@@ -156,12 +156,15 @@ After the successful test in the previous task, you can now enable the policy fo
 Make sure, that you have at least one emergency admin account that is excluded from this policy in a productive, real world scenario. 
 
 1. You should still be logged into the Entra ID portal **https://entra.microsoft.com**.
-2. On the left navigation pane, navigate to **Protection** > **Conditional Access** > **Policies**.
-3. Select the policy **Block access outside Trusted Network**.
-4. Under Users select **Specific users included**.
-5. Select **All users**.
-6. In the warning that appeared on the bottom of the window select **Exclude current user, admin@WWLxZZZZZZ.onmicrosoft.com, from this policy**.
-7. Select **Save**.
+1. On the left naviagtion panel, navigate to **identity** > **Application**> **Enterprise applications**
+1. Click on **New Application** and seach for **salesforce**.
+1. once you find it, click on **Salesforce** and click on **create**, this will add the application.
+1. Next, on the left navigation panel, navigate to **Protection** > **Conditional Access** > **Policies**.
+1. Select the policy **Block access outside Trusted Network**.
+1. Under Users select **Specific users included**.
+1. Select **All users**.
+1. In the warning that appeared on the bottom of the window select **Exclude current user, admin@WWLxZZZZZZ.onmicrosoft.com, from this policy**.
+1. Select **Save**.
 
 You have now configured an active working Conditional Access policy that prevents users from logging in outside the trusted network you defined as the company's external IP address. This was tested using a limited user scope to ensure that all cloud applications remain accessible. Lastly you have rolled out the CA policy to all users.
 
