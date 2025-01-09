@@ -5,6 +5,17 @@ After setting up a monitoring server, you need to establish secure networking to
 
 To establish secure networking, you will start by creating an Azure App Proxy and enrolling the client to Entra ID, before creating a connector. After that, you will configure an access policy and install the GSA client. Finally, you will test the GSA connection to ensure that everything is working properly.
 
+## Exercise Objective
+
+After completing this exercise, you'll be able to:
+
+- Activate Global Secure Access for enhanced security.
+- Enable TLS and install the private network connector for secure connections.
+- Create a shared folder on the server for collaboration.
+- Set up Quick Access and assign users for easier file access.
+- Join devices to Entra ID for seamless identity management.
+- Activate the traffic forwarding profile and download the GSA desktop client for secure traffic handling.
+
 ## Estimated Duration: 60 Minutes
 
 ## Architecture Diagram
@@ -26,8 +37,6 @@ The architecture for this lab involves the following key components:
 - **Traffic Forwarding Profile Activation and Desktop Client Setup**: Activates the traffic forwarding profile to direct traffic securely and sets up the GSA desktop client for user access to organizational resources.  
 
 ## Part 1: Design a solution
-
-In this task you will secure remote access to your on premise environment.
 
 ### Design approach
 
@@ -73,7 +82,7 @@ In this task, you will activate **Global Secure Access** in your tenant as the f
 
    ![](../media/lab4/16.png)
     
-You have successfully activated Global Secure Access.
+   >**Success!** You have successfully activated Global Secure Access.
 
 ### Task 2: Enable TLS and install the private network connector
 
@@ -202,7 +211,7 @@ In this task, you´ll create an SMB Share on the on-premise file server that wil
 
 1. Select **Close** and minimize or close File explorer.
 
-You've created a shared folder on the server. It is this folder and its content that you'll access through GSA.
+   >**Success!** You've created a shared folder on the server. It is this folder and its content that you'll access through GSA.
 
 ### Task 4: Setup Quick Access and assign User
 
@@ -245,7 +254,7 @@ You will enable **Quick Access**, create an enterprise application to secure the
 
     ![](../media/lab4/37.png)
 
-You have successfully enabled quick access for your test user.
+    >**Success!** You have successfully enabled quick access for your test user.
 
 ### Task 5: Device join Entra ID
 
@@ -357,11 +366,13 @@ Additionally, you will download and install the **Global Secure Access desktop c
 1. Password field: **<inject key="VM Password"></inject>**.
 
 
-You have successfully connected to the file server by using Global Secure Access.
+   >**Success!** You have successfully connected to the file server by using Global Secure Access.
 
 
 ### Review
-In this lab, you have completed the following:
+
+In this excercise, you have completed the following:
+
 - Activated the Global Secure Access.
 - Enabled TLS and installed the private network connector.
 - Created a shared folder on the server.
@@ -369,4 +380,4 @@ In this lab, you have completed the following:
 - Joined device to Entra ID.
 - Activated the traffic forwarding profile and download the GSA desktop client.
 
-### You have successfully finished the exercise. Click on **Next** to move on to the next one.
+### You have successfully finished the exercise. Click on **Next** to move on to the next excercise.
