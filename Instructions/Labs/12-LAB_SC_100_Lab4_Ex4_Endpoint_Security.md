@@ -5,6 +5,15 @@ Contoso uses Microsoft Intune to manage its devices and provides its employees w
 
 In addition, the analysis revealed that Tailwind Traders uses macOS devices in its environment. As part of the upcoming merger, you plan to prepare the Contoso tenant for the new macOS devices.
 
+## Exercise Objectives
+
+After completing this exercise, you'll be able to:
+
+- Deploy endpoint security baseline policies to strengthen device security.
+- Deploy antivirus software on macOS devices to protect against threats.
+- Encrypt macOS devices to ensure data security and compliance.
+
+
 ## Estimated Duration: 60 Minutes
 
 ## Architecture Diagram
@@ -22,8 +31,6 @@ The architecture for this lab involves the following key components:
 - **macOS Device Encryption**: Encrypts macOS devices to protect sensitive data and ensure that information remains secure in the event of device loss or theft.
 
 ## Part 1: Design a solution
-
-In this task you will design a concept to address the challenges Contoso Ltd. is facing.
 
 ### Design Approach
 
@@ -107,7 +114,7 @@ In this task, you will create **endpoint security baseline policies** for **Wind
 
 1. On the **Review + create** blade select **Create**.
 
-You have successfully created two security baseline policies for Windows devices.
+   >**Success!** You have successfully created two security baseline policies for Windows devices.
 
 ### Task 2: Deploy antivirus on macOS devices
 
@@ -182,7 +189,7 @@ enter **All users** and select it.
 
 1. On the **Review + create** tab select **Save**.
 
-You have successfully configured and deployed antivirus for macOS devices.
+   >**Success!** You have successfully configured and deployed antivirus for macOS devices.
 
 ### Task 3: Encrypt macOS devices
 
@@ -221,11 +228,11 @@ In this task you will encrypt macOS devices.
 
 1. On the **Review + create** blade select **Create**.
 
-You have successfully configured and deployed a FileVault profile to encrypt macOS devices.
-
+   >**Success!** You have successfully configured and deployed a FileVault profile to encrypt macOS devices.
 
 ### Review
-In this lab, you have completed the following:
+
+In this excercise, you have completed the following:
 - Deployed endpoint security baseline policies.
 - Deployed antivirus on macOS devices.
 - Encrypted macOS devices.
