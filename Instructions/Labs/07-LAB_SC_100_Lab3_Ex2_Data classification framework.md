@@ -1,4 +1,4 @@
-# Excercise 2: Data classification framework
+# Exercise 2: Data classification framework
 
 ## Exercise Overview
 You have been assigned the task of structuring data classification for Contoso Ltd. in preparation for an ISO-27001:2022 audit. The goal is to establish a robust framework that is crucial for ensuring effective data protection against leakage, deletion, and loss. Your role involves integrating a new project ID system for construction projects within the company. To comply with government regulations, all documents that contain a certain project-ID must be kept for 5 years.
@@ -159,7 +159,7 @@ In this task, you will use the **sensitive information type** created earlier to
 
     ![altext](../media/lab3/image-28.png)
 
-1. On the **Let´s get started** page, enter the following information:
+1. On the **Let's get started** page, enter the following information:
 
     - Name: **`Label documents related to construction projects`**
     - Description: **`This policy automatically enforces the "Construction Project Documentation Retention" policy on any document pertaining to construction projects.`**
@@ -186,7 +186,7 @@ In this task, you will use the **sensitive information type** created earlier to
 1. On the **Policy scope** page, leave the Admin Units setting to **Full directory** and select **Next**.
 1. On the **Choose the type of retention policy to create** page, select **Static** and select **Next**.
 1. On the **Choose where to automatically apply the label**, verify the status is set to **On** for all available locations then select **Next**.
-1. On the **Choose a label to auto-apply**, select **Add label**, then select the label **Retention of construction project documentation** you created in teh previous task, select **Add**, then select **Next**.
+1. On the **Choose a label to auto-apply**, select **Add label**, then select the label **Retention of construction project documentation** you created in the previous task, select **Add**, then select **Next**.
 
     ![altext](../media/lab3/image-32.png)
 
@@ -206,9 +206,9 @@ In this task, you will use the **sensitive information type** created earlier to
 
 ### Review
 
-In this excercise, you have completed the following:
+In this exercise, you have completed the following:
 - Created a custom sensitive information Type.
 - Created a retention label.
 - Published and auto-applied the retention label to all documents that contain project IDs.
 
-### You have successfully finished the exercise. Click on **Next** to move on to the next excercise.
+### You have successfully finished the exercise. Click on **Next** to move on to the next exercise.
