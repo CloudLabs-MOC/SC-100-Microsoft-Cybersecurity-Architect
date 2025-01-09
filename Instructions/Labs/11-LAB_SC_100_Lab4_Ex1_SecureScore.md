@@ -1,4 +1,4 @@
-# Excercise 1: Security Posture Management
+# Exercise 1: Security Posture Management
 
 ## Exercise Overview
 Contoso's security team wants to improve its security posture by using Microsoft Secure Score, a tool that provides recommendations and guidance on how to reduce the attack surface and protect against threats.
@@ -257,11 +257,11 @@ In this task, you confirmed that members of the Mark 8 Project can see the messa
 
 ### Review
 
-In this excercise, you have completed the following:
+In this exercise, you have completed the following:
 
 - Create a custom role to manage security posture for Exposure Management.
 - Activate Defender XDR unified RBAC for specific workloads.
 - Shared the recommended action in the Teams channel.
 - Edited the status for the recommended action.
 
-### You have successfully finished the exercise. Click on **Next** to move on to the next excercise.
+### You have successfully finished the exercise. Click on **Next** to move on to the next exercise.
