@@ -58,7 +58,7 @@ To ensure that the security ambassadors have the necessary role permissions, you
 
 In this task, you'll set up custom role focused on security posture and more specifically on Exposure Management. As part of the custom role, you'll grant Joni Shermann access to the data source for Exposure Management.
 
-1. Ensure you are logged into the **MICROSOFT AZURE: lON-SC1** VM by default. To switch between virtual machines, select the desired VM from the dropdown menu.
+1. Ensure you are logged into the **MICROSOFT AZURE: LON-SC1** VM by default. To switch between virtual machines, select the desired VM from the dropdown menu.
 
    ![](../media/lab4/vm-1.png)
 
