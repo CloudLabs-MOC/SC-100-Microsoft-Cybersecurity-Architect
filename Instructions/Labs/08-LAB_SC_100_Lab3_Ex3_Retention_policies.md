@@ -1,4 +1,4 @@
-# Excercise 3: Retention policies
+# Exercise 3: Retention policies
 
 ## Exercise Overview
 The German government recently modified specific laws governing retention periods for companies. One significant change is that all financial documents must now be retained for 11 years, instead of the previous requirement of 10 years. Another change is that commercial or business correspondence, including copies of dispatched commercial or business correspondence, can now be retained for 5 years instead of 7. Currently, your company adheres to a retention policy that maintains all documents for a duration of 7 years. However, Contoso Ltd. has encountered challenges in recent years due to the accumulation of a large volume of data in its environment. This has led to increased maintenance costs and significant storage space consumption. Your assignment is to optimize the retention policy in your company to comply with legal regulations while minimizing data storage requirements. The company policy dictates that all data must be retained for at least five years after creation, in strict adherence to all applicable laws governing data retention.
@@ -225,7 +225,7 @@ In this task, you will create a **retention label** with a **10-year retention p
 
 ### Review
 
-In this excercise, you have completed the following:
+In this exercise, you have completed the following:
 - Analysed the current structure of the retention policy.
 - Created a retention policy.
 - Created and auto-applied a retention label.
