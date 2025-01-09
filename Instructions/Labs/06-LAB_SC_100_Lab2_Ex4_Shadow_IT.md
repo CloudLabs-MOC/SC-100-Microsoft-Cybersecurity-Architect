@@ -1,4 +1,4 @@
-# Excercise 3: Shadow-IT
+# Exercise 3: Shadow-IT
 
 ## Exercise Overview
 Contoso's IT infrastructure has evolved over the past few decades, providing various server instances, applications, and services. Recently, the company has prioritized securing its environment by implementing Device Management, data governance, and Identity and Application Protection over the last two years. However, the process of restricting users to only specific applications deployed by the company has not yet been established, allowing users to install applications from various sources. As the organization's cyber security architect, your goal is to have a complete overview of all applications used by employees. Your protection measure is to block insecure applications in your environment.
@@ -128,7 +128,7 @@ In order to automatically block unsafe applications in the future, you will crea
 
 ### Review
 
-In this excercise, you have completed the following:
+In this exercise, you have completed the following:
 - Integrated Microsoft Defender for Endpoint with Defender for Cloud Apps.
 - Investigated the Shadow-IT of Contoso Ltd.
 - Blocked unsecure applications.
