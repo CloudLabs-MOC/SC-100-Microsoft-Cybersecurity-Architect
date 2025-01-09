@@ -1,4 +1,4 @@
-# Excercise 1: Security Operations Center
+# Exercise 1: Security Operations Center
 
 ## Exercise Overview
 
@@ -6,7 +6,7 @@ Contoso has a Security Operations Center (SOC) that monitors and responds to sec
 
 ## Exercise Objectives
 
-After completing this lab, you'll be able to:  
+After completing this exercise, you'll be able to:  
 
 - Create and configure a Log Analytics Workspace to collect and analyze data from various sources.  
 - Deploy Azure Sentinel to enable security analytics and threat detection.  
@@ -436,10 +436,10 @@ In this task, you´ll create a workbook, to get a dashboard with custom views an
    >**Success!** You successfully created a dashboard with custom views for incidents and the associated alerts.
 
 ### Review
-In this excercise, you have completed the following:
+In this exercise, you have completed the following:
 - Created the log analytics workspace for your Sentinel deployment.
 - Deployed Sentinel to the log analytics workspace and added data.
 - Created role based access model for the role requirements for Contoso´s security operations team.
 - Created a dashboard with custom views for incidents and the associated alerts.
 
-### You have successfully finished the exercise. Click on **Next** to move on to the next excercise.
+### You have successfully finished the exercise. Click on **Next** to move on to the next exercise.
