@@ -1,4 +1,4 @@
-# Excercise 2: Managing External Attack Surface
+# Exercise 2: Managing External Attack Surface
 
 ## Exercise Overview
 
@@ -6,7 +6,7 @@ Contoso aims to enhance its cybersecurity posture by identifying and managing it
 
 ## Exercise Objectives
 
-After completing this lab, you'll be able to:  
+After completing this exercise, you'll be able to:  
 
 - Create a Defender External Attack Surface Management (EASM) workspace.  
 - Discover and analyze Contoso’s External Attack Surface.  
@@ -48,7 +48,7 @@ Based on the provided use-case, the following requirements can be outlined:
 - Integrate data to Contoso´s SIEM Solution.
 - Assets need to be managed and labeled
 
-In the second step examinine Contoso Ltd.'s existing environment. Microsoft Defender External Attack Surface Management (EASM) continuously discovers and maps the digital attack surface, providing an external view of an organization’s online infrastructure. It identifies exposed resources, prioritizes risks, and extends vulnerability and exposure control beyond the firewall.
+In the second step examine Contoso Ltd.'s existing environment. Microsoft Defender External Attack Surface Management (EASM) continuously discovers and maps the digital attack surface, providing an external view of an organization’s online infrastructure. It identifies exposed resources, prioritizes risks, and extends vulnerability and exposure control beyond the firewall.
 
 ### Proposed solution
 
@@ -235,10 +235,10 @@ Since this asset is hosted by a third party but still belongs to your attack sur
 Only if the State is set to **Approved Inventory**, assets are represented in dashboard charts and are scanned daily. For that reason its important to review newly discovered assets and changed their state accordingly.
 
 ### Review
-In this excercise, you have completed the following:
+In this exercise, you have completed the following:
 - Created the Defender EASM workspace.
 - Created the Discovery of Contoso´s External Attack Surface.
 - Setup the connection between Defender EASM and a log analytics workspace.
 - Reviewed the Security posture and labeled an asset.
 
-### You have successfully finished the exercise. Click on **Next** to move on to the next excercise.
+### You have successfully finished the exercise. Click on **Next** to move on to the next exercise.
