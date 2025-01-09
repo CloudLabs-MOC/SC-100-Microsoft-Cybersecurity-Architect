@@ -1,4 +1,4 @@
-# Excercise 1: Compliance assessment
+# Exercise 1: Compliance assessment
 
 ## Exercise Overview
 
@@ -136,9 +136,9 @@ In this task, you will grant **Nestor Wilke** access to the assessment, enabling
 
 ### Review
 
-In this excercise, you have completed the following:
+In this exercise, you have completed the following:
 - Conducted an ISO-27001 assessment
 - Assigned tasks to a technical engineer
 - Provided access to a technical engineer for the improvement actions
 
-### You have successfully finished the exercise. Click on **Next** to move on to the next excercise.
+### You have successfully finished the exercise. Click on **Next** to move on to the next exercise.
