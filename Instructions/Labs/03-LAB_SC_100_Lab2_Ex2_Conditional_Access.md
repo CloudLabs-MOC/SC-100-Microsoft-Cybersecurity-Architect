@@ -1,4 +1,4 @@
-# Excercise 2: Conditional Access
+# Exercise 2: Conditional Access
 
 ## Exercise Overview
 You have discovered that employees are accessing Microsoft 365 from unknown locations, despite your Conditional Access policies only allowing access from specific locations and devices. Your investigation has revealed that these employees are accessing Microsoft 365 while traveling home from their office on public transportation. This behavior is in violation of industry regulations, and you want to use Continuous Access Evaluation to prevent it. Additionally, you want to implement the authentication strength you prepared in the previous exercise to secure certain applications that handle customer data. 
@@ -330,11 +330,11 @@ In this task, you create a CA policy to enforce the authentication strenth you c
 
 ### Review
 
-In this excercise, you have completed the following:
+In this exercise, you have completed the following:
 - Created trusted network.
 - Created new Conditional Access Policy with limited scope.
 - Tested the configured Policy.
 - Configured an active working Conditional Access policy that prevents users from logging in outside the trusted network.
 - Created a CA policy to enforce your authentication strength policy to Salesforce.
 
-### You have successfully finished the exercise. Click on **Next** to move on to the next excercise.
+### You have successfully finished the exercise. Click on **Next** to move on to the next exercise.
