@@ -47,8 +47,8 @@ A security baseline policy comprises a set of configuration settings recommended
 
 |Requirement|Solution|Action plan|
 |----|----|----|
-|Consolidate all configurations for Windows devices in one place|Microsoft Endpoint Manager - Endpoint Seucurity|Deploy security baseline policies
-|Protect MacOS devices|Micorosft Endpoint Manager|Deploy antivirus on macOS devices|
+|Consolidate all configurations for Windows devices in one place|Microsoft Endpoint Manager - Endpoint Security|Deploy security baseline policies
+|Protect MacOS devices|Microsft Endpoint Manager|Deploy antivirus on macOS devices|
 
 ## Part 2: Implement the solution 
 
@@ -138,7 +138,7 @@ In this task, after securing **Windows devices** with endpoint security baseline
 
 1. On the **Basics** blade enter:
     1. Name: **`Deploy antivirus on macOS devices`**
-    1. Description: **`Deploy antivirus and enable encryption on macOS devices to prepare your environment for merging with Trailwind Traders.`**
+    1. Description: **`Deploy antivirus and enable encryption on macOS devices to prepare your environment for merging with Tailwind Traders.`**
 1. Select **Next**
 
 1. On the **Configuration settings** tab ensure the settings are configured as follows:
