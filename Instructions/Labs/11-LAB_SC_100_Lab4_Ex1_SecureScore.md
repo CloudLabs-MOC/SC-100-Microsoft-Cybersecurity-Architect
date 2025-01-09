@@ -7,6 +7,15 @@ The security team reviews and delegates Secure Score recommended actions to its 
 
 Recently, there have been reports that uninvited associates were automatically being admitted to Teams calls to which they were not directly invited. Due to the sensitive and confidential nature of calls, the security team want to control this.
 
+## Exercise Objective
+
+After completing this exercise, you'll be able to:
+
+- Create a custom role to manage security posture for Exposure Management.
+- Activate Defender XDR unified RBAC for specific workloads.
+- Share recommended actions in a Teams channel for collaboration.
+- Edit the status of recommended actions to track progress.
+
 ## Estimated Duration: 60 Minutes
 
 ## Architecture Diagram
@@ -119,7 +128,7 @@ In this task, you'll set up custom role focused on security posture and more spe
 
    ![](../media/lab4/10.png)
 
-You successfully set up a custom role for security posture that grants Joni Shermann access to the Exposure Management data source.
+   >**Success!** You successfully set up a custom role for security posture that grants Joni Shermann access to the Exposure Management data source.
 
 ### Task 2 - Activate Defender XDR unified RBAC for specific workloads
 
@@ -143,7 +152,7 @@ In this task you´ll explore the page where workloads are activated.
 
 1. For this exercise, the data source for Exposure Management is enabled by default, which is why there is no setting to enable that workload. If you had created a custom role that included permissions for other workloads, such as Office 365 or Device and Vulnerability Management, as examples, then you would need to activate those specific workloads to activate the custom role, as part of unified RBAC.
 
-You learned where to activate the Microsoft Defender XDR Unified RBAC model for some or all of your workloads.
+   >**Success!** You learned where to activate the Microsoft Defender XDR Unified RBAC model for some or all of your workloads.
 
 ### Task 3 - Share a recommended action
 
@@ -247,10 +256,12 @@ In this task, you confirmed that members of the Mark 8 Project can see the messa
 
 
 ### Review
-In this lab, you have completed the following:
+
+In this excercise, you have completed the following:
+
 - Create a custom role to manage security posture for Exposure Management.
 - Activate Defender XDR unified RBAC for specific workloads.
 - Shared the recommended action in the Teams channel.
 - Edited the status for the recommended action.
 
-### You have successfully finished the exercise. Click on **Next** to move on to the next one.
+### You have successfully finished the exercise. Click on **Next** to move on to the next excercise.
