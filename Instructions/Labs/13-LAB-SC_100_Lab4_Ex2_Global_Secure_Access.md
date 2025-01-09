@@ -1,4 +1,4 @@
-# Excercise 2: Global Secure Access
+# Exercise 2: Global Secure Access
 
 ## Exercise Overview
 After setting up a monitoring server, you need to establish secure networking to the file server using Global Secure Access (GSA). You want to ensure that access to these machines is secured until these file servers can be migrated to secure cloud storage, especially if Tailwind Traders is bringing local servers into your company IT infrastructure. You decided against reworking the VPN infrastructure of Tailwind Traders to allow your employees access to the servers. 
@@ -371,7 +371,7 @@ Additionally, you will download and install the **Global Secure Access desktop c
 
 ### Review
 
-In this excercise, you have completed the following:
+In this exercise, you have completed the following:
 
 - Activated the Global Secure Access.
 - Enabled TLS and installed the private network connector.
@@ -380,4 +380,4 @@ In this excercise, you have completed the following:
 - Joined device to Entra ID.
 - Activated the traffic forwarding profile and download the GSA desktop client.
 
-### You have successfully finished the exercise. Click on **Next** to move on to the next excercise.
+### You have successfully finished the exercise. Click on **Next** to move on to the next exercise.
