@@ -95,7 +95,7 @@ In this task, you will familiarize yourself with your company's existing retenti
 
     >[!NOTE] You can also access the Microsoft Purview Compliance portal to view retention policies but you have to look into each policy one by one instead of getting an overview over all your policies at a glance.
 
-You successfully viewed the existing labels and settings to decide whether they meet the legal requirements.
+    >**Success!**  You successfully viewed the existing labels and settings to decide whether they meet the legal requirements.
 
 ### Task 2: Create a retention policy
 
@@ -152,7 +152,7 @@ Your plan involves implementing a new company-wide retention policy with a five-
 
     ![altext](../media/lab3/image-44.png)
 
-You have successfully created a retention policy. You can now delete all remaining retention policies as they do not meet the company's requirements.
+    >**Success!** You have successfully created a retention policy. You can now delete all remaining retention policies as they do not meet the company's requirements.
 
 ### Task 3: Create a retention label
 
@@ -221,7 +221,7 @@ In this task, you will create a **retention label** with a **10-year retention p
 
     ![altext](../media/lab3/image-51.png)
 
-You have successfully created and auto-applied a retention label.
+    >**Success!** You have successfully created and auto-applied a retention label.
 
 ### Review
 
