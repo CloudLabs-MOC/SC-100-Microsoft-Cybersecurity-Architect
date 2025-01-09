@@ -1,4 +1,4 @@
-# Excercise 1: Configure Entra ID
+# Exercise 1: Configure Entra ID
 ## Exercise Overview
 You are the newly promoted IT-Security specialist of Contoso Ltd. As the company recently acquired Tailwind Traders, you reviewed your Entra ID tenant and decided on new security requirements. Your task is to manage the tasks and implement policies to meet the requirements that come with the acquisition.
 
@@ -136,8 +136,8 @@ In this task, you will use the Entra ID portal to create an own Authentication s
    >**Success!** You have now created an authentication strength that restricts the use of SMS OTP as an authentication factor.
 
 ### Review
-In this excercise, you have completed the following:
+In this exercise, you have completed the following:
 - Restricted the use of third-party apps to Microsoft verified services.
 - Created an Authentication strength.
 
-### You have successfully finished the exercise. Click on **Next** to move on to the next excercise.
+### You have successfully finished the exercise. Click on **Next** to move on to the next exercise.
