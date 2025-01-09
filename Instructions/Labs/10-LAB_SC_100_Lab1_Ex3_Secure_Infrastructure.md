@@ -1,11 +1,11 @@
-# Excercise 3: Secure Infrastructure
+# Exercise 3: Secure Infrastructure
 
 ## Exercise Overview
 Contoso Ltd. recently acquired Tailwind Traders, which still uses local file servers for storage. As the cybersecurity architect of Contoso Ltd., you want to evaluate a solution to secure these file servers with your existing cloud environment. Tailwind Traders provided you with a test server (The Lab VM 2) that you can use for the implementation of your POC. In this exercise, you will set up the server and integrate it into your cloud infrastructure and security environment using Azure Arc and send server logs to Defender for Cloud.
 
 ## Exercise Objectives
 
-After completing this excercise, you'll be able to:
+After completing this exercise, you'll be able to:
 
 - Enable Defender for Cloud for enhanced security management.
 - Enable Azure Arc on a test server to manage it centrally.
@@ -232,7 +232,7 @@ By continuously assessing resources against these controls, Defender for Cloud i
 
 ### Review
 
-In this excercise, you have completed the following:
+In this exercise, you have completed the following:
 - Enabled Defender for Cloud.
 - Enabled Azure Arc on the test server.
 - Added Server to Defender for Cloud and gather Logs.
