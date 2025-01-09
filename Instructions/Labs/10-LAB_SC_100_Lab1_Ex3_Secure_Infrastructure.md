@@ -83,12 +83,12 @@ In this task, you will enable Defender plans for the resource types you want to 
 1. Select the ellipses (...) (3) next to the subscription and select **Edit settings** (4).
 
    ![](../media/lab01/37.png)
-1. Under **Cloud Workload Protection** set the **Servers** plan stats to **On** (1).
-1. Select **Save** (2) on top of the page.
+1. Under **Cloud Workload Protection** set the **Servers** plan statUs to **On** (1).
+1. Select **Save** (2) at the top of the page.
 
    ![](../media/lab01/38.png)
 
-When enabling the Plan for Servers you could see that Defender for Cloud supports many more resource types.
+When enabling the Plan for Servers you will see that Defender for Cloud supports many more resource types.
 
 ### Task 2: Enable the on premise Server in Azure Arc
 
