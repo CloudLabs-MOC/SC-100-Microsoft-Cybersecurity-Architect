@@ -1,4 +1,4 @@
-# Exercise 1: Compliance assessment
+# Lab 01: Compliance assessment
 
 ## Exercise Overview
 

@@ -1,4 +1,4 @@
-# Exercise 2: Managing External Attack Surface
+# Lab 02: Managing External Attack Surface
 
 ## Exercise Overview
 

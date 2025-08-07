@@ -1,4 +1,4 @@
-# Exercise 1: Security Operations Center
+# Lab 01: Security Operations Center
 
 ## Exercise Overview
 
