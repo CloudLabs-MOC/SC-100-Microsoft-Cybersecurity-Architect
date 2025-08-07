@@ -1,4 +1,4 @@
-# Exercise 1: Configure Entra ID
+# Lab 01: Configure Entra ID
 ## Exercise Overview
 You are the newly promoted IT-Security specialist of Contoso Ltd. As the company recently acquired Tailwind Traders, you reviewed your Entra ID tenant and decided on new security requirements. Your task is to manage the tasks and implement policies to meet the requirements that come with the acquisition.
 
