@@ -200,7 +200,7 @@ In this task, you will use the **sensitive information type** created earlier to
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
   
-<validation step="8c2f8278-828f-407f-91b8-f930a4318959" />
+<validation step="d2427f90-04b0-4bcf-b0a7-a8ab39226ad5" />
 
     >**Success!** You have successfully published and auto-applied the retention label to all documents that contain project IDs.
 

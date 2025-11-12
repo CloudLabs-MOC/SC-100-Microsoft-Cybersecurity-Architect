@@ -147,7 +147,7 @@ In this task, you will configure **Azure Arc** to send data to the **Log Analyti
  - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
  - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
     
-<validation step="7905e87b-74c6-4ccc-92fc-21b2e51da913" />
+<validation step="2af86520-61c4-4405-a0a3-befbdcd310be" />
 
    >**Success!**: You have successfully enabled Azure Arc on the test server and data should start to flow into the log analytics workspace. This process might take some time until you can see anything in the dashboard.
 
@@ -203,7 +203,7 @@ It may take a few hours till the resource is fully onboarded in Defender for Clo
  - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
  - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
     
-<validation step="883a42a8-fd6a-4cf4-9b39-da3e203dc093" />
+<validation step="aaa0c13e-5c2b-47b0-9a03-7e02da57b90c" />
 
 ### Task 4: Add regulatory compliance standard
 

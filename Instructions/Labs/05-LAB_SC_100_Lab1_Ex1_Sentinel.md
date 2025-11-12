@@ -17,9 +17,7 @@ After completing this exercise, you'll be able to:
 
 ## Architecture Diagram
 
-
    ![](../media/lab01/lab1ex1.png)
-
 
 ## Explanation of Components
 
@@ -89,7 +87,7 @@ In this task, you'll create a log analytics workspace which is required to house
  - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
  - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
     
-<validation step="76fe2891-2386-4c8f-872c-46eb9701d50c" />
+<validation step="8573527a-13ef-4957-84ed-b2ba36b558a1" />
 
    >**Success!** You successfully created the log analytics workspace for your Sentinel deployment.
 
@@ -129,7 +127,7 @@ In this task, you will add Sentinel to the created log analytics workspace and a
  - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
  - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
     
-<validation step="dd739dbe-ab7d-4545-b085-2890cfd574ee" />
+<validation step="cf32dd14-82b1-420c-a84a-da5f7b32ae71" />
 
    >**Success!** You have successfully deployed Sentinel to the log analytics workspace and added data.
 
@@ -259,7 +257,7 @@ Additionally, you'll restrict the Network Team to only access Cisco Umbrella log
  - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
  - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
     
-<validation step="d2819e37-068f-437c-9026-013869aa3f4c" />
+<validation step="e3b769e8-546a-454f-a712-d6dee7abb1c7" />
 
    >**Success!** You successfully created role based access model for the role requirements for Contoso´s security operations team and created a custom role for the network team and assigned the role on the specific table in your log analytics workspace.
 
@@ -431,7 +429,7 @@ In this task, you´ll create a workbook, to get a dashboard with custom views an
  - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
  - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
     
-<validation step="80e42d63-07d4-44b8-bce9-022ddf79ca4d" />
+<validation step="1dc048a7-54dc-4649-92b0-1bb9ecd949cf" />
 
    >**Success!** You successfully created a dashboard with custom views for incidents and the associated alerts.
 

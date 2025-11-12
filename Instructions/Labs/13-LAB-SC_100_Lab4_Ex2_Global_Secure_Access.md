@@ -179,7 +179,7 @@ In this task, you will install the **Private Network Connector** on a Windows Se
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="8103ca0e-2b22-4651-b73c-fa4473d89ae8" />
+<validation step="26c9f1af-aa6a-47fd-a8e8-dca184a6f518" />
 
 ### Task 3: Create a folder on the File Server
 

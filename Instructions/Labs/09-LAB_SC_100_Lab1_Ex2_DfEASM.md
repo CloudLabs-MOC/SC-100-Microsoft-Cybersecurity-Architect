@@ -91,7 +91,7 @@ In this Task, you´ll create a Defender EASM workspace.
  - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
  - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
     
-<validation step="f10c8d8e-403f-40ca-8055-fb57c65221e1" />
+<validation step="c3428576-3701-4aaa-ade6-cb28d362cf6a" />
 
    >**Success!** You successfully created the Defender EASM workspace.
 
@@ -187,7 +187,7 @@ In this Task, you´ll review the Defender EASM Security posture and get informat
  - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
  - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
     
-<validation step="3923d260-f803-495e-8b59-018c7ab6f6bc" />
+<validation step="1b554d1f-6a44-4a5d-821b-92ccb2bdad1c" />
 
    >**Success!** You successfully reviewed the Security posture and labeled an asset for further investigation.
 

@@ -107,7 +107,7 @@ In this task, you will create a named location using your VM's external IP addre
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
   
-<validation step="6023a971-27ce-41da-8a97-ea621ca2e8de" />
+<validation step="ca1d3c7d-92a1-4cd3-a072-dc6478cc1958" />
 
   >**Success!** You have now defined your Company's external IP Address named and trusted location you can use to restrict access outside the company's network.
 
@@ -173,7 +173,7 @@ As you have successfully created a trusted network you will now use this to crea
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
   
-<validation step="ab7de097-f109-48c9-82ef-c69c8122bc37" />
+<validation step="7c8f6a2e-4399-41fe-8514-52be854527f3" />
 
   >**Success!** You have now created and enabled your CA policy to restrict access outside trusted networks only affecting your own test user account.
 
