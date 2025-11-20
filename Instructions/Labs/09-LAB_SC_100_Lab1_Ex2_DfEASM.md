@@ -66,11 +66,11 @@ In the second step examine Contoso Ltd.'s existing environment. Microsoft Defend
 
 In this Task, you´ll create a Defender EASM workspace.
 
-1. In the top search bar, search for **`Microsoft Defender EASM`**.
+1. In the top search bar, search for **`Microsoft Defender EASM`** (1) and select **Microsoft Defender EASM** (2) from Services.
 
     ![](../media/lab01/13.png)
 
-1. Select **Create**.
+1. Select **Create** (1).
 
     ![](../media/lab01/up14.png)
 
@@ -122,7 +122,7 @@ In this Task, you´ll create a Discovery on Contoso Ltd. outside facing assets. 
 
 In this Task, you´ll configure a data connection from Defender EASM to an log analytics workspace that will be used for Sentinel. Defender EASM asset or insights information can be used in Log Analytics to enrich existing workflows with other security data.
 
-1. In the top search bar, search for **`Log Analytics Workspaces`**.
+1. In the top search bar, search for **`Log Analytics Workspaces`** (1) and select **Log Analytics Workspaces** (2) from Services.
 
     ![](../media/lab01/17.png)
 
@@ -158,7 +158,7 @@ In this Task, you´ll configure a data connection from Defender EASM to an log a
 
     ![](../media/lab01/upadc.png)
 
-1. The Log Analytics card of the Data connections page should now show law-sentinel, listed under **Connected (1)**.
+1. The Log Analytics card of the Data connections page should now show law-sentinel, listed under **Connected (1)** .
 
     ![](../media/lab01/logdone.png)
 
@@ -200,7 +200,7 @@ In this Task, you´ll review the Defender EASM Security posture and get informat
 
     ![](../media/lab01/ipmo.png)
 
-1. Select **Create new label**.
+1. Select **Create new label** (1).
 
     ![](../media/lab01/26.png)
 
@@ -253,7 +253,7 @@ In this task, you´ll manage and categorize the discovered assets.
 1. You identify that this asset is hosted on Amazon, there are also open CVE´s on some of the components, but these are not active as you can see in the **Recent** and **Last seen** column. These originate from earlier discovery runs.
 Since this asset is hosted by a third party but still belongs to your attack surface, you categorize it based on their role in your organization.
 
-1. Select **Modify Asset** (2).
+1. Select **Modify Asset** .
 
     ![](../media/lab01/modweb.png)
 
@@ -273,7 +273,7 @@ Since this asset is hosted by a third party but still belongs to your attack sur
 
     ![](../media/lab01/amzn.png)
 
-1. Select, **Modify assets** (1).
+1. Select, **Modify assets** .
 
     ![](../media/lab01/modamzn.png)
 
