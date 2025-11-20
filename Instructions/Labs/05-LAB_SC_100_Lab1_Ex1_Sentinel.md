@@ -63,11 +63,13 @@ In this task, you'll create a log analytics workspace which is required to house
    - **Username**: <inject key="AzureAdUserEmail"></inject>
    - **Password**: <inject key="AzureAdUserPassword"></inject>
      > **Note**: If you are asked to **Stay Signed in**, Click on **Yes**.
+
 1. Search for **`log analytics workspace`**(1) and click on **log analytics workspace** (2).
 
    ![](../media/lab01/1.png)
 
 1. Click On **+ Create**.
+
 1. On Create Log Analytics workspace tab, please enter the following details:
    | Settings | Values |
    | -- | -- |
@@ -79,6 +81,7 @@ In this task, you'll create a log analytics workspace which is required to house
    ![](../media/lab01/2.png)
 
 1. Select **Review & Create (5)**.
+
 1. Select **Create** to start the deployment.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -100,21 +103,29 @@ In this task, you will add Sentinel to the created log analytics workspace and a
    ![](../media/lab01/3.png)
 
 1. From the **Microsoft Sentinel** page, select **+ Create**.
+
 1. In the **Add a Microsoft Sentinel to a workspace page** the previously created log analytics workspace should be listed. Select **law-sentinel-<inject key="DeploymentID" enableCopy="false" /></inject>** then select **Add**.
+
 1. It may take a few minutes to add Sentinel to the workspace. Once it's added, the **Microsoft Sentinel | New & guides (1)** page is displayed. You're notified that the Microsoft Sentinel fre trial is activated. Select **Ok**.
+
 1. From the center of the page, select **Go to content hub (2)**. Alternatively, from the left navigation panel expand **Content management** then select **Content hub**.
 
-   ![](../media/lab01/4.png)
+   ![](../media/lab01/up4.png)
 
 1. Search for **Microsoft Sentinel Training Lab (1)**, select it from the search results, and **install (2)** the solution.
 
    ![](../media/lab01/5.png)
+
+> **Note:** If you are not able to find **Microsoft Sentinel Training Lab** try changing catergory to **Training and Tutorials**
+
+   ![](../media/lab01/ctgry.png)
 
 1. Select **Create (1)**.
 
    ![](../media/lab01/6.png)
 
 1. Choose the resource group **sc-100-lab1 (1)** and workspace **law-sentinel-<inject key="DeploymentID" enableCopy="false" /></inject> (2)**.
+
 1. Select **Review & Create (3)** then select **Create**.
 
    ![](../media/lab01/7.png)
@@ -152,48 +163,63 @@ Additionally, you'll restrict the Network Team to only access Cisco Umbrella log
 ---
 
 1. In the top searchbar, search for **Resoure groups** and select **sc-100-lab1** resource group.
+
 1. In the left navigation pane, select **Access control (IAM) (1)**.
+
 1. Select **Add (2)**, from the dropdown select **Add role assignment (3)**.
 
    ![](../media/lab01/8.png)
 
 1. Search for **`Microsoft Sentinel Responder`** (1) and select **View** (2) in the Details column.
+
 1. Review that the permissions match the requirements.
+
 1. Close the window with **X** in the top right corner.
+
 1. Select **Next (3)**.
 
    ![](../media/lab01/9.png)
 
 1. Select **+Select members (1)**.
+
 1. Search for **`SOC Analysts`** (2) Group, select **SOC Analysts** from the search results, press **Select (3)** and add the role assignment.
 
-   ![](../media/lab01/10.png)
+   ![](../media/lab01/up10.png)
 
 1. Select **Review + assign** twice.
+
 1. You'll repeat the steps for the Sentinel Contributor role. Select **Add**, from the dropdown select **Add role assignment**.
+
 1. Search for **`Microsoft Sentinel Contributor`** (1) and select the role (2).
+
 1. Select **Next** (3).
 
    ![](../media/lab01/11.png)
 
 1. Select **+Select members (1)**.
+
 1. On the **Select members** blade, search for the **`SOC Engineers`** (2) Group. From the search results select **SOC Engineers** press **Select (3)** to add the role assignment.
 
-   ![](../media/lab01/12.png)
+   ![](../media/lab01/up12.png)
 
 1. Select **Review + assign** twice.
+
 1. Select **Role assignments tab**, Confirm that the role assignments are set.
+
 1. Now you'll add a custom role. Select **Add** (1), from the dropdown select **Add custom role** (2).
 
    ![](../media/lab01/57.png)
 
 1. Name it, **`NOC-CiscoUmbrellaCL-Read`** (1).
+
 1. For **Baseline Permission**, select **Start from scratch** (2).
+
 1. Select **Next** (3).
 
    ![](../media/lab01/58.png)
 
 1. On the **Permissions** tab, select **Add permissions**.
+
 1. Search for **`Microsoft.OperationalInsights`** (1), Select the **Azure Log Analytics** (2) card.
 
    ![](../media/lab01/59.png)
@@ -226,28 +252,38 @@ Additionally, you'll restrict the Network Team to only access Cisco Umbrella log
        ![](../media/lab01/63.png)
 
 1. Click on **Add**.
+
 1. Select **Review + Create**.
-1. Select **Create**, then select **Ok**
+
+1. Select **Create**.
+
+    ![](../media/lab01/cstmcreate.png)   
+
 1. In the top search bar, search for **`Resource groups`** and select **sc-100-lab1**.
+
 1. Open the log analytics workspace **law-sentinel-<inject key="DeploymentID" enableCopy="false" /></inject>**.
+
 1. In the left navigation pane, expand **Settings** (1) and select **Tables** (2).
+
 1. Search for **`Cisco_Umbrella_dns_CL`** (3).
+
 1. Click on the ellipses (...), select **Access control (IAM)** (4).
 
-   ![](../media/lab01/64.png)
+   ![](../media/lab01/up64.png)
 
 1. Select **Add** > **Add role assignment** (1).
 
-   ![](../media/lab01/65.png)
+   ![](../media/lab01/up65.png)
 
 1. Search for **`NOC-CiscoUmbrellaCL-Read`** (1) and select the custom role (2).
+
 1. Select **Next** (3).
 
    ![](../media/lab01/66.png)
 
 1. Select **Select Members** (1), search for **NOC** (2), select it from the search results then press **Select** (3).
 
-   ![](../media/lab01/67.png)
+   ![](../media/lab01/noc.png)
 
 1. Select **Review + assign** twice.
 
@@ -270,7 +306,9 @@ In this task, you´ll create a workbook, to get a dashboard with custom views an
    ![](../media/lab01/68.png)
 
 1. Select **law-sentinel-<inject key="DeploymentID" enableCopy="false" /></inject>**.
+
 1. In the left navigation pane, expand **Threat management** (1) and select **Workbooks** (2).
+
 1. Select **Add Workbook** (3).
 
    ![](../media/lab01/69.png)
@@ -278,36 +316,47 @@ In this task, you´ll create a workbook, to get a dashboard with custom views an
 1. Select **Edit** (1).
 
    ![](../media/lab01/70.png)
+
 1. Select the first **Edit** button on the right side.
 
     ![](../media/lab01/71.png)
-1. Select **Add** > **Add parameters**.
 
-    ![](../media/lab01/72.png)
+1. Select **Add (1)** > **Add parameters (2)**.
+
+    ![](../media/lab01/addpara.png)
+
 1. Select **Add parameter**.
 
     ![](../media/lab01/77.png)
+
 1. Fill out the following information:
    - **Parameter name:** TimeRange (1)
    - **Parameter type:** Time range picker (2)
+
 1. Check the following settings:
    - **Required?** (3)
+
 1. Select **Save** (4).
 
-    ![](../media/lab01/73.png)
+    ![](../media/lab01/up73.png)
+
 1. In the **TimeRange:** dropdown menu in the lower left, select **Last 7 days**.
 
     ![](../media/lab01/74.png)
+
 1. Select **Add parameter**.
 
     ![](../media/lab01/77.png)
+
 1. Fill out the following information:
    - **Parameter name:** AlertSeverity (1)
    - **Parameter type:** Drop down (2)
+
 1. Check the following settings:
    - **Required?** (3)
    - **Allow multiple selections** (4)
    - **Hide parameter in reading mode** (5)
+
 1. Under **Log Analytics workspace Logs Query** paste in (6):
 
    ```KQL
@@ -318,25 +367,30 @@ In this task, you´ll create a workbook, to get a dashboard with custom views an
    ```
 
 1. In the **Time Range** dropdown menu Select **TimeRange** (7).
+
 1. Scroll down to **Include in the drop down**, check **All** and set **Default selected item** to **All**.
 
     ![](../media/lab01/75.png)
+
 1. Select **Save** (8).
 
-    ![](../media/lab01/76.png)
+    ![](../media/lab01/up76.png)
+
 1. Select **Add parameter**. 
 
     ![](../media/lab01/77.png)
+
 1. Fill out the following information:
-   - **Parameter name:** ProductName
-   - **Parameter type:** Drop down
+   - **Parameter name:** ProductName (1)
+   - **Parameter type:** Drop down (2)
+
 1. Check the following settings:
 
-   - **Required?**
-   - **Allow multiple selections**
-   - **Hide parameter in reading mode**
+   - **Required?** (3)
+   - **Allow multiple selections** (4)
+   - **Hide parameter in reading mode** (5)
 
-1. Under **Log Analytics workspace Logs Query** paste in:
+1. Under **Log Analytics workspace Logs Query** paste in (6) :
 
    ```KQL
    SecurityAlert
@@ -345,14 +399,20 @@ In this task, you´ll create a workbook, to get a dashboard with custom views an
    | project Value = ProductName, Label = strcat(ProductName, ' - ', Count)
    ```
 
-1. In the **Time Range** dropdown menu Select **TimeRange**
+1. In the **Time Range** dropdown menu Select **TimeRange** (7) .
+
 1. Scroll down to **Include in the drop down**, check **All** and set **Default selected item** to **All**.
 
     ![](../media/lab01/75.png)
-1. Select **Save**.
+
+1. Select **Save** (8).
+
+   ![](../media/lab01/proname.png)
+
 1. Select **Add** (1) and choose **Add query** (2).
 
-    ![](../media/lab01/78.png)
+    ![](../media/lab01/query.png)
+
 1. Under **Log Analytics workspace Logs Query** paste in (1):
 
    ```KQL
@@ -376,33 +436,47 @@ In this task, you´ll create a workbook, to get a dashboard with custom views an
 1. Choose **TimeRange** (2) in the Time Range drop down menu.You´ll setup dynamic content to get all alerts for the selected incident. Alerts will be exported and available outside this query.
 
     ![](../media/lab01/79.png)
+
 1. Select the **Advanced Settings** (1) tab at the top of the **Editing query** window.
+
 1. Check the following settings and select **Add Parameter** (3):
    - **When items are selected, export parameters** (2)
 
     ![](../media/lab01/80.png)
+
 1. Fill in the following information:
    - **Field to export:** Alerts (1)
    - **Parameter name:** Alerts (2)
+
 1. Select **Save** (3). 
 
     ![](../media/lab01/81.png)
+
 1. Go back to the **Settings** (1) tab.
+
 1. Select **Run Query** (2).
+
 1. Select **Column Settings** (3).
 
-    ![](../media/lab01/81.png)
+    ![](../media/lab01/col.png)
+
 1. Select **IncidentUrl** (1).
+
 1. Set Column renderer to **Link** (2).
+
 1. Under Link Settings set **View to open** to **Url** (3).
+
 1. Select **Save and Close** (4).
 
     
     ![](../media/lab01/83.png)
+
 1. Next, You´ll create the alerts view based on which incident is selected.
+
 1. Select **+ Add** (1) on the bottom of the **Editing query item** window. Select **Add query** (2).
 
     ![](../media/lab01/84.png)
+
 1. Paste the KQL in the Log Analytics workspace Logs Query (1):
 
    ```KQL
@@ -413,12 +487,17 @@ In this task, you´ll create a workbook, to get a dashboard with custom views an
    ```
 
 1. Choose **TimeRange** (2) in the Time Range drop down.
+
 1. Select **Done Editing** (3) in the top bar of the **New workbook** window.
 
-    ![](../media/lab01/85.png)
+    ![](../media/lab01/up85.png)
+
 1. Select an **Incident**.
+
 1. Alerts to the linked Incident will show up below.
+
 1. Save your query by selecting the Save icon.
+
 1. In the **Save as** window, enter a title for your new workbook (1), select the **sc-100-lab1** (2) resource group from the drop-down, then select **Save as** (3).
 
     ![](../media/lab01/86.png)
