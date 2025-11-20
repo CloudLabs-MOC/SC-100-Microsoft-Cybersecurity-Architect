@@ -116,9 +116,9 @@ In this task, you will add Sentinel to the created log analytics workspace and a
 
    ![](../media/lab01/5.png)
 
-> **Note:** If you are not able to find **Microsoft Sentinel Training Lab** try changing catergory to **Training and Tutorials**
+	> **Note:** If you are not able to find **Microsoft Sentinel Training Lab** try changing catergory to **Training and Tutorials**.
 
-   ![](../media/lab01/ctgry.png)
+  	 ![](../media/lab01/ctgry.png)
 
 1. Select **Create (1)**.
 
