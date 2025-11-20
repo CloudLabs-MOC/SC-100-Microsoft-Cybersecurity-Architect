@@ -69,10 +69,13 @@ In this Task, you´ll create a Defender EASM workspace.
 1. In the top search bar, search for **`Microsoft Defender EASM`**.
 
     ![](../media/lab01/13.png)
+
 1. Select **Create**.
 
-    ![](../media/lab01/14.png)
+    ![](../media/lab01/up14.png)
+
 1. On Create Microsoft Defender EASM Resource, select the existing resource group **sc-100-lab1**.
+
 1. In Instance details enter the following details and select on **Review & Create** (5):
     | Settings | Values |
     |  -- | -- |
@@ -102,12 +105,16 @@ In this Task, you´ll create a Discovery on Contoso Ltd. outside facing assets. 
 1. On the search bar on the top, search for **`Microsoft Defender EASM`** and open it.
 
     ![](../media/lab01/13.png)
-1. Select the **EASM<inject key="DeploymentID" enableCopy="false" /></inject>** workspace you created in the last task.
-1. Search for **Contoso (1)** in the **Search for an organization** search field.
-1. Select **Contoso Ltd. (2)**.
-1. Select **Start attack surface discovery (3)**.
 
-    ![](../media/lab01/16.png)
+1. Select the **EASM<inject key="DeploymentID" enableCopy="false" /></inject>** workspace you created in the last task.
+
+1. Search for **Contoso** (1) in the **Search for an organization** search field.
+
+1. Select **Contoso Ltd.** (2).
+
+1. Select **Start attack surface discovery** (3).
+
+    ![](../media/lab01/up16.png)
 
     >**Success!** You successfully created the Discovery of Contoso´s External Attack Surface and populated the EASM instance with actionable data.
 
@@ -118,29 +125,42 @@ In this Task, you´ll configure a data connection from Defender EASM to an log a
 1. In the top search bar, search for **`Log Analytics Workspaces`**.
 
     ![](../media/lab01/17.png)
+
 1. Select your **law-sentinel-<inject key="DeploymentID" enableCopy="false" /></inject>** workspace from the last exercise.
+
 1. Leave the page as it is and open another tab and log into the Azure portal **`https://portal.azure.com`**.
+
 1. On the search bar on the top, search for **`Microsoft Defender EASM`** and open it.
 
     ![](../media/lab01/13.png)
+
 1. Select your **EASM<inject key="DeploymentID" enableCopy="false" /></inject>** workspace.
-1. In the left navigation pane, expand **Manage (1)** and select **Data connections (2)**.
 
-    ![](../media/lab01/18.png)
-1. Under Log Analytics, select **Add connection**.
-1. Name it **law-sentinel-<inject key="DeploymentID" enableCopy="false" /></inject>**.
+1. In the left navigation pane, expand **Manage** (1) and select **Data connections** (2).
+
+1. Under Log Analytics, select **Add connection** (3).
+
+    ![](../media/lab01/addcon.png)
+
+1. Name it **law-sentinel-<inject key="DeploymentID" enableCopy="false" /></inject> (1)**.
+
 1. Switch to the previous tab with the log analytics workspace that should be open.
-1. Expand **Agents** under Settings.
-1. Expand **Log Analytics agent instructions** and Copy the **Workspace ID** into the corresponding field of the Add data connection window.
-1. Copy the **Primary key** into the API key field of the Add data connection window.
 
-    ![](../media/lab01/19.png)
-1. In Content select **All**.
-1. In Frequency select **Daily**.
-1. Select **Add**.
+1. On the **overview** (1) page copy the **Workspace ID** (2) and use it in Add data connection pane for **Workspace ID** (2) .
 
-    ![](../media/lab01/20.png)
-1. The Log Analytics card of the Data connections page should now show law-sentinel, listed under Connected (1).
+    ![](../media/lab01/wid.png)
+
+1. In Content select **All** (3).
+
+1. In Frequency select **Daily** (4).
+
+1. Select **Add** (5).
+
+    ![](../media/lab01/upadc.png)
+
+1. The Log Analytics card of the Data connections page should now show law-sentinel, listed under **Connected (1)**.
+
+    ![](../media/lab01/logdone.png)
 
 After the connection has been created, custom log tables are created in the log analytics workspace. In Sentinel, this data can then be used to create or enrich security incidents, build investigation playbooks, train machine learning algorithms or trigger remediation actions.
 
@@ -151,35 +171,48 @@ After the connection has been created, custom log tables are created in the log 
 In this Task, you´ll review the Defender EASM Security posture and get information about findings.
 
 1. On the search bar on the top, search for **`Microsoft Defender EASM`** and open it.
+
 1. Select your **EASM<inject key="DeploymentID" enableCopy="false" /></inject>** workspace.
-1. In the left navigation pane, expand **Dashboards (1)** and select **Attack surface summary (2)**. The Attack Surface Summary dashboards provide key insights and high level overview of the impacted core assets of your attack surface.
+
+1. In the left navigation pane, expand **Dashboards** (1) and select **Attack surface summary** (2). The Attack Surface Summary dashboards provide key insights and high level overview of the impacted core assets of your attack surface.
 
     ![](../media/lab01/21.png)
+
 1. Review the **Attack surface summary** Dashboard.
-1. In the left navigation pane, select **Security posture**.
 
-    ![](../media/lab01/22.png)
+1. In the left navigation pane, select **Security posture** (1).
+
+    ![](../media/lab01/up22.png)
+
 1. Review the different categories for open vulnerabilities.
-1. Under the category **Open ports**, select **Web servers**.
 
-    ![](../media/lab01/23.png)
+1. Under the category **Open ports** (1), select **Web servers** (2).
+
+    ![](../media/lab01/open.png)
+
 1. Select the found ip address **34.223.124.45**.
 
-    ![](../media/lab01/24.png)
+    ![](../media/lab01/ip.png)
+
 1. You decide to label the asset for further investigation.
+
 1. Select **Modify Asset**.
 
-    ![](../media/lab01/25.png)
+    ![](../media/lab01/ipmo.png)
+
 1. Select **Create new label**.
 
     ![](../media/lab01/26.png)
+
 1. Name it **Open ports** (1) and select **Add** (2).
 
     ![](../media/lab01/27.png)
+
 1. Assign the newly created label in the field **Labels** (1).
+
 1. Select **Update** (2).
 
-    ![](../media/lab01/26.png)
+    ![](../media/lab01/updt.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 	
@@ -196,38 +229,54 @@ In this Task, you´ll review the Defender EASM Security posture and get informat
 In this task, you´ll manage and categorize the discovered assets.
 
 1. On the search bar on the top, search for **`Microsoft Defender EASM`** and open it.
+
 1. Select your **EASM<inject key="DeploymentID" enableCopy="false" /></inject>** workspace.
+
 1. In the left navigation pane, expand **General** (1) and select **Inventory** (2).
 
     ![](../media/lab01/29.png)
+
 1. In the EASM | Inventory page, the Search tab is selected (underlined). In the search field use the dropdown menu to select **Labels** (1).
+
 1. In the dropdown menu below choose the label you recently created, **Open ports** (2).
+
 1. Select **Search** (3).
+
 1. Open the found asset **34.223.124.45** (4).
 
     ![](../media/lab01/30.png)
+
 1. Select the **Web components** (1) tab.
 
-    ![](../media/lab01/31.png)
+    ![](../media/lab01/webslct.png)
+
 1. You identify that this asset is hosted on Amazon, there are also open CVE´s on some of the components, but these are not active as you can see in the **Recent** and **Last seen** column. These originate from earlier discovery runs.
 Since this asset is hosted by a third party but still belongs to your attack surface, you categorize it based on their role in your organization.
+
 1. Select **Modify Asset** (2).
 
-    ![](../media/lab01/31.png)
+    ![](../media/lab01/modweb.png)
+
 1. In the Modify Asset window, use the drop-down the **State** field to select **Dependency** (1).
+
 1. Select **Update** (2).
 
     ![](../media/lab01/32.png)
     >**NOTE**: In this Case you choose Dependency, because the asset is Infrastructure that is owned by a third party but is part of your attack surface because it directly supports the operation of your owned assets.
 1. Go back to Inventory by selecting **X** in the top right and create a new Search.
-1. Modify the search query to **Web Component Name (1) - contains (2) - Amazon (3)**.
-1. Select **Search** (4).
-1. Select all Assets (5).
 
-    ![](../media/lab01/33.png)
+1. Modify the search query to **Web Component Name (1) - contains (2) - Amazon (3)**.
+
+1. Select **Search** (4).
+
+1. Select all **Assets** (5).
+
+    ![](../media/lab01/amzn.png)
+
 1. Select, **Modify assets** (1).
 
-    ![](../media/lab01/34.png)
+    ![](../media/lab01/modamzn.png)
+
 1. Choose **Dependency** (1) in State and select **Update** (2).
 
     ![](../media/lab01/35.png)
