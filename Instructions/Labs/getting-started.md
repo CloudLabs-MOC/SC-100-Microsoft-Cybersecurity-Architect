@@ -60,7 +60,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
-       ![Enter Your Password](../media/lc-image-2.png)
+       ![Enter Your Password](../media/uptpwrd.png)
 
 1. If **Action required** pop-up window appears, click on **Ask Later**.
 
@@ -83,3 +83,4 @@ Learner Support Contacts:
 
 
 ## Happy Learning!!
+
