@@ -80,7 +80,7 @@ In this task, you'll create a log analytics workspace which is required to house
 
    ![](../media/lab01/2.png)
 
-1. Select **Review & Create (5)**.
+1. Select **Review & Create** (5).
 
 1. Select **Create** to start the deployment.
 
@@ -98,7 +98,7 @@ In this task, you'll create a log analytics workspace which is required to house
 
 In this task, you will add Sentinel to the created log analytics workspace and add demo logs, because the demo tenant doesn't have an existing data in the log analytics workspace, you import demo logs to have a better idea of how sentinel works.
 
-1. In the search bar, in the blue banner at the top of the page, enter **`Microsoft Sentinel`** (1), then select it from the search results listed under services.
+1. In the search bar, in the blue banner at the top of the page, enter **`Microsoft Sentinel`** (1), then select it from the search results listed under services for **Microsoft Sentinel** (2).
 
    ![](../media/lab01/3.png)
 
@@ -106,13 +106,13 @@ In this task, you will add Sentinel to the created log analytics workspace and a
 
 1. In the **Add a Microsoft Sentinel to a workspace page** the previously created log analytics workspace should be listed. Select **law-sentinel-<inject key="DeploymentID" enableCopy="false" /></inject>** then select **Add**.
 
-1. It may take a few minutes to add Sentinel to the workspace. Once it's added, the **Microsoft Sentinel | New & guides (1)** page is displayed. You're notified that the Microsoft Sentinel fre trial is activated. Select **Ok**.
+1. It may take a few minutes to add Sentinel to the workspace. Once it's added, the **Microsoft Sentinel | New & guides** (1) page is displayed. You're notified that the Microsoft Sentinel fre trial is activated. Select **Ok**.
 
-1. From the center of the page, select **Go to content hub (2)**. Alternatively, from the left navigation panel expand **Content management** then select **Content hub**.
+1. From the center of the page, select **Go to content hub** (2). Alternatively, from the left navigation panel expand **Content management** then select **Content hub**.
 
    ![](../media/lab01/up4.png)
 
-1. Search for **Microsoft Sentinel Training Lab (1)**, select it from the search results, and **install (2)** the solution.
+1. Search for **Microsoft Sentinel Training Lab** (1), select it from the search results, and **Install** (2) the solution.
 
    ![](../media/lab01/5.png)
 
@@ -120,11 +120,11 @@ In this task, you will add Sentinel to the created log analytics workspace and a
 
   	 ![](../media/lab01/ctgry.png)
 
-1. Select **Create (1)**.
+1. Select **Create** (1).
 
    ![](../media/lab01/6.png)
 
-1. Choose the resource group **sc-100-lab1 (1)** and workspace **law-sentinel-<inject key="DeploymentID" enableCopy="false" /></inject> (2)**.
+1. Choose the resource group **sc-100-lab1** (1) and workspace **law-sentinel-<inject key="DeploymentID" enableCopy="false" /></inject>**  (2).
 
 1. Select **Review & Create (3)** then select **Create**.
 
@@ -164,9 +164,9 @@ Additionally, you'll restrict the Network Team to only access Cisco Umbrella log
 
 1. In the top searchbar, search for **Resoure groups** and select **sc-100-lab1** resource group.
 
-1. In the left navigation pane, select **Access control (IAM) (1)**.
+1. In the left navigation pane, select **Access control (IAM)** (1).
 
-1. Select **Add (2)**, from the dropdown select **Add role assignment (3)**.
+1. Select **Add** (2), from the dropdown select **Add role assignment** (3).
 
    ![](../media/lab01/8.png)
 
@@ -180,9 +180,9 @@ Additionally, you'll restrict the Network Team to only access Cisco Umbrella log
 
    ![](../media/lab01/9.png)
 
-1. Select **+Select members (1)**.
+1. Select **+Select members** (1).
 
-1. Search for **`SOC Analysts`** (2) Group, select **SOC Analysts** from the search results, press **Select (3)** and add the role assignment.
+1. Search for **`SOC Analysts`** (2) Group, select **SOC Analysts** from the search results, press **Select** (3) and add the role assignment.
 
    ![](../media/lab01/up10.png)
 
@@ -198,7 +198,7 @@ Additionally, you'll restrict the Network Team to only access Cisco Umbrella log
 
 1. Select **+Select members (1)**.
 
-1. On the **Select members** blade, search for the **`SOC Engineers`** (2) Group. From the search results select **SOC Engineers** press **Select (3)** to add the role assignment.
+1. On the **Select members** blade, search for the **`SOC Engineers`** (2) Group. From the search results select **SOC Engineers** press **Select** (3) to add the role assignment.
 
    ![](../media/lab01/up12.png)
 
@@ -317,15 +317,15 @@ In this task, you´ll create a workbook, to get a dashboard with custom views an
 
    ![](../media/lab01/70.png)
 
-1. Select the first **Edit** button on the right side.
+1. Select the first **Edit** (1) button on the right side.
 
     ![](../media/lab01/71.png)
 
-1. Select **Add (1)** > **Add parameters (2)**.
+1. Select **Add** (1) > **Add parameters** (2).
 
     ![](../media/lab01/addpara.png)
 
-1. Select **Add parameter**.
+1. Select **Add parameter** (1).
 
     ![](../media/lab01/77.png)
 
@@ -340,11 +340,11 @@ In this task, you´ll create a workbook, to get a dashboard with custom views an
 
     ![](../media/lab01/up73.png)
 
-1. In the **TimeRange:** dropdown menu in the lower left, select **Last 7 days**.
+1. In the **TimeRange:** dropdown menu in the lower left, select **Last 7 days** (1).
 
     ![](../media/lab01/74.png)
 
-1. Select **Add parameter**.
+1. Select **Add parameter** (1).
 
     ![](../media/lab01/77.png)
 
@@ -500,7 +500,7 @@ In this task, you´ll create a workbook, to get a dashboard with custom views an
 
 1. In the **Save as** window, enter a title for your new workbook (1), select the **sc-100-lab1** (2) resource group from the drop-down, then select **Save as** (3).
 
-    ![](../media/lab01/86.png)
+    ![](../media/lab01/1ex86.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 	
