@@ -74,7 +74,7 @@ You successfully created the log analytics workspace. -->
 
 In this task, you will enable Defender plans for the resource types you want to secure, ensuring that **Defender for Cloud** can apply the necessary protections to your assets.
 
-1. Search for **Microsoft Defender for Cloud** (1) and Select it (2).
+1. Search for **Microsoft Defender for Cloud** (1) and Select **Microsoft Defender for Cloud** (2) from Services .
 
    ![](../media/lab01/36.png)
 
@@ -84,7 +84,7 @@ In this task, you will enable Defender plans for the resource types you want to 
 
 1. If the Subscription is shown as **unregistered** reload the page.
 
-1. Select the ellipses (...) (3) next to the subscription and select **Edit settings** (4).
+1. Select the ellipses **(...)** (3) next to the subscription and select **Edit settings** (4).
 
    ![](../media/lab01/ex37.png)
 
@@ -109,13 +109,13 @@ In this task, you will configure **Azure Arc** to send data to the **Log Analyti
    - **Password**: <inject key="AzureAdUserPassword"></inject>
    >**Note**: If you are asked to **Stay Signed in**, Click on **Yes**.
 
-1. Search for **`Azure Arc`** and open it.
+1. Search for **`Azure Arc`** (1) and select **Azure Arc** (2) from Services .
 
    ![](../media/lab01/40.png)
 
-1. In the left hand navigation pane, expand **Infrastructure (1)** and select **Machines (2)**.
+1. In the left hand navigation pane, expand **Infrastructure** (1) and select **Machines** (2) .
 
-1. Select **Onboard/Create (3)** > **Onboard existing machines (4)**.
+1. Select **Onboard/Create** (3) > **Onboard existing machines** (4).
 
    ![](../media/lab01/onbvm.png)
 
@@ -155,7 +155,7 @@ In this task, you will configure **Azure Arc** to send data to the **Log Analyti
 
 1. Go back to Azure Portal and open Azure Arc.
 
-1. Select **Machines**, select **Refresh** (1) on top of the page and validate your server is successfully deployed to Azure Arc.
+1. Select **Machines**, select **Refresh** on top of the page and validate your server is successfully deployed to Azure Arc.
 
    ![](../media/lab01/arcdone.png)
 
