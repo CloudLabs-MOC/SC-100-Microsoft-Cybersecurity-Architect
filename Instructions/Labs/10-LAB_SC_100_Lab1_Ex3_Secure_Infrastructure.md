@@ -86,7 +86,7 @@ In this task, you will enable Defender plans for the resource types you want to 
 
 1. Select the ellipses (...) (3) next to the subscription and select **Edit settings** (4).
 
-   ![](../media/lab01/37.png)
+   ![](../media/lab01/ex37.png)
 
 1. Under **Cloud Workload Protection** set the **Servers** plan status to **On** (1).
 
@@ -100,7 +100,7 @@ When enabling the Plan for Servers you will see that Defender for Cloud supports
 
 In this task, you will configure **Azure Arc** to send data to the **Log Analytics Workspace** used by **Defender for Cloud**, enabling seamless integration and enhanced security monitoring.
 
-1. Swap to VM **VM1**, use <inject key="VM1 Password"></inject> to sign in into the machine.
+1. Swap to another VM named as **VM1**, use <inject key="VM1 Password"></inject> to sign in into the machine.
 
    ![](../media/lab01/swap.png)
 
@@ -182,7 +182,7 @@ In this task, you will deploy a **Data Collection Rule** to gather event logs fr
 
 1. Expand the **Tenant Root Group** and the **Subscrtiption**, now you will see the previously created log analytics workspace, **law-sentinel-<inject key="DeploymentID" enableCopy="false" /></inject>** listed. Select the ellipses (...) next to the **law-sentinel-<inject key="DeploymentID" enableCopy="false" /></inject>** and select **Edit settings** (2).  This will take you to the **Defender plan** page of law-sentinel-<inject key="DeploymentID" enableCopy="false" /></inject>.  
 
-   ![](../media/lab01/47.png)
+   ![](../media/lab01/ex47.png)
 
 1. On the **Servers** plan, select **On** (1), then select **Save** (2), from the top of the page.
 
@@ -199,11 +199,11 @@ In this task, you will deploy a **Data Collection Rule** to gather event logs fr
    - Resource group: **sc-100-lab1** (2)
    - Region - **<inject key="Resource group Region" enableCopy="false" ></inject>** (3)
 
-      ![](../media/lab01/50.png)
+      ![](../media/lab01/ex50.png)
 
 1. Select **Add resources** (1). Choose **Machines - Azure Arc** (2) under the droupdown for **Resource types** and Expand the scope of the resource group. Check the previously onboarded **Azure Arc machine** (3), select **Apply** (4).
 
-   ![](../media/lab01/51.png)
+   ![](../media/lab01/ex51.png)
 
 1. Select **Next: Collect and deliver**.
 
@@ -224,7 +224,7 @@ levels to collect:** (3).
 
 1. Select **Add data source** (4).
 
-   ![](../media/lab01/53.png)
+   ![](../media/lab01/ex53.png)
 
 1. Select **Review & create**.
 
@@ -252,17 +252,17 @@ In this task, you will secure the resources based on recommendations and assign 
 
 1. Select the ellipses (...) next to the subscription and select **Edit settings** (2).
 
-   ![](../media/lab01/54.png)
+   ![](../media/lab01/ex54.png)
 
 1. Select **Security policies** (1) in the navigation menu on the left. The list might take a while to load.
 
 1. Search for **`NIST SP 800-53 Rev. 5`** (2). Change the status slider to **On** (3).
 
-   ![](../media/lab01/55.png)
+   ![](../media/lab01/ex55.png)
 
 1. Go back to Defender for Cloud and select **Regulatory compliance** (1) under Cloud Security.
 
-   ![](../media/lab01/56.png)
+   ![](../media/lab01/ex56.png)
 
 
 Due to limitation off the lab environment, you are not able to see the resources as well as the compliance recommendations. It takes a while until the deployed resources are visible in Defender for Cloud.
