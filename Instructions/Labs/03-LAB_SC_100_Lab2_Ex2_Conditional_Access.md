@@ -66,9 +66,9 @@ In this task, you will create a named location using your VM's external IP addre
 1. Enter the following cmdlet to check your current external IP address:
 
     ```powershell
-    (Invoke-RestMethod -Uri http://ifconfig.me).Trim()
+    (Invoke-RestMethod -Uri "https://ifconfig.me/ip").Trim()
     ```
-   ![](../media/lab02/exc2-1.png)
+   ![](../media/lab02/psip.png)
 
 1. Note down the IP address powershell returned.
 
@@ -81,25 +81,25 @@ In this task, you will create a named location using your VM's external IP addre
 
 1. Close the password save dialog box by selecting **Not now**, to not save the default global admin's credentials in your browser.
 
-1. On the left navigation pane, navigate to **Protection** > **Conditional Access** > **Named locations**.
+1. On the left navigation pane scroll down and navigate to **Conditional Access** (1) > **Named locations** (2).
 
-   ![](../media/lab02/exc2-2.png)
+1. Select **+ IP ranges location** (3).
 
-1. Select **+ IP ranges location**.
+1. Enter the name **Trusted contoso network** (4).
 
-1. Enter the name **Trusted contoso network**.
+1. Select **Mark as trusted location** (5).
 
-1. Select **Mark as trusted location**.
+1. Select **+** (6) to add the IP address you noted earlier using Powershell command.
 
-1. Select **+** to add the IP address you noted in **Step 4.**
+1. The Input should look like **``**.***.**.***/32``** (7)
 
-1. The Input should look like ``**.***.**.***/32`` (*** replace with ip address noted in the above step ).
+1. Select **Add** (8).
 
-1. Select **Add**.
+    ![](../media/lab02/ipadd.png)
 
 1. Select **Create**.
 
-   ![](../media/lab02/exc2-3.png)
+    ![](../media/lab02/exc2-3.png)
 
 
 **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -115,57 +115,58 @@ In this task, you will create a named location using your VM's external IP addre
 
 As you have successfully created a trusted network you will now use this to create the Conditional Access policy to restrict access outside the corporate network with a scope limited to your personal user to be able to test and prevent a company wide account lockout from Entra ID.
 
-1. On the left navigation pane, navigate to **Protection** > **Conditional Access** > **Policies**.
+1. On the left navigation pane, navigate to **Conditional Access** (1) > **Policies** (2).
 
-1. Select **+ New policy**.
+1. Select **+ New policy** (3).
 
-   ![](../media/lab02/exc2-4.png)
+   ![](../media/lab02/newp.png)
 
-1. Enter the name **Block access outside Trusted Network**.
+1. Enter the name **Block access outside Trusted Network** (1).
 
-   ![](../media/lab02/exc2-5.png)
+1. Select **0 users or agents (Preview) selected** (2).
 
-1. Select **0 users and groups selected**.
+    ![](../media/lab02/accblk.png)
 
-1. Under **Include** select **Select users and groups** and tick **Users and groups**.
+1. Under **Include** (1) select **Select users and groups** (2) and check **Users and groups** (3).
 
-    ![](../media/lab02/exc2-6.png)
+    ![](../media/lab02/ung.png)
 
-1. Select **Allan Deyoung** as the sole test user for the policy.
+1. Select **Allan Deyoung** (1) as the sole test user for the policy by clicking **Select** (2).
 
-   ![](../media/lab02/exc2-7.png)
+   ![](../media/lab02/ady.png)
 
-1. Select **No target resources selected** and under **Include** select **All resources (formerly All cloud apps)**.
+1. Select **No target resources selected** (1) and under **Include** (2) select **All resources (formerly All cloud apps)** (3).
 
-   ![](../media/lab02/exc2-8.png)
+    ![](../media/lab02/tgr.png)
+    ![](../media/lab02/tgr.png)
 
-1. Select **0 conditions selected** and under **Locations** select **Not configured**.
+1. Select **0 conditions selected** (1) and under **Locations** select **Not configured** (2).
 
-    ![](../media/lab02/exc2-9.png)
+    ![](../media/lab02/lnc.png)
 
-1. Select **Yes** to configure the location condition.
+1. Select **Yes** (1) to configure the location condition.
 
-1. Under **Include** select **Any network or location**.
+1. Under **Include** (2) select **Any network or location** (3).
 
-    ![](../media/lab02/exc2-10.png)
+    ![](../media/lab02/anl.png)
 
-1. Under **Exclude** select **All trusted networks and locations**.
+1. Under **Exclude** (1) select **All trusted networks and locations** (2).
 
-    ![](../media/lab02/exc2-11.png)
+    ![](../media/lab02/exc.png)
 
-1. Under **Grant** select **0 controls selected** and switch it from **Grant access** to **Block access** then choose **Select** at the bottom of the page.
+1. Under **Grant** select **0 controls selected** (1) and switch it from **Grant access** to **Block access** (2) then choose **Select** (3) at the bottom of the page.
 
-    ![](../media/lab02/exc2-12.png)
+    ![](../media/lab02/grant.png)
 
-1. Under **Session** select **0 controls selected**.
+1. Under **Session** select **0 controls selected** (1).
 
-1. Enable **Customize continuous access evaluation** and select **Strictly enforce location policies (preview)** and choose **Select** at the bottom to confirm.
+1. Enable **Customize continuous access evaluation** (2) and select **Strictly enforce location policies (preview)** (3) and choose **Select** (4) at the bottom to confirm.
 
-    ![](../media/lab02/exc2-13.png)
+    ![](../media/lab02/sess.png)
 
-1. Where it says **Enable Policy**, select **On**, then select **Create**.
+1. Where it says **Enable Policy**, select **On** (1), then select **Create** (2).
 
-    ![](../media/lab02/exc2-14.png)
+    ![](../media/lab02/createcap.png)
 
 
 **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
