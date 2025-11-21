@@ -193,29 +193,31 @@ Since you have created a Conditional Access policy limiting access to all cloud 
 
 1. On the Stay signed in? dialog box, select the **Don’t show this again** checkbox and then select **No**.
 
+    >**Note! :** If prompted for MFA please follow the MFA steps mentioned on Getting Started page of lab .
+
 1. Since the login was successful, you can close the **InPrivate** window.
 
 1. Switch back to your Edge browser window where you should still be logged into the Entra ID portal **https://entra.microsoft.com**.
 
-1. On the left navigation pane, navigate to **Protection** > **Conditional Access** > **Monitoring** > **Sign-in logs**.
+1. On the left navigation pane, navigate to **Conditional Access** (1) > **Monitoring** > **Sign-in logs** (2).
 
-   ![](../media/lab02/exc2-16.png)
+1. Select **Add filters** (3) and filter by the **User** of **Allan Deyoung** and select **user sign-ins(non-interactive)** (4).
 
-1. Select **Add filters** and filter by the **User** of **Allan Deyoung**.
+1. Select the **latest log** (5) entry of **Allan Deyoung** (6) 
 
-1. Select the latest log entry of **Allan Deyoung**.
+    ![](../media/lab02/sinlog.png)
 
-1. Under the **Conditional Access** tab, select **Block access outside Trusted Network**.
+1. Under the **Conditional Access** (1) tab, select **Block access outside Trusted Network** (2).
 
    ![](../media/lab02/exc2-17.png)
 
-1. Select the **User** assignment and you should see, that it **Matched** by **Direct assignment**.
+1. Select the **User** (1) assignment and you should see, that it **Matched** by **Direct assignment**.
 
 1. Select the **Application** assignment and you should see, that it **Matched** by **All apps included**.
 
-1. You should also see, that the **Location** condition was **Not matched** since it is within the trusted network that is excluded.
+1. You should also see, that the **Location** (2) condition was **Not matched** since it is within the trusted network that is excluded.
 
-   ![](../media/lab02/exc2-18.png)
+   ![](../media/lab02/capd.png)
 
 1. If you tried to log in from a network with a different external IP address, this condition would match and block the login attempt.
 
@@ -231,43 +233,35 @@ After the successful test in the previous task, you can now enable the policy fo
 Make sure, that you have at least one emergency admin account that is excluded from this policy in a productive, real world scenario. 
 
 
-1. On the left naviagtion panel, navigate to **identity** > **Application**> **Enterprise applications**
+1. On the left naviagtion panel, navigate to **Enterprise apps** (1) and Click on **New application** (2).
 
-    ![](../media/lab02/Extra-01.png)
+    ![](../media/lab02/entaps.png)
 
-1. Click on **New Application**. 
+1. Seach for **salesforce** (1). Once you find it, click on **Salesforce** (2). 
 
-    ![](../media/lab02/Extra-02.png)
-
-1. Seach for **salesforce**. Once you find it, click on **Salesforce**. 
-
-    ![](../media/lab02/Extra-03.png)
+    ![](../media/lab02/slsf.png)
 
 1. click on **create**, this will add the application.
 
     ![](../media/lab02/Extra-04.png)
 
-1. Next, on the left navigation panel, navigate to **Protection** > **Conditional Access** > **Policies**.
+1. Next, on the left navigation panel, navigate to **Conditional Access** (1) > **Policies** (2) and select the policy **Block access outside Trusted Network** (3).
 
-    ![](../media/lab02/image-01.png)
+    ![](../media/lab02/slsfpol.png)
 
-1. Select the policy **Block access outside Trusted Network**.
+1. Select **Users or agents (Preview)** (1) tab.
 
-    ![](../media/lab02/image-02.png)
+1. Under **include** (2) select **All users** (3).
 
-1. Under Users select **Specific users included**.
+1. In the warning that appeared on the bottom of the window select **Exclude current user, <inject key="AzureAdUserEmail"></inject>, from this policy** (4).
 
-1. Select **All users**.
+1. Select **Save** (5).
 
-1. In the warning that appeared on the bottom of the window select **Exclude current user, <inject key="AzureAdUserEmail"></inject>, from this policy**.
-
-1. Select **Save**.
-
-    ![](../media/lab02/image-03.png)
+    ![](../media/lab02/savesls.png)
 
     >**Note**: You have now configured an active working Conditional Access policy that prevents users from logging in outside the trusted network you defined as the company's external IP address. This was tested using a limited user scope to ensure that all cloud applications remain accessible. Lastly you have rolled out the CA policy to all users.
 
-  >**Success!** You have successfully restricted access from outside the trusted network.
+    >**Success!** You have successfully restricted access from outside the trusted network.
 
 ### Task 5 - Require MFA for Salesforce
 
@@ -275,56 +269,59 @@ In this task, you create a CA policy to enforce the authentication strenth you c
 
 >**IMPORTANT**: This task will skip the testing phase. In a real world scenario you would test with a limited user scope first as seen in the previous tasks and perform a full rollout after a successful testing phase.
 
-2. On the left navigation pane, navigate to **Protection** > **Conditional Access** > **Policies**.
-3. Select **+ New policy**.
+1. On the left navigation pane, navigate to **Conditional Access** (1) > **Policies** (2).
 
-    ![](../media/lab02/image-04.png)
+1. Select **+ New policy** (3).
 
-4. Enter the name **Salesforce authentication strength**
+   ![](../media/lab02/newp.png)
 
-5. Select **0 users and groups selected**.
+1. Enter the name **Salesforce authentication strength** (1).
 
-    ![](../media/lab02/image-05.png)
+1. Select **0 users or agents (Preview) selected** (2).
 
-6. Under **Include** select **Select users and groups** and tick **Users and groups**.
+    ![](../media/lab02/sas.png)
 
-    ![](../media/lab02/image-06.png)
+1. Under **Include** (1) select **Select users and groups** (2) and check **Users and groups** (3).
 
-7. Select **Alex Wilber** from Sales as the sole test user for the policy.
+    ![](../media/lab02/ung.png)
 
-    ![](../media/lab02/image-07.png)
+1. Select **Alex Wilber** (1) as the sole test user for the policy by clicking **Select** (2).
 
-8. Select **No target resources selected** and under **Include** select **Select apps**.
+   ![](../media/lab02/awb.png)
 
-    ![](../media/lab02/image-08.png)
+8. Select **No target resources selected** (1) and under **Include** (2) select **Select resources** (3) and under specific resources click **none** (4).
 
-9. Under **Select** select **None** and search for **Salesforce**.
-10. Confirm your choice with **Select**.
+    ![](../media/lab02/tgsls.png)
 
-    ![](../media/lab02/image-09.png)
+9. Search for **Salesforce** (1) and select **Salesforce** (2).
+
+10. Confirm your choice with **Select** (3).
+
+    ![](../media/lab02/addsls.png)
+
+11. Under **Grant** select **0 controls selected** (1) and enable **Require authentication strength** (2).
+
+12. Select your custom created authentication strength **Hardened MFA** (3) and confirm with the **Select** (4) button.
+
+    ![](../media/lab02/hmfa.png)
 
 
-11. Under **Grant** select **0 controls selected** and enable **Require authentication strength**.
-12. Select your custom created authentication strength **Hardened MFA** and confirm with the **Select** button.
+13. Now set the policy to **On** (1) using the control bar at the bottom and select **Create** (2).
 
-    ![](../media/lab02/image-10.png)
-
-
-13. Now set the policy to **On** using the control bar at the bottom and select **Create**.
-
-    ![](../media/lab02/image-11.png)
+    ![](../media/lab02/mfaonh.png)
 
 
 14. After a successful testing phase with your limited user scope select **Salesforce authentication strength**.
 
-    ![](../media/lab02/image-12.png)
+    ![](../media/lab02/fullsls.png)
 
+15. For **Users or agents (Preview)** (1) tab.
 
-15. Under Users select **Specific users included**.
-16. Select **All users**.
-17. Select **Save**.
+16. Select **All users** (2).
 
-    ![](../media/lab02/image-13.png)
+17. Select **Save** (3).
+
+    ![](../media/upallapply.png)
 
     >**Success!** You have now created a CA policy to enforce your authentication strength policy to Salesforce excluding SMS OTP and therefore prevent successful attacks using SMS interception.
 
