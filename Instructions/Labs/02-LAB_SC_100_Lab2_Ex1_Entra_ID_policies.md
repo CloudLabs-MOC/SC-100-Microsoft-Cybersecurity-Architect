@@ -64,37 +64,37 @@ In this task, you will restrict the level of access a user can grant to applicat
     - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
     - **Password:** <inject key="AzureAdUserPassword"></inject>
 
-1. On the left navigation pane, navigate to **Identity** > **Applications** > **Enterprise applications** > **Security** > **Consent and permissions**.
+1. On the left navigation pane, navigate to **Entra ID** (1)> **Enterprise apps** (2)> **Security** (3)> **Consent and permissions** (4).
 
-   ![](../media/lab02/exc1-1.png)
+   ![](../media/lab02/entnav.png)
 
-1. Navigate to **Permission classifications**.
+1. Navigate to **Permission classifications** (1).
 
-1. Entra will suggest the most used permissions for **low risk** permissions.
+1. Entra will suggest the most used permissions for **low risk** (2) permissions.
 
-1. Check all these permissions and select **Yes, add selected permissions** to classify them as **low risk** in your Entra ID tenant.
+1. **Check** (3) all these permissions listed and select **Yes, add selected permissions** (4) to classify them as **low risk** in your Entra ID tenant.
 
    ![](../media/lab02/exc1-2.png)
 
-1. Navigate to **User consent settings**.
+1. Navigate to **User consent settings** (1).
 
-1. Under **User consent for applications** select the recommended option **Allow user consent for apps from verified publishers, for selected permissions**. This enables users to consent for permissions classified as "low impact" (that you previously selected), for apps from verified publishers.
+1. Under **User consent for applications** select the recommended option **Allow user consent for apps from verified publishers, for selected permissions** (2). This enables users to consent for permissions classified as "low impact" (that you previously selected), for apps from verified publishers.
 
-1. Select **Save**.
+1. Select **Save** (3).
 
-   ![](../media/lab02/exc1-3.png)
+   ![](../media/lab02/ucs.png)
 
-1. Navigate to **Admin consent settings** and enable Admin consent requests by selecting **Yes**, to allows users to request admin consent to apps they are unable to consent to.
+1. Navigate to **Admin consent settings** (1) and enable Admin consent requests by selecting **Yes** (2), to allows users to request admin consent to apps they are unable to consent to.
 
-   ![](../media/lab02/exc1-4.png)
+1. Select **+ Add users** (3) to add **Lidia Holloway** (4) and **ODL_User <inject key="DeploymentID" enableCopy="false"/>** (5) as users that can review admin consent requests by clicking **Select** (6).
 
-1. Select **+ Add users** to add **`Lidia Holloway`** and **ODL_User <inject key="DeploymentID" enableCopy="false"/>** as users that can review admin consent requests.
+   ![](../media/lab02/acs.png)
 
-   ![](../media/lab02/exc1-5.png)
+   ![](../media/lab02/userslc.png)
 
 1. Select **Save** on the **Admin consent settings** window.
 
-   ![](../media/lab02/exc1-6.png)
+   ![](../media/lab02/saveacs.png)
 
 1. Keep this browser tab open for the next task.
 
@@ -104,34 +104,32 @@ In this task, you will restrict the level of access a user can grant to applicat
 
 In this task, you will use the Entra ID portal to create an own Authentication strength to restrict the use of SMS OTP within your organization. 
 
-1. On the left navigation pane, navigate to **Protection** > **Authentication methods** > **Authentication strengths**.
+1. On the left navigation pane scroll down and navigate to **Authentication methods** (1)> **Authentication strengths** (2) and Select **+ New authentication strength** (3) .
 
-   ![](../media/lab02/exc1-7.png)
+   ![](../media/lab02/authm.png)
 
-1. Select **+ New authentication strength**.
+1. Enter the name **Hardened MFA** (1).
 
-1. Enter the name **Hardened MFA**.
+1. Check **Phishing-resistant MFA** (2), **Passwordless MFA** (3) and **Multifactor authentication** (4) .
 
-1. Check **Phishing-resistant MFA**, **Passwordless MFA** and **Multifactor authentication**.
+   ![](../media/lab02/hardmf.png)
 
-   ![](../media/lab02/exc1-8.png)
+1. Under Multifactor authentication **uncheck** the following:
+   - **Temporary Access Pass (Multi-use)** (1)
+   - **Password + SMS** (2)
+   - **Password + Voice** (3)
+   - **Federated Single factor + SMS** (4)
+   - **Federated Single factor + Voice** (5)
 
-1. Under Multifactor authentication uncheck the following:
-   - **Temporary Access Pass (Multi-use)**
-   - **Password + SMS**
-   - **Password + Voice**
-   - **Federated Single factor + SMS**
-   - **Federated Single factor + Voice**.
+     ![](../media/lab02/unchk.png)
 
-     ![](../media/lab02/exc1-9.png)
-
-1. Select **Next**.
+1. Select **Next** (6).
 
 1. Review and check, that none of the above factors are left in the authentication strength.
 
 1. Select **Create**.
 
-    ![](../media/lab02/exc1-10.png)
+    ![](../media/lab02/hrdcreate.png)
 
    >**Success!** You have now created an authentication strength that restricts the use of SMS OTP as an authentication factor.
 
