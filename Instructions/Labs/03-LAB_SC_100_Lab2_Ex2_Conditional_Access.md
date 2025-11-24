@@ -168,14 +168,6 @@ As you have successfully created a trusted network you will now use this to crea
 
     ![](../media/lab02/createcap.png)
 
-
-**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
-  
-<validation step="7c8f6a2e-4399-41fe-8514-52be854527f3" />
-
   >**Success!** You have now created and enabled your CA policy to restrict access outside trusted networks only affecting your own test user account.
 
 ### Task 3 - Test the configured Policy
@@ -323,7 +315,14 @@ In this task, you create a CA policy to enforce the authentication strenth you c
 
     ![](../media/upallapply.png)
 
-    >**Success!** You have now created a CA policy to enforce your authentication strength policy to Salesforce excluding SMS OTP and therefore prevent successful attacks using SMS interception.
+**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
+  
+<validation step="7c8f6a2e-4399-41fe-8514-52be854527f3" />
+
+   >**Success!** You have now created a CA policy to enforce your authentication strength policy to Salesforce excluding SMS OTP and therefore prevent successful attacks using SMS interception.
 
 
 ### Review
