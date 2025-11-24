@@ -57,21 +57,25 @@ In order to control the use of application on users company owned devices you mu
 
    - **Password:** <inject key="AzureAdUserPassword"></inject>
 
-1. In the Microsoft Defender portal, expand **Hunting** (1) and select **Advanced Hunting** (2). Wait for the completion of the new spaces preparation. This step is only for the purpose of setting up the new spaces, there is no hunting in this step.
-   ![](../media/lab02/1.png)
+1. In the Microsoft Defender portal, expand **Investigation & response** (1) > **Hunting** (2) and select **Advanced Hunting** (3).This step is only for the purpose of setting up the new spaces, there is no hunting in this step.
 
-1. In the Microsoft Defender portal, in the left navigation page and select **Settings** (1).
+   ![](../media/upadv.png)
 
-1. On the **Settings** page select **Endpoints** (2).
+   > **NOTE**: Wait for the completion of the new spaces preparation.
 
-   ![](../media/lab02/2.png)
+1. In the Microsoft Defender portal, in the left navigation page under **System** (1) select **Settings** (2).
+
+1. On the **Settings** page select **Endpoints** (3).
+
+   ![](../media/endpt.png)
 
    > **NOTE**: It can take anywhere from 10 minutes to 1 hour for this option to appear. If after 10 minutes, you don't see it, continue with another exercise and then come back to this step.
 
 1. Under **Endpoints**, select **Advanced features** (1). Scroll down until you see Microsoft Defender for Cloud Apps. Select the slider to set it to **On** (2).
+
 1. At the bottom of the page, select **Save preferences** (3).
 
-   ![](../media/lab02/3.png)
+   ![](../media/savepref.png)
 
    >**Success!** You have successfully enabled Microsoft Defender for Cloud Apps for Endpoints. With this set-up all signals coming from Microsoft Defender for Endpoints are forwarded to Defender for Cloud Apps giving you the ability to block unsecure applications. All applications tagged as **Unsanctoned** will now be blocked.
 
@@ -79,9 +83,9 @@ In order to control the use of application on users company owned devices you mu
 
 In this task, you will analyze all the applications currently used in your company. You will take a closer look at various applications and their respective risk assessment as well as their assessment structure.
 
-1. In the Microsoft Defender portal, in the left navigation page expand **Cloud apps** and select **Cloud app catalog** (1).
+1. In the Microsoft Defender portal, in the left navigation page expand **Cloud apps** (1) and select **Cloud app catalog** (2).
 
-   ![](../media/lab02/4.png)
+   ![](../media/lab02/cac.png)
 
 1. The **Cloud app catalog** blade displays all applications currently utilized within your organization. Explore multiple applications and their associated risk scores by selecting each respective application.
 
@@ -93,12 +97,13 @@ In this task, you will analyze all the applications currently used in your compa
 
 Once you have successfully gained an overview of the use of applications in your environment, your first remediation action is to block unsafe applications.
 
-1. In the Microsoft Defender portal, in the left navigation page expand **Cloud apps** and select **Cloud app catalog** (1).
-1. Set the filter for **Risk score** to 0 - 4 (2).
-1. Select **Bulk selection** (3) then select **All in page** (4).
-1. Select **Tag as unsanctioned** (5).
+1. On the **Cloud app catalog** page Set the filter for **Risk score** to 0 - 4 (1).
 
-   ![](../media/lab02/5.png)
+1. Select **All apps** then then click on **Tag app** (2).
+
+1. Select **Tag as unsanctioned** (3).
+
+   ![](../media/lab02/tasc.png)
 
    >**Success!** You have successfully blocked vulnerable applications from being used by users.
 
@@ -106,23 +111,28 @@ Once you have successfully gained an overview of the use of applications in your
 
 In order to automatically block unsafe applications in the future, you will create a custom app discovery policy. This policy will tag unsafe applications as **Unsanctioned**. As you have integrated Defender for Endpoint with Defender for Cloud Apps, these applications will be blocked automatically.
 
-1. In the Microsoft Defender portal, in the left navigation page expand **Cloud apps** and select **Cloud app catalog**.
-1. On the **Cloud app catalog** page select **+ New policy from search**.
+1. In the Microsoft Defender portal, in the left navigation page expand **Cloud apps** (1) and select **Cloud app catalog** (2).
 
-   ![](../media/lab02/6.png)
+1. On the **Cloud app catalog** page select **+ New policy from search** (3).
+
+   ![](../media/lab02/npfs.png)
 
 1. Enter the following information:
    - **Policy Name**: Tag unsafe apps as unsanctioned (1)
    - **Policy severity**: Medium (2)
    - **Description for users**: Applications with a risk score of 4 or lower will be unsanctioned and blocked automatically (3).
+
 1. Under **Apps matching all of the following** add a filter and set it to **Risk score equals 0-4** (4).
 
-    ![](../media/lab02/7.png)
+   ![](../media/lab02/adp1.png)
+
 1. Under **Alerts** select **Create an alert for each matching event with the policy's severity** (5) and set the value for **Daily alert limit per policy** to 5 (6).
+
 1. Under **Governance actions** select **Tag app as unsanctioned** (7).
+
 1. Select **Create** (8).
 
-    ![](../media/lab02/8.png)
+    ![](../media/lab02/adp2.png)
 
     >**Success!** You have successfully created a policy to tag applications with a risk score of 5 or lower as unsanctioned.
 
