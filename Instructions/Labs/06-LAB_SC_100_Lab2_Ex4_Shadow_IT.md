@@ -59,15 +59,15 @@ In order to control the use of application on users company owned devices you mu
 
 1. In the Microsoft Defender portal, expand **Investigation & response** (1) > **Hunting** (2) and select **Advanced Hunting** (3).This step is only for the purpose of setting up the new spaces, there is no hunting in this step.
 
-   ![](../media/lab02/nohunt.png)
+   ![](../media/upadv.png)
 
    > **NOTE**: Wait for the completion of the new spaces preparation.
 
-1. In the Microsoft Defender portal, in the left navigation page and select **Settings** (1).
+1. In the Microsoft Defender portal, in the left navigation page under **System** (1) select **Settings** (2).
 
-1. On the **Settings** page select **Endpoints** (2).
+1. On the **Settings** page select **Endpoints** (3).
 
-   ![](../media/lab02/2.png)
+   ![](../media/endpt.png)
 
    > **NOTE**: It can take anywhere from 10 minutes to 1 hour for this option to appear. If after 10 minutes, you don't see it, continue with another exercise and then come back to this step.
 
@@ -75,7 +75,7 @@ In order to control the use of application on users company owned devices you mu
 
 1. At the bottom of the page, select **Save preferences** (3).
 
-   ![](../media/lab02/3.png)
+   ![](../media/savepref.png)
 
    >**Success!** You have successfully enabled Microsoft Defender for Cloud Apps for Endpoints. With this set-up all signals coming from Microsoft Defender for Endpoints are forwarded to Defender for Cloud Apps giving you the ability to block unsecure applications. All applications tagged as **Unsanctoned** will now be blocked.
 
