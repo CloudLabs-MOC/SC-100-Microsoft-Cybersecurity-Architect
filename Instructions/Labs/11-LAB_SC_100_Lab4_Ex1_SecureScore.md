@@ -85,44 +85,44 @@ In this task, you'll set up custom role focused on security posture and more spe
 
 1. Click **Continue** on the **Add Windows devices and Apply security settings** page, and then click **Submit**.
 
-1. Under **Microsoft Defender XDR(1)**, select **Roles**.
+1. Scroll down from the left navigation panel  to **System** (1) and select **Permissions** (2) and under **Microsoft Defender XDR(1)**, select **Roles** (3).
 
-   ![](../media/lab4/1.png)
+   ![](../media/lab4/up1.png)
 
 1. Select **Create custom role**.
 
    ![](../media/lab4/2.png)
 
-1. In the Role name field, enter **`SecureScore Manager`** then select **Next**.
+1. In the Role name field, enter **`SecureScore Manager`** (1) then select **Next** (2).
 
-   ![](../media/lab4/3.png)
+   ![](../media/lab4/up3.png)
 
-1. Select **Security posture**.
+1. Select **Security posture** (1).
 
 1. In the Security posture window:
 
-   - Select **Select custom permissions**
-   - Under Posture management select **Select custom permissions**
-   - Choose **Exposure Management (manage)**
-   - Select **Apply**.
-   - Select **Next**.
+   - Select **Select custom permissions** (2)
+   - Under Posture management select **Select custom permissions** (3)
+   - Choose **Exposure Management (manage)** (4)
+   - Select **Apply** (5).
+   - Select **Next** (6).
 
-   ![](../media/lab4/4.png)
+   ![](../media/lab4/up4.png)
 
 1. On the **Assign users and data sources** page, select **Add assignment** then populate the fields as follows then click on **Next**:
 
    ![](../media/lab4/5.png)
 
-   - Assignment name: **`ExposureManagement`**
-   - Assign users and group: Enter **`Joni Sherman`**, then select it.
-   - Under **Data sources**, select the drop-down menu to see a list of the available data-sources. Select only **Microsoft Security Exposure Management**. If other data sources are listed, unselect them.
-   - Select, **Add**.
+   - Assignment name: **`ExposureManagement`** (1)
+   - Assign users and group: Enter **`Joni Sherman`** (2), then select it.
+   - Under **Data sources**, select the drop-down menu to see a list of the available data-sources. Select only **Microsoft Security Exposure Management** (3). If other data sources are listed, unselect them.
+   - Select, **Add** (4).
 
-     ![](../media/lab4/6.png)
+     ![](../media/lab4/up6.png)
 
 1. In the Review and finish page review your settings, select **Submit**, then select **Done**.
 
-   ![](../media/lab4/submit.png)
+   ![](../media/lab4/upsubmit.png)
 
 1. You should be on the **Permissions and roles** page and see the custom role you just created. Keep this tab open, you'll come back to it in the next task.
 
@@ -148,7 +148,7 @@ In this task you´ll explore the page where workloads are activated.
 
 1. Note the description under **Activate unified role-based access control**. When you activate some or all of your workloads to use the new permission model, the roles and permissions for these workloads are fully controlled by the Microsoft Defender XDR Unified RBAC model in the Microsoft Defender portal.
 
-   ![](../media/lab4/9.png)
+   ![](../media/lab4/aurbc.png)
 
 1. For this exercise, the data source for Exposure Management is enabled by default, which is why there is no setting to enable that workload. If you had created a custom role that included permissions for other workloads, such as Office 365 or Device and Vulnerability Management, as examples, then you would need to activate those specific workloads to activate the custom role, as part of unified RBAC.
 
@@ -158,9 +158,9 @@ In this task you´ll explore the page where workloads are activated.
 
 In this task, you will share a **Microsoft Secure Score recommended action** by posting it on a **Teams channel**. Users in the channel will see the notice but won't be able to edit the status or manage the action. Only **Joni Shermann**, a member with the necessary role permissions, will have access to the recommended action.
 
-1. On the left navigation pane, expand **Exposure management** then select **Secure Score**.
+1. On the left navigation pane, expand **Exposure management** (1) then select **Secure Score** (2).
 
-1. If a pop-up page appears with the message **Welcome to Microsoft Defender for Business**, click **Get Started** and follow steps 4 and 5. If it does not appear, proceed directly to step 6.
+1. If a pop-up page appears with the message **Welcome to Microsoft Defender for Business**, click **Get Started** and follow steps 4 and 5. **If it does not appear, proceed directly to step 6.**
 
    ![](../media/lab4/getstarted.png)
 
@@ -168,13 +168,15 @@ In this task, you will share a **Microsoft Secure Score recommended action** by 
 
 1. Click **Continue** on the **Add Windows devices and Apply security settings** page, and then click **Submit**.
 
-1. Select the **Recommended actions** tab.
+1. Select the **Recommended actions** (3) tab.
 
-1. Select any **Recommended actions** with a status of **To address**
+1. Select any **Recommended actions** (4) with a status of **To address**
 
-   ![](../media/lab4/t31.png)
+   ![](../media/lab4/expss.png)
 
-1. Select **Share**, and in the dropdown menu select **Microsoft Teams**.
+   ![](../media/lab4/upslctteams.png)
+
+1. Select **Share** (5), and in the dropdown menu select **Microsoft Teams** (6).
 
 1. In field **Team** select **Mark 8 Project Team (1)** and in the **Channel** field select **Channel Research and Development (2)**.
 
