@@ -176,52 +176,60 @@ In this task, you will create a **retention label** with a **10-year retention p
 
 1. On the **Name your retention label** page enter the following information:
 
-    - Name: **`German financial data`**
-    - Description for users: **`This label retains all German financial data for 10 years.`**
-    - Description for admins: **`The label retains all financial data for 10 years and it is automatically applied.`**
+    - Name: **`German financial data`** (1)
+    - Description for users: **`This label retains all German financial data for 10 years.`** (2)
+    - Description for admins: **`The label retains all financial data for 10 years and it is automatically applied.`** (3)
 
-1. Select **Next**.
+1. Select **Next** (4).
 
-    ![altext](../media/lab3/image-46.png)
+    ![altext](../media/lab3/rtlbl.png)
 
-1. On the **Define label settings** page select **Enforce actions after a specific period** and select **Next**.
+1. On the **Define label settings** page select **Enforce actions after a specific period** (1) and select **Next** (2).
+
+    ![altext](../media/lab3/easp.png)
 
 1. On the **Define the period** page enter the following information:
 
-    - How long is the period?: **10 years**
-    - When should the period begin?: **When items were created**
+    - How long is the period?: **10 years** (1)
+    - When should the period begin?: **When items were created** (3)
 
-1. Select **Next**.
+1. Select **Next** (3).
 
-1. On the **Choose what happens after the period** page select **Delete items automatically**. Click **Next**.
+    ![altext](../media/lab3/dtp.png)
 
-    ![altext](../media/lab3/image-47.png)
+1. On the **Choose what happens after the period** page select **Delete items automatically** (1). Click **Next** (2).
+
+    ![altext](../media/lab3/autodel.png)
 
 1. On the **Review and finish** page select **Create label**.
 
-1. On the **Your retention label is created** page select **Auto-apply this label to a specific type of content** and select **Done**.
+1. On the **Your retention label is created** page select **Auto-apply this label to a specific type of content** (1) and select **Done** (2).
+
+    ![altext](../media/lab3/spcont.png)
 
 1. On the **Let´s get started** page enter the following information:
 
-    - Name: **`Automatically retain all German financial data for 10 years`**
-    - Descriptions: **`This policy auto-applies the label German financial data.`**
+    - Name: **`Automatically retain all German financial data for 10 years`** (1)
+    - Descriptions: **`This policy auto-applies the label German financial data.`** (2)
 
-1. Select **Next**.
+1. Select **Next** (3).
 
-    ![altext](../media/lab3/image-48.png)
+    ![altext](../media/lab3/lgs.png)
 
 1. On the **Choose the type of content you want to apply this label to** page select **Apply label to content that contains
 sensitive info** and select **Next**.
 
-1. On the **Content that contains sensitive info** page set the filter to **Germany** and select **Financial** and then **Germany Financial Data** then select **Next**.
+1. On the **Content that contains sensitive info** page set the filter to **Germany** (1) and select **Financial** (2) and then **Germany Financial Data** (3) then select **Next** (4).
 
-    ![altext](../media/lab3/image-49.png)
+    ![altext](../media/lab3/sengen.png)
 
 1. On the **Define content that contains sensitive info** page, leave all existing settings (no change) and select **Next**.
 
 1. On the **Policy scope** page select **Next**.
 
 1. On the **Choose the type of retention policy to create**, page select **Static**.
+
+    ![altext](../media/lab3/static1.png)
 
 1. On the **Choose where to automatically apply the label** page enable following locations:
 
@@ -232,15 +240,15 @@ sensitive info** and select **Next**.
 
 1. Select **Next**.
 
-1. On the **Choose a label to auto-apply** page make sure that the  **German Financial Data** label is already present. Otherwise add it using the **+ Add label** button. Select **Next**.
+1. On the **Choose a label to auto-apply** page make sure that the  **German Financial Data** (1) label is already present. Otherwise add it using the **+ Add label** button. Select **Next** (2).
 
-    ![altext](../media/lab3/image-50.png)
+    ![altext](../media/lab3/alabel.png)
 
 1. On the **Decide whether to test or run your policy** page select **Turn on policy** then select **Next**.
 
 1. On the **Review and finish** page select **Submit** then select **Done**.
 
-    ![altext](../media/lab3/image-51.png)
+    ![altext](../media/lab3/alpdone.png)
 
     >**Success!** You have successfully created and auto-applied a retention label.
 

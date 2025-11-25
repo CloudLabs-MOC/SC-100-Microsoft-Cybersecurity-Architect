@@ -210,7 +210,7 @@ setting to **Full directory** and select **Next**.
 
 1. On the **Choose the type of retention policy to create** page, select **Static** (1) and select **Next** (2).
 
-    ![altext](../media/lab3/static.png)
+    ![altext](../media/lab3/static1.png)
 
 1. On the **Choose where to automatically apply the label**, verify the status is set to **On** for all available
 locations then select **Next**.
