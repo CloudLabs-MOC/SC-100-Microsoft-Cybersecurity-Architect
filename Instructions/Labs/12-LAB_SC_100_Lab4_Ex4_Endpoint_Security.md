@@ -250,29 +250,36 @@ In this task you will encrypt macOS devices.
 
 1. On the **Configuration settings** blade under **Encryption** configure the following settings:
 
-   - Enable FileVault: **Yes (1)**
-   
-   - Personal recovery key rotation: **6 months (2)**
-   
-   - Escrow location description of personal recovery key: **`To recover a lost or recently rotated recovery key, log in to the Intune Company Portal website using any device. Navigate to the Devices section within the portal, choose the device with FileVault enabled, and then select the option to retrieve the recovery key. The portal will display the current recovery key for that device.` (3)**
-   
-   - Number of times allowed to bypass: **3 (4)**
-   
-   - Allow deferral until sign out: **Yes (5)**
-   
-   - Disable prompt at sign-out: **Yes (6)**
-   
-   - Hide recovery key: **Yes**
-   
-   - Select **Next**.
+    - Escrow location description:  
+  **`To recover a lost or recently rotated recovery key, log in to the Intune Company Portal website using any device. Navigate to the Devices section within the portal, choose the device with FileVault enabled, and then select the option to retrieve the recovery key.`** (1)
 
-   ![](../media/lab4/lab4i7.png)
+    - Defer: **Enabled** (2)
+
+    - Defer Don’t Ask At User Logout: **Enabled** (3)
+
+    - Defer Force At User Login Max Bypass Attempts: **Configured** (4)
+
+    - Number of bypass attempts: **3** (5)
+
+    - Enable FileVault: **On** (6)
+
+    - Recovery Key Rotation in Months: **6 months** (7)
+
+    - Use Recovery Key: **Enabled** (8)
+
+    - Select **Next**. (9)
+
+        ![](../media/lab4/diskconfig.png)
 
 1. On the **Scope tags** blade select **Next**.
 
-1. On the **Assignments** blade, under **Included groups** select **Add all users** then select **Next**.
+1. On the **Assignments** blade, under **Included groups** select **Add all users** (1) then select **Next** (2).
+
+    ![](../media/lab4/diskusr.png)
 
 1. On the **Review + create** blade select **Create**.
+
+    ![](../media/lab4/diskdone.png)
 
    >**Success!** You have successfully configured and deployed a FileVault profile to encrypt macOS devices.
 
