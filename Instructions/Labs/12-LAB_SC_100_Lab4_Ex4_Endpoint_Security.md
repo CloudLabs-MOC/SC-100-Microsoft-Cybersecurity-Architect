@@ -81,9 +81,9 @@ In this task, you will create **endpoint security baseline policies** for **Wind
 
 1. On the **Basics** blade enter:
 
-    1. Name: **`Secure Windows Endpoints`** (1)
+    - Name: **`Secure Windows Endpoints`** (1)
 
-    1. Description: **`The Security Baseline for Windows 10 and later represents the recommendations for configuring Windows.`** (2).
+    - Description: **`The Security Baseline for Windows 10 and later represents the recommendations for configuring Windows.`** (2).
 
 1. Select **Next** (3).
 
@@ -116,8 +116,8 @@ In this task, you will create **endpoint security baseline policies** for **Wind
     ![](../media/lab4/cpdef.png)
 
 1. On the **Basics** blade enter:
-    1. Name: **`Defender for Endpoint Security Baseline`** (1)
-    1. Description: **`Security best practices for the Microsoft security stack on devices managed by Intune.`** (2)
+    - Name: **`Defender for Endpoint Security Baseline`** (1)
+    - Description: **`Security best practices for the Microsoft security stack on devices managed by Intune.`** (2)
 
 1. Select **Next** (3).
 
@@ -159,9 +159,9 @@ In this task, after securing **Windows devices** with endpoint security baseline
 
 1. On the **Basics** blade enter:
 
-    1. Name: **`Deploy antivirus on macOS devices`** (1)
+    - Name: **`Deploy antivirus on macOS devices`** (1)
     
-    1. Description: **`Deploy antivirus and enable encryption on macOS devices to prepare your environment for merging with Tailwind Traders.`** (2)
+    - Description: **`Deploy antivirus and enable encryption on macOS devices to prepare your environment for merging with Tailwind Traders.`** (2)
 
 1. Select **Next** (3).
 
@@ -242,9 +242,9 @@ In this task you will encrypt macOS devices.
 
 1. On the **Basic** blade enter:
 
-    1. Name: **`Encrypt macOS devices`** (1)
-    1. Description: **`FileVault provides built-in Full Disk Encryption for macOS devices.`** (2)
-    1. Select **Next**. (3)
+    - Name: **`Encrypt macOS devices`** (1)
+    - Description: **`FileVault provides built-in Full Disk Encryption for macOS devices.`** (2)
+    - Select **Next**. (3)
 
     ![](../media/lab4/diskbasic.png)
 
