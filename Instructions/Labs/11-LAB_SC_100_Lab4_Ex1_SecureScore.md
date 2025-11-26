@@ -182,7 +182,7 @@ In this task, you will share a **Microsoft Secure Score recommended action** by 
 
 1. Select **Post message to Teams (3)**.
 
-   ![](../media/lab4/teamch.png)
+   ![](../media/lab4/upmark8.png)
 
 Joni Sherman and her Mark 8 Project Team will be notified about the recommended action in the Teams channel.
 
@@ -196,31 +196,33 @@ In this task, you´ll manage recommended action and document your solutions.
    - **Email/Username:** **<inject key="User 01 UPN"></inject>**
    - **Password:** **<inject key="User 01 Password"></inject>**
 
-1. If the landing page appears blurred out, refresh the page.
+   >**Note :** Close the **Welcome to your Microsoft 365 Copilot app** pop-up by clicking **X** from top right corner. 
+   
+   ![](../media/lab4/365pop.png)
 
-1. Select the app launcher icon, located to the left of the top banner that says Contoso Electronics, and select **Teams**.
+1. From the left navigation pane of M365 Copilot select **Apps** (1) and then select **Teams** (2).
 
-   ![](../media/lab4/12.png)
+   ![](../media/lab4/jsteam.png)
 
 1. On the Welcome to Teams window, select **Get Started**. It may take a minute or two for Teams to set up. If a Teams for Mobile QR-code screen pops-up, close it.
 
-1. Open Teams. For the **Mark 8 Project Team** select **See all channels** then select **Research and Development**.
+1. Open Teams. For the **Mark 8 Project Team** (1) select **See all channels** then select **Research and Development** (2).
 
-1. Review the message posted from the previous task.
+1. Review the **message posted** (3) from the previous task.
 
-1. From the posted message, select the link. Because you, Joni Shermann, have been granted permission through the custom role, you are able to access Secure Score. Other members of the Mark 8 project team can see teh post, but do not have access to Secure Score.
+1. From the posted message, select the **link** (4). Because you, Joni Shermann, have been granted permission through the custom role, you are able to access Secure Score. Other members of the Mark 8 project team can see teh post, but do not have access to Secure Score.
 
-   ![](../media/lab4/t3i2.png)
+   ![](../media/lab4/post.png)
 
-1. Select **Edit status & action plan**.
+1. Select **Edit status & action plan** (1).
 
-   ![](../media/lab4/t3i3.png)
+1. Check **Resolved through third party** (2).
 
-1. Check **Resolved through third party**.
+1. Add a note **Currently secured** (3) to the **Action plan** field.
 
-1. Add a note **Currently secured** to the **Action plan** field.
+1. Select **Save and Close** (4).
 
-1. Select **Save and Close**.
+   ![](../media/lab4/js.png)
 
 1. Close the inPrivate browser tabs.
 
@@ -234,19 +236,23 @@ In this task, Adele Vance access the Mark 8 Project Team channel and selects the
    - **Email/Username:** **<inject key="User 02 UPN"></inject>**.
    - **Password:** **<inject key="User 02 Password"></inject>**
 
-1. If the landing page appears blurred out, refresh the page.
+   >**Note :** Close the **Welcome to your Microsoft 365 Copilot app** pop-up by clicking **X** from top right corner.
 
-1. Select the app launcher icon, located to the left of the top banner that says Contoso Electronics, and select **Teams**.
+   ![](../media/lab4/365pop.png)
+
+1. From the left navigation pane of M365 Copilot select **Apps** (1) and then select **Teams** (2).
+
+   ![](../media/lab4/advteam.png)
 
 1. On the Welcome to Teams window, select **Get Started**.
 
-1. Open Teams. For the **Mark 8 Project Team** select **See all channels** then select **Research and Development**.
+1. Open Teams. For the **Mark 8 Project Team** (1) select **See all channels** then select **Research and Development** (2).
 
-1. Review the message posted from the previous task.
+1. Review the **message posted** (3) from the previous task.
 
-1. Select the link in the posted message
+1. From the posted message, select the **link** (4).
 
-   ![](../media/lab4/t3i4.png)
+   ![](../media/lab4/post.png)
 
 1. You are taken directly to Microsoft Secure Score, but you don't have permission to access this data, as Adele Vance was not added as a member to the custom role that you created.
 
