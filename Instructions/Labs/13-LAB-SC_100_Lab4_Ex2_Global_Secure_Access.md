@@ -76,11 +76,11 @@ In this task, you will activate **Global Secure Access** in your tenant as the f
 
 1. If you see an information box on the top right of the screen that says **Manage multifactor authentication**, close it by selecting the **X**.
 
-1. In the left navigation pane expand **Global Secure Access** and select **Dashboard**.
+1. In the left navigation pane expand **Global Secure Access** (1) and select **Dashboard** (2).
 
-1. Under **Activate Global Secure Access in your Tenant** select **Activate**.
+1. Under **Activate Global Secure Access in your Tenant** select **Activate** (3).
 
-   ![](../media/lab4/16.png)
+   ![](../media/lab4/activategs.png)
     
    >**Success!** You have successfully activated Global Secure Access.
 
@@ -98,19 +98,19 @@ In this task, you will install the **Private Network Connector** on a Windows Se
 
     ![](../media/lab4/13.png)
     
-1. From within the VM, you'll open Notepad. In the taskbar's search field, type **`Notepad`**, then select **Notepad** to open the application.
+1. From within the VM, you'll open Notepad. In the taskbar's search field, type **`Notepad`** (1), then select **Notepad** (2) to open the application.
 
-    ![](../media/lab4/14.png)
+    ![](../media/lab4/up14.png)
 
 1. Use **Ctrl + v** to paste the code into Notepad.  Do NOT change anything in the pasted code. The first line of code is required.
 
-1. From Notepad, select **File** then select **Save as**. 
+1. From Notepad, select **File** (1) then select **Save as** (2). 
 
-    ![](../media/lab4/15.png)
+    ![](../media/lab4/up15.png)
 
-1. In the **Save as type** field, select **All files** from the drop-down, and in the **File name** field enter **`EnableTLS.reg`**, then select **Save**.  It's important that you save the file with the .reg extension. Take note of where the document is saved then close Notepad.
+1. In the **Save as type** field, select **All files** from the drop-down, and in the **File name** field enter **`EnableTLS.reg`** (1), then select **Save** (2). It's important that you save the file with the .reg extension. Take note of where the document is saved then close Notepad.
 
-   ![](../media/lab4/17.png)
+   ![](../media/lab4/up17.png)
 
 1. From the taskbar, open **File Explorer** and navigate to the folder where you saved the file (the default is This PC > Documents).
 
@@ -118,15 +118,15 @@ In this task, you will install the **Private Network Connector** on a Windows Se
 
     ![](../media/lab4/18.png)
 
-1. Because you are changing the registry file, you are asked, **Are you sure you want to continue?**  Select **Yes**, then select **Ok**. 
+1. Because you are changing the registry file, you are asked, **Are you sure you want to continue?**  Select **Yes** (1), then select **Ok** (2). 
 
-    ![](../media/lab4/19.png)
+    ![](../media/lab4/up19.png)
 
- 1. Since you updated the registry, you'll need to restart the server. From the taskbar of the Server VM, select the  **Windows icon**, select **Power**, select **Restart** and select **Continue**.
+ 1. Since you updated the registry, you'll need to restart the server. From the taskbar of the Server VM, select the  **Windows icon** (1), select **Power**, select **Restart** (2) and select **Continue**.
 
-    ![](../media/lab4/20.png)
+    ![](../media/lab4/up20.png)
 
-1. After the restart click on **reconnect**, log back in to the Server VM, as the local **Administrator** and password **Pa55w.rd** .
+1. After the restart click on **reconnect**, log back in to the Server VM, as the local **Administrator** and password **Password.1!!** .
 
 1. Minimize or close Server Manager.
 
@@ -134,12 +134,12 @@ In this task, you will install the **Private Network Connector** on a Windows Se
 
 1. Dismiss the dialog boxes, as you did in the previous task.
 
-1. From the left navigation panel, expand **Global Secure Access**, expand **Connect**, and select **Connectors**.
+1. From the left navigation panel, expand **Global Secure Access**, expand **Connect** (1), and select **Connectors and sensors** (2).
 
-1. From the top of the Private Network connectors page, select **Download connector service**.
+1. From the top of the Private Network connectors page, select **Download connector service** (3).
 1. Review the information then select **Accept terms & Download**.
 
-    ![](../media/lab4/21.png)
+    ![](../media/lab4/dcsrvc.png)
 
 1. From the downloads window on the top right corner of the page, when the download is complete, select **Open file**.  If the downloads window closed before you were able to select Open file, select **File explorer** from the taskbar, go to the **Downloads** folder, then run the file **MicrosoftEntraPrivateNetworkConnectorInstaller**.
 
@@ -171,7 +171,7 @@ In this task, you will install the **Private Network Connector** on a Windows Se
 
 1.  Make note of the private ip address for your server, then close the Command Prompt window. You've successfully installed the private network connector on your on-premise server.
 
-    ![](../media/lab4/28.png)
+    ![](../media/lab4/up28.png)
 
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -197,11 +197,11 @@ In this task, you´ll create an SMB Share on the on-premise file server that wil
 
     ![](../media/lab4/31.png)
 
-1. From the dropdown, select **Everyone** and select **Add**.
+1. From the dropdown, select **Everyone** (1) and select **Add** (2).
 
    ![](../media/lab4/32.png)
 
-1. Select **Share**.
+1. Select **Share** (3).
 
 1. Select **No, make the network that I am connected to a private network**.
 
@@ -219,28 +219,27 @@ In this task, you will configure **Quick Access** to secure private resources, s
 
 You will enable **Quick Access**, create an enterprise application to secure the resources, and assign it to your test users for access.
 
-1. Naviaget back to **Entra Admin Center** and in the left navigation pane expand **Global Secure Access**, expand **Applications**, then select **Quick Access**. Enter the following information:
+1. Naviaget back to **Entra Admin Center** and in the left navigation pane expand **Global Secure Access** (1), expand **Applications** (2), then select **Quick Access** (3). Enter the following information:
 
-    - Name: **`SMB to ContosoFS`**
-    - Connector Group: **Default**
+    - Name: **`SMB to ContosoFS`** (4)
+    - Connector Group: **Default** (5)
 
-1. Select **Add Quick Access application segment** and fill in the following information:
+1. Select **Add Quick Access application segment** (6) and fill in the following information:
 
-    - Destination type: **IP address**
-    - IP address: the private IP address of your server that you noted in the earlier step,
-    - Ports: **`445`**
+    - Destination type: **IP address** (7)
+    - IP address: the **private IP address** (8) of your server that you noted in the earlier step 
+    - Ports: **`445`** (9)
+    - Protocol: **TCP** (10)
 
-1. Select **Apply**.
+1. Select **Apply** (11).
 
-   ![](../media/lab4/34.png)
+   ![](../media/lab4/smbcon.png)
 
-1. Select **Save**. Once you see the status field for the application segment show success, refresh the browser page. Upon refreshing the page, you're taken to the **Quick Access | Network access properties** page.
+1. Select **Save** (12). Once you see the status field for the application segment show success, refresh the browser page. Upon refreshing the page, you're taken to the **Quick Access | Network access properties** page.
 
-1. On the left select **User and groups**.
+1. **Alternatively** you can navigate to **Enterprise apps** (1) and select **SMB to ContosoFS** and then selecting **Users and groups** (2) and click **+ Add user/group** (3)
 
-1. Select **Add user/group**.
-
-   ![](../media/lab4/35.png)
+   ![](../media/lab4/usrgrp.png)
 
 1. Select **None Selected**.
 
@@ -248,11 +247,11 @@ You will enable **Quick Access**, create an enterprise application to secure the
 
 1. From the bottom of the page, press **Select**.
 
-    ![](../media/lab4/36.png)
+    ![](../media/lab4/slctodl.png)
 
 1.  On Add Assignment page, select **Assign**.
 
-    ![](../media/lab4/37.png)
+    ![](../media/lab4/assodl.png)
 
     >**Success!** You have successfully enabled quick access for your test user.
 
@@ -270,15 +269,15 @@ In this task, you will join the client endpoint, **LON-SC2 VM**, to **Microsoft 
 
 1. In the **Windows Settings** page, select **Accounts**.
 
-     ![](../media/lab4/settingpage.png)
+     ![](../media/lab4/acts.png)
 
-1. From the Accounts page from the left navigation pane, select  **Access work or school**.
+1. From the Accounts page from the left navigation pane, select  **Access work or school** (1).
 
-     ![](../media/lab4/access.png)
+1. To add a work or school account select **Connect** (2).
 
-1. To add a work or school account select **Connect**.
+1. From the bottom of the window, select **Join this device to Microsoft Entra ID** (3).
 
-1. From the bottom of the window, select **Join this device to Microsoft Entra ID**.
+    ![](../media/lab4/wsentra.png)
 
 1. Sign in with your **ODL_USER** admin credentials provided by the lab provider.
 
@@ -287,17 +286,19 @@ In this task, you will join the client endpoint, **LON-SC2 VM**, to **Microsoft 
 
 1. From the **Make sure this is your organization** window, review the information then select **Join**.
 
-    ![](../media/lab4/join.png)
+    ![](../media/lab4/orgjoin.png)
 
 1. Review the information on the **You're all set** window and select **Done**.
 
 1. Now that your device is Entra ID joined with you <inject key="AzureAdUserEmail"></inject> account, you need to log in using that account.
 
-1. From the taskbar, select the **Windows** icon, select **Admin**, then select **Sign out**.
+1. From the taskbar, select the **Windows** (1) icon, select **Admin** (2), then select **Sign out** (3).
 
-1. Click on **Reconnect** and From the bottom left of the window, select **Other user**, then log in with your **Email/Username:** <inject key="AzureAdUserEmail"></inject> ,**Password:** <inject key="AzureAdUserPassword"></inject>.
+    ![](../media/lab4/signout.png)
 
-      ![](../media/lab4/otheruser.png)
+1. Click on **Reconnect** and From the bottom left of the window, select **Other user** (1), then log in with your **Email/Username:** <inject key="AzureAdUserEmail"></inject> ,**Password:** <inject key="AzureAdUserPassword"></inject>.
+
+      ![](../media/lab4/othuser.png)
 
 
 Once your endpoint is joined to Entra ID you will be able to set up the GSA client which is used to connect to any resources you are protecting with Global Secure Access.
