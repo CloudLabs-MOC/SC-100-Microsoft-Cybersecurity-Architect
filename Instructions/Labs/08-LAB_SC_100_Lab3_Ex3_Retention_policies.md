@@ -191,7 +191,7 @@ In this task, you will create a **retention label** with a **10-year retention p
 1. On the **Define the period** page enter the following information:
 
     - How long is the period?: **10 years** (1)
-    - When should the period begin?: **When items were created** (3)
+    - When should the period begin?: **When items were created** (2)
 
 1. Select **Next** (3).
 
@@ -249,6 +249,14 @@ sensitive info** and select **Next**.
 1. On the **Review and finish** page select **Submit** then select **Done**.
 
     ![altext](../media/lab3/alpdone.png)
+
+    >**Note :** You may see a Client Error popup when submitting the **auto-labeling policy for the “German financial data” retention label**. This is a known UI glitch in the Microsoft Purview portal.Click **OK** (1) and then **Cancel** (2).
+    
+    ![altext](../media/lab3/10ce.png)
+
+1. After clicking OK and then Cancel, navigate to Data Lifecycle Management → **Label policies** (1) to verify that the **policy** (2) has been created successfully.
+
+    ![altext](../media/lab3/celbl.png)
 
     >**Success!** You have successfully created and auto-applied a retention label.
 

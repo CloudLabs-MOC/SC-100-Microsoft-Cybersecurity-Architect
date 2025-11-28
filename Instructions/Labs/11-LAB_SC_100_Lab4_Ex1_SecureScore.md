@@ -58,10 +58,6 @@ To ensure that the security ambassadors have the necessary role permissions, you
 
 In this task, you'll set up custom role focused on security posture and more specifically on Exposure Management. As part of the custom role, you'll grant Joni Shermann access to the data source for Exposure Management.
 
-1. Ensure you are logged into the **MICROSOFT AZURE: LON-SC1** VM by default. To switch between virtual machines, select the desired VM from the dropdown menu.
-
-   ![](../media/lab4/vm-1.png)
-
 1. Open a new tab in **Microsoft Edge**, select the address bar, navigate to **`https://security.microsoft.com`** and log into the Entra ID Portal with the below credentials if prompted.
 
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
@@ -73,56 +69,46 @@ In this task, you'll set up custom role focused on security posture and more spe
 
 1. If you see an information box on the top right of the screen that says **Manage multifactor authentication**, close it by selecting the **X**.
 
-1. On the left navigation pane, scroll down to bottom then select **Permissions**.
+1. Scroll down from the left navigation panel  to **System** (1) and select **Permissions** (2) and under **Microsoft Defender XDR(1)**, select **Roles** (3).
 
-1. If this is the first time you are accessing Microsoft Defender settings, you will have to wait a few minutes while Defender prepares new spaces for your data and connects them. Once that completes, refresh the permissions page until you see a listing that includes Microsoft Defender XDR, Microsoft Entra ID, Endpoints roles & groups, Email & collaboration roles, and Cloud Apps. It may take some time for all of these to show up.
+   ![](../media/lab4/up1.png)
 
-1. If a pop-up page appears with the message **Welcome to Microsoft Defender for Business**, click **Get Started** and follow steps 9 and 10. If it does not appear, proceed directly to step 11.
-
-   ![](../media/lab4/getstarted.png)
-
-1. Click **Skip** on the **Assign User Permission** page and the **Setup Email Notification** page.
-
-1. Click **Continue** on the **Add Windows devices and Apply security settings** page, and then click **Submit**.
-
-1. Under **Microsoft Defender XDR(1)**, select **Roles**.
-
-   ![](../media/lab4/1.png)
+   >**Note :** If this is the first time you are accessing Microsoft Defender settings, you will have to wait a few minutes while Defender prepares new spaces for your data and connects them. Once that completes, refresh the permissions page until you see a listing that includes Microsoft Defender XDR, Microsoft Entra ID, Endpoints roles & groups, Email & collaboration roles, and Cloud Apps. It may take some time for all of these to show up.
 
 1. Select **Create custom role**.
 
    ![](../media/lab4/2.png)
 
-1. In the Role name field, enter **`SecureScore Manager`** then select **Next**.
+1. In the Role name field, enter **`SecureScore Manager`** (1) then select **Next** (2).
 
-   ![](../media/lab4/3.png)
+   ![](../media/lab4/up3.png)
 
-1. Select **Security posture**.
+1. Select **Security posture** (1).
 
 1. In the Security posture window:
 
-   - Select **Select custom permissions**
-   - Under Posture management select **Select custom permissions**
-   - Choose **Exposure Management (manage)**
-   - Select **Apply**.
-   - Select **Next**.
+   - Select **Select custom permissions** (2)
+   - Under Posture management select **Select custom permissions** (3)
+   - Choose **Exposure Management (manage)** (4)
+   - Select **Apply** (5).
+   - Select **Next** (6).
 
-   ![](../media/lab4/4.png)
+   ![](../media/lab4/up4.png)
 
 1. On the **Assign users and data sources** page, select **Add assignment** then populate the fields as follows then click on **Next**:
 
    ![](../media/lab4/5.png)
 
-   - Assignment name: **`ExposureManagement`**
-   - Assign users and group: Enter **`Joni Sherman`**, then select it.
-   - Under **Data sources**, select the drop-down menu to see a list of the available data-sources. Select only **Microsoft Security Exposure Management**. If other data sources are listed, unselect them.
-   - Select, **Add**.
+   - Assignment name: **`ExposureManagement`** (1)
+   - Assign users and group: Enter **`Joni Sherman`** (2), then select it.
+   - Under **Data sources**, select the drop-down menu to see a list of the available data-sources. Select only **Microsoft Security Exposure Management** (3). If other data sources are listed, unselect them.
+   - Select, **Add** (4).
 
-     ![](../media/lab4/6.png)
+     ![](../media/lab4/up6.png)
 
 1. In the Review and finish page review your settings, select **Submit**, then select **Done**.
 
-   ![](../media/lab4/submit.png)
+   ![](../media/lab4/upsubmit.png)
 
 1. You should be on the **Permissions and roles** page and see the custom role you just created. Keep this tab open, you'll come back to it in the next task.
 
@@ -148,7 +134,7 @@ In this task you´ll explore the page where workloads are activated.
 
 1. Note the description under **Activate unified role-based access control**. When you activate some or all of your workloads to use the new permission model, the roles and permissions for these workloads are fully controlled by the Microsoft Defender XDR Unified RBAC model in the Microsoft Defender portal.
 
-   ![](../media/lab4/9.png)
+   ![](../media/lab4/aurbc.png)
 
 1. For this exercise, the data source for Exposure Management is enabled by default, which is why there is no setting to enable that workload. If you had created a custom role that included permissions for other workloads, such as Office 365 or Device and Vulnerability Management, as examples, then you would need to activate those specific workloads to activate the custom role, as part of unified RBAC.
 
@@ -158,9 +144,9 @@ In this task you´ll explore the page where workloads are activated.
 
 In this task, you will share a **Microsoft Secure Score recommended action** by posting it on a **Teams channel**. Users in the channel will see the notice but won't be able to edit the status or manage the action. Only **Joni Shermann**, a member with the necessary role permissions, will have access to the recommended action.
 
-1. On the left navigation pane, expand **Exposure management** then select **Secure Score**.
+1. On the left navigation pane, expand **Exposure management** (1) then select **Secure Score** (2).
 
-1. If a pop-up page appears with the message **Welcome to Microsoft Defender for Business**, click **Get Started** and follow steps 4 and 5. If it does not appear, proceed directly to step 6.
+1. If a pop-up page appears with the message **Welcome to Microsoft Defender for Business**, click **Get Started** and follow steps 4 and 5. **If it does not appear, proceed directly to step 6.**
 
    ![](../media/lab4/getstarted.png)
 
@@ -168,19 +154,21 @@ In this task, you will share a **Microsoft Secure Score recommended action** by 
 
 1. Click **Continue** on the **Add Windows devices and Apply security settings** page, and then click **Submit**.
 
-1. Select the **Recommended actions** tab.
+1. Select the **Recommended actions** (3) tab.
 
-1. Select any **Recommended actions** with a status of **To address**
+1. Select any **Recommended actions** (4) with a status of **To address**
 
-   ![](../media/lab4/t31.png)
+   ![](../media/lab4/expss.png)
 
-1. Select **Share**, and in the dropdown menu select **Microsoft Teams**.
+   ![](../media/lab4/upslctteams.png)
+
+1. Select **Share** (5), and in the dropdown menu select **Microsoft Teams** (6).
 
 1. In field **Team** select **Mark 8 Project Team (1)** and in the **Channel** field select **Channel Research and Development (2)**.
 
 1. Select **Post message to Teams (3)**.
 
-   ![](../media/lab4/teamch.png)
+   ![](../media/lab4/upmark8.png)
 
 Joni Sherman and her Mark 8 Project Team will be notified about the recommended action in the Teams channel.
 
@@ -194,31 +182,33 @@ In this task, you´ll manage recommended action and document your solutions.
    - **Email/Username:** **<inject key="User 01 UPN"></inject>**
    - **Password:** **<inject key="User 01 Password"></inject>**
 
-1. If the landing page appears blurred out, refresh the page.
+   >**Note :** Close the **Welcome to your Microsoft 365 Copilot app** pop-up by clicking **X** from top right corner. 
+   
+   ![](../media/lab4/365pop.png)
 
-1. Select the app launcher icon, located to the left of the top banner that says Contoso Electronics, and select **Teams**.
+1. From the left navigation pane of M365 Copilot select **Apps** (1) and then select **Teams** (2).
 
-   ![](../media/lab4/12.png)
+   ![](../media/lab4/jsteam.png)
 
 1. On the Welcome to Teams window, select **Get Started**. It may take a minute or two for Teams to set up. If a Teams for Mobile QR-code screen pops-up, close it.
 
-1. Open Teams. For the **Mark 8 Project Team** select **See all channels** then select **Research and Development**.
+1. Open Teams. For the **Mark 8 Project Team** (1) select **See all channels** then select **Research and Development** (2).
 
-1. Review the message posted from the previous task.
+1. Review the **message posted** (3) from the previous task.
 
-1. From the posted message, select the link. Because you, Joni Shermann, have been granted permission through the custom role, you are able to access Secure Score. Other members of the Mark 8 project team can see teh post, but do not have access to Secure Score.
+1. From the posted message, select the **link** (4). Because you, Joni Shermann, have been granted permission through the custom role, you are able to access Secure Score. Other members of the Mark 8 project team can see teh post, but do not have access to Secure Score.
 
-   ![](../media/lab4/t3i2.png)
+   ![](../media/lab4/post.png)
 
-1. Select **Edit status & action plan**.
+1. Select **Edit status & action plan** (1).
 
-   ![](../media/lab4/t3i3.png)
+1. Check **Resolved through third party** (2).
 
-1. Check **Resolved through third party**.
+1. Add a note **Currently secured** (3) to the **Action plan** field.
 
-1. Add a note **Currently secured** to the **Action plan** field.
+1. Select **Save and Close** (4).
 
-1. Select **Save and Close**.
+   ![](../media/lab4/js.png)
 
 1. Close the inPrivate browser tabs.
 
@@ -232,19 +222,23 @@ In this task, Adele Vance access the Mark 8 Project Team channel and selects the
    - **Email/Username:** **<inject key="User 02 UPN"></inject>**.
    - **Password:** **<inject key="User 02 Password"></inject>**
 
-1. If the landing page appears blurred out, refresh the page.
+   >**Note :** Close the **Welcome to your Microsoft 365 Copilot app** pop-up by clicking **X** from top right corner.
 
-1. Select the app launcher icon, located to the left of the top banner that says Contoso Electronics, and select **Teams**.
+   ![](../media/lab4/365pop.png)
+
+1. From the left navigation pane of M365 Copilot select **Apps** (1) and then select **Teams** (2).
+
+   ![](../media/lab4/advteam.png)
 
 1. On the Welcome to Teams window, select **Get Started**.
 
-1. Open Teams. For the **Mark 8 Project Team** select **See all channels** then select **Research and Development**.
+1. Open Teams. For the **Mark 8 Project Team** (1) select **See all channels** then select **Research and Development** (2).
 
-1. Review the message posted from the previous task.
+1. Review the **message posted** (3) from the previous task.
 
-1. Select the link in the posted message
+1. From the posted message, select the **link** (4).
 
-   ![](../media/lab4/t3i4.png)
+   ![](../media/lab4/post.png)
 
 1. You are taken directly to Microsoft Secure Score, but you don't have permission to access this data, as Adele Vance was not added as a member to the custom role that you created.
 
