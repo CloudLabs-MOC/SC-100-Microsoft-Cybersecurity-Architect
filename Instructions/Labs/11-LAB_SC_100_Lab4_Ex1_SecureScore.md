@@ -58,10 +58,6 @@ To ensure that the security ambassadors have the necessary role permissions, you
 
 In this task, you'll set up custom role focused on security posture and more specifically on Exposure Management. As part of the custom role, you'll grant Joni Shermann access to the data source for Exposure Management.
 
-1. Ensure you are logged into the **MICROSOFT AZURE: LON-SC1** VM by default. To switch between virtual machines, select the desired VM from the dropdown menu.
-
-   ![](../media/lab4/vm-1.png)
-
 1. Open a new tab in **Microsoft Edge**, select the address bar, navigate to **`https://security.microsoft.com`** and log into the Entra ID Portal with the below credentials if prompted.
 
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
@@ -73,21 +69,11 @@ In this task, you'll set up custom role focused on security posture and more spe
 
 1. If you see an information box on the top right of the screen that says **Manage multifactor authentication**, close it by selecting the **X**.
 
-1. On the left navigation pane, scroll down to bottom then select **Permissions**.
-
-1. If this is the first time you are accessing Microsoft Defender settings, you will have to wait a few minutes while Defender prepares new spaces for your data and connects them. Once that completes, refresh the permissions page until you see a listing that includes Microsoft Defender XDR, Microsoft Entra ID, Endpoints roles & groups, Email & collaboration roles, and Cloud Apps. It may take some time for all of these to show up.
-
-1. If a pop-up page appears with the message **Welcome to Microsoft Defender for Business**, click **Get Started** and follow steps 9 and 10. If it does not appear, proceed directly to step 11.
-
-   ![](../media/lab4/getstarted.png)
-
-1. Click **Skip** on the **Assign User Permission** page and the **Setup Email Notification** page.
-
-1. Click **Continue** on the **Add Windows devices and Apply security settings** page, and then click **Submit**.
-
 1. Scroll down from the left navigation panel  to **System** (1) and select **Permissions** (2) and under **Microsoft Defender XDR(1)**, select **Roles** (3).
 
    ![](../media/lab4/up1.png)
+
+   >**Note :** If this is the first time you are accessing Microsoft Defender settings, you will have to wait a few minutes while Defender prepares new spaces for your data and connects them. Once that completes, refresh the permissions page until you see a listing that includes Microsoft Defender XDR, Microsoft Entra ID, Endpoints roles & groups, Email & collaboration roles, and Cloud Apps. It may take some time for all of these to show up.
 
 1. Select **Create custom role**.
 
