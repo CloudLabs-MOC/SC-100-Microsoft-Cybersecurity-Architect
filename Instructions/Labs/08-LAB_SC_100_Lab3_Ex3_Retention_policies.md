@@ -250,6 +250,14 @@ sensitive info** and select **Next**.
 
     ![altext](../media/lab3/alpdone.png)
 
+    >**Note :** You may see a Client Error popup when submitting the **auto-labeling policy for the “German financial data” retention label**. This is a known UI glitch in the Microsoft Purview portal.Click **OK** (1) and then **Cancel** (2).
+    
+    ![altext](../media/lab3/10ce.png)
+
+1. After clicking OK and then Cancel, navigate to Data Lifecycle Management → **Label policies** (1) to verify that the **policy** (2) has been created successfully.
+
+    ![altext](../media/lab3/celbl.png)
+
     >**Success!** You have successfully created and auto-applied a retention label.
 
 ### Review
