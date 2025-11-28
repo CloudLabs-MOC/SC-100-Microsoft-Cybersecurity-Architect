@@ -191,7 +191,7 @@ In this task, you will create a **retention label** with a **10-year retention p
 1. On the **Define the period** page enter the following information:
 
     - How long is the period?: **10 years** (1)
-    - When should the period begin?: **When items were created** (3)
+    - When should the period begin?: **When items were created** (2)
 
 1. Select **Next** (3).
 
