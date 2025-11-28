@@ -76,8 +76,9 @@ In this task, you will create a **custom sensitive information type** to detect 
 
     ![altext](../media/lab3/seninfo.png)
 
-    >**NOTE :** If you get any Client error select Ok.
-    ![altext](../media/lab3/clerror.png)
+ >**NOTE :** If you get any Client error select Ok.
+
+ ![altext](../media/lab3/clerror.png)
 
 
 1. On the **Name your sensitive info type** page enter following information:
