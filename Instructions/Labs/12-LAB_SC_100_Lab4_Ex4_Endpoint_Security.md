@@ -246,12 +246,11 @@ In this task you will encrypt macOS devices.
     - Description: **`FileVault provides built-in Full Disk Encryption for macOS devices.`** (2)
     - Select **Next**. (3)
 
-    ![](../media/lab4/diskbasic.png)
+        ![](../media/lab4/diskbasic.png)
 
 1. On the **Configuration settings** blade under **Encryption** configure the following settings:
 
-    - Escrow location description:  
-  **`To recover a lost or recently rotated recovery key, log in to the Intune Company Portal website using any device. Navigate to the Devices section within the portal, choose the device with FileVault enabled, and then select the option to retrieve the recovery key.`** (1)
+    - Escrow location description:**`To recover a lost or recently rotated recovery key, log in to the Intune Company Portal website using any device. Navigate to the Devices section within the portal, choose the device with FileVault enabled, and then select the option to retrieve the recovery key`**(1)
 
     - Defer: **Enabled** (2)
 
