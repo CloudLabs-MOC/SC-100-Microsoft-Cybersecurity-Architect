@@ -1,6 +1,7 @@
 # Lab 02: Data classification framework
 
-## Exercise Overview
+## Lab Overview
+
 You have been assigned the task of structuring data classification for Contoso Ltd. in preparation for an ISO-27001:2022 audit. The goal is to establish a robust framework that is crucial for ensuring effective data protection against leakage, deletion, and loss. Your role involves integrating a new project ID system for construction projects within the company. To comply with government regulations, all documents that contain a certain project-ID must be kept for 5 years.
 
 You were given following examples to classify Project IDs:
@@ -14,7 +15,7 @@ You were given following examples to classify Project IDs:
 |BaR#0418-ag|
 |dui0522-in|
 
-## Exercise Objectives
+## Lab Objectives
 
 After completing this exercise, you'll be able to:
 
@@ -56,47 +57,53 @@ This introduction of a new project ID necessitates the creation of a correspondi
 
 ### Task 1: Create a custom sensitive information Type
 
-In this task, you will create a **custom sensitive information type** to detect documents containing **project IDs**.
+In this task, you will create a **Custom sensitive information type** to detect documents containing **project IDs**.
 
 1. Sign-in to the Microsoft Purview Compliance portal **`https://purview.microsoft.com/`** as per the credentials mentioned below:
     - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
     - **Password:** <inject key="AzureAdUserPassword"></inject>
     
-1. You're taken to the new Microsoft Purview portal landing page. Select the box next to the statement, **I agree to the terms of data flow disclosure and Privacy Statements**, then select **Get started**.
-1. From the left navigation panel, select **Solutions** then select **Information Protection**. Alternatively, from the main window you can select the **View all solutions** tile, then select the **Information Protection** tile listed under Data Security.
+1. You're taken to the new Microsoft Purview portal landing page, then select **Get started**.
+
+1. From the left navigation panel, select **Solutions (1)** then select **Information Protection (2)**. Alternatively, from the main window you can select the **View all solutions** tile, then select the **Information Protection** tile listed under Data Security.
 
     ![altext](../media/lab3/image-15.png)
 
-1. Expand **Classifiers** then select **Sensitive info types**.
-1. From the **Sensitive info types** page, select **Create sensitive info Type**.
+1. Expand **Classifiers (1)** then select **Sensitive info types (2)**, select **Create sensitive info Type (3)**.
 
     ![altext](../media/lab3/image-17.png)
 
 1. On the **Name your sensitive info type** page enter following information:
-    - Name: **`Project Identification Number`**
-    - Description: **`Identifies project identification number`**
-1. Select **Next**.
+    - Name: **`Project Identification Number` (1)**
+    - Description: **`Identifies project identification number` (2)**
+    - Select **Next (3)**.
 
-    ![altext](../media/lab3/image-18.png)
+        ![altext](../media/lab3/image-18.png)
 
-1. On the **Define patterns for this sensitive info type** page, select **Create pattern**.
-1. On the **New pattern** page, select **Add primary element** and then **Regular expression**.
+1. On the **Define patterns for this sensitive info type** page, select **+ Create pattern (1)**.
+
+1. On the **New pattern** page, leave the default confidence level set to **High confidence (2)**.
+
+1. Select **+ Add primary element (3)** and then **Regular expression**..
 
     ![altext](../media/lab3/image-19.png)
 
-1. On the **Add a regular expression** page in the **ID** text box, type **`ProjectID`**.
-1. In the text box **Regular expression** enter the following expression:
+1. On the **Add a regular expression** page in the **ID** text box, type **`ProjectID` (1)**.
+1. In the text box **Regular expression (2)** enter the following expression:
 
     **`[a-zA-Z]{3}(\W)?[\d]{4}(\W)?[a-zA-Z]{2}`**
 
-    >[!NOTE] The provided regular expression is crafted to identify a sequence characterized by three letters, followed by potentially optional non-word characters, then four digits, followed once again by optional non-word characters, and ultimately ending with two letters. The presence of non-word characters is discretionary, and the overarching pattern is intended to correspond to a specific format or structure within the data.
+    > **NOTE :** This regular expression matches a sequence of three letters, an optional non-word character, four digits, another optional non-word character, and two letters. Examples include `ABC1234DE`, `ABC-1234-DE`, and `ABC 1234 DE`.
 
-1. Under the Regular expression text box, select **String match** then select **Done**.
+1. Under the Regular expression text box, select **String match (3)** then select **Done (4)**.
 
     ![altext](../media/lab3/image-20.png)
 
-1. On the **New pattern** window, for the **Confidence level**, select **High confidence**, select **Create**, then select **Next**.    
-1. On the **Choose the recommended confidence level to show in compliance policies** page, leave the setting to **High confidence level**, then select **Next**.
+1. Select **Create**.    
+
+1. You are back at the Define patterns for this sensitive info type. Select **Next**.
+
+1. On the **Choose the recommended confidence level to show in compliance policies** page, leave the setting to **High confidence level (1)**, then select **Next (2)**.
 
     ![altext](../media/lab3/image-21.png)
 
@@ -114,33 +121,44 @@ In this task, you will create a **retention label** to retain all documents rela
 
     ![altext](../media/lab3/image-23.png)
 
-1. Select **Retention Labels**.
-1. On the **Labels** page, select **Create a label**.
+1. Select **Retention Labels (1)**, on the **Labels** page, select **Create a label (2)**.
 
     ![altext](../media/lab3/image-24.png)
 
 1. On the **Name your retention label** page, enter the following information:
 
-    - Name: **`Retention of Construction Project Documentation`**
-    - Description for users: **`The construction project documentation Retention Policy dictates the retention of all project-related documents for five years following project completion.`**
-    - Description for admins: **`This label is applied to retain construction project documents for a period of five years, and it is utilized in conjunction with auto-labeling.`**
+    - Name: **`Retention of Construction Project Documentation` (1)**
 
-1. Select **Next**
+    - Description for users: **`The construction project documentation Retention Policy dictates the retention of all project-related documents for five years following project completion.` (2)**
 
-    ![altext](../media/lab3/image-25.png)
+    - Description for admins: **`This label is applied to retain construction project documents for a period of five years, and it is utilized in conjunction with auto-labeling.` (3)**
 
-1. On the **Define label settings** page, select **Retain items forever or for a specific period** and select **Next**.
+    - Select **Next (4)**
+
+        ![altext](../media/lab3/image-25.png)
+
+1. On the **Define label settings** page, select **Retain items forever or for a specific period (1)** and select **Next (2)**.
+
+    ![altext](../media/lab3/image-25-a.png)
+
 1. On the **Define the retention period** page, enter the following information:
 
-    - Retain items for: **5 years**
-    - Start the retention period based on: **When items were created**
+    - Retain items for: **5 years (1)**
 
-1. Select **Next**.
+    - Start the retention period based on: **When items were created (2)**
+    
+    - Select **Next (3)**.
 
-    ![altext](../media/lab3/image-26.png)
+        ![altext](../media/lab3/image-26.png)
 
-1. On the **Choose what happens after retention period** page, select **Deactivate retention settings** then select **Next**.
+1. On the **Choose what happens after retention period** page, select **Deactivate retention settings (1)** then select **Next (2)**.
+
+    ![altext](../media/lab3/image-27-1.png)
+
 1. On the **Review and finish** page, review the settings, select **Create label**.
+
+    ![altext](../media/lab3/image-27-2.png)
+
 1. On the **Your retention label is created** page, you have several options.  Select **Do Nothing** then select **Done**.  You will create the auto-apply policy in the next task. Selecting Auto-apply this label to a specific type of content, walks you through the steps in the subsequent task, starting on step 4.
 
     ![altext](../media/lab3/image-27.png)
@@ -154,43 +172,66 @@ In this task, you will create a **retention label** to retain all documents rela
 In this task, you will use the **sensitive information type** created earlier to **auto-apply** the **retention label** to relevant documents.
 
 1. Navigate to **`https://purview.microsoft.com/`** > **Solutions** > **Data Lifecycle Management**.
-1. On the **Data lifecycle management** pane, select **Label policies**.
-1. On the **Label policies** blade, select **Auto-apply a label**.
+
+1. On the **Data lifecycle management** pane, select **Label policies (1)**, on the **Label policies** blade, select **Auto-apply a label (2)**.
 
     ![altext](../media/lab3/image-28.png)
 
 1. On the **Let's get started** page, enter the following information:
 
-    - Name: **`Label documents related to construction projects`**
-    - Description: **`This policy automatically enforces the "Construction Project Documentation Retention" policy on any document pertaining to construction projects.`**
+    - Name: **`Label documents related to construction projects` (1)**
 
-1. Select **Next**.
+    - Description: **`This policy automatically enforces the "Construction Project Documentation Retention" policy on any document pertaining to construction projects.` (2)**
+
+    - Select **Next (3)**.
 
     ![altext](../media/lab3/image-29.png)
 
 1. On the **Choose the type of content you want to apply this label to** page, select **Apply label to content that contains sensitive info** and select **Next**.
-1. On the **Content that contains sensitive info** page, select **Custom**, then select **Custom policy** and select **Next**.
+
+1. On the **Content that contains sensitive info** page, select **Custom (1)**, then select **Custom policy (2)** and select **Next (3)**.
 
     ![altext](../media/lab3/image-30.png)
 
 1. On the **Define content that contains sensitive info**, specify the following settings:
-    - Group name: **`Project ID lookup`**
-    - Under Sensitive info types, select **Add** and select **Sensitive info types**.  
-    - In the Sensitive info types page, in the search field, enter the name of the label you created **`Project Identification number`** and press return.  Select **Project Identification number** then select **Add**.
+    - Group name: **`Project ID lookup` (1)**
 
-        ![altext](../media/lab3/image-31.png)
+    - Under Sensitive info types, select **Add (2)** and select **Sensitive info types (3)**. 
 
-    - Leave the Confidence level to **High confidence**.
-    - Leave the instance count as **1 to Any**.
-    - Select **Next**
+        ![altext](../media/lab3/image-31.png) 
+
+    - In the Sensitive info types page, in the search field, enter the name of the label you created **`Project Identification number` (1)** and press return.  Select **Project Identification number (2)** then select **Add (3)**.
+
+        ![altext](../media/lab3/image-31-a.png) 
+
+    - Leave the Confidence level to **High confidence (1)**.
+
+    - Leave the instance count as **1 to Any (2)**.
+
+    - Select **Next (3)**
+
+        ![altext](../media/lab3/image-31-b.png) 
+
 1. On the **Policy scope** page, leave the Admin Units setting to **Full directory** and select **Next**.
-1. On the **Choose the type of retention policy to create** page, select **Static** and select **Next**.
-1. On the **Choose where to automatically apply the label**, verify the status is set to **On** for all available locations then select **Next**.
-1. On the **Choose a label to auto-apply**, select **Add label**, then select the label **Retention of construction project documentation** you created in the previous task, select **Add**, then select **Next**.
+
+    ![altext](../media/lab3/image-52.png)
+
+1. On the **Choose the type of retention policy to create** page, select **Static (1)** and select **Next (2)**.
+
+    ![altext](../media/lab3/image-53.png)
+
+1. On the **Choose where to automatically apply the label**, verify the status is set to **On (1)** for all available locations then select **Next (2)**.
+
+     ![altext](../media/lab3/image-54.png)
+
+1. On the **Choose a label to auto-apply**, select **Add label (1)**, then select the label **Retention of construction project documentation (2)** you created in the previous task, select **Add**, then select **Next (3)**.
 
     ![altext](../media/lab3/image-32.png)
 
-1. In the **Decide whether to test or run your policy**, select **Turn on policy** then select **Next**.
+1. In the **Decide whether to test or run your policy**, select **Turn on policy (1)** then select **Next (2)**.
+
+    ![altext](../media/lab3/image-55.png)
+
 1. On the **Review and finish** page, review all your settings, select **Submit**, then select **Done**.
 
     ![altext](../media/lab3/image-33.png)
@@ -198,11 +239,11 @@ In this task, you will use the **sensitive information type** created earlier to
 **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
   
 <validation step="8c2f8278-828f-407f-91b8-f930a4318959" />
 
-    >**Success!** You have successfully published and auto-applied the retention label to all documents that contain project IDs.
+> **Success!** You have successfully published and auto-applied the retention label to all documents that contain project IDs.
 
 ### Review
 
