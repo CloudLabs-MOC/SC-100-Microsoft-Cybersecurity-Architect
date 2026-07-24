@@ -32,7 +32,7 @@ For convenience, you can open the lab guide in a separate window by selecting th
 
 ## Managing Your Virtual Machine
 
-Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+Feel free to **start, stop, or restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
 
 ![Manage Your Virtual Machine](../media/gs-restab.png)
 
@@ -40,7 +40,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
 1. To extend the duration of the lab, kindly click the **Hourglass** icon in the top right corner of the lab environment.
 
-   ![Manage Your Virtual Machine](../media/gext.png)
+   ![Manage Your Virtual Machine](../media/gs-extend.png)
 
    > **Note:** You will get the **Hourglass** icon when 10 minutes are remaining in the lab.
 

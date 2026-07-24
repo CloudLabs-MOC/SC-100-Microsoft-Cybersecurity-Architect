@@ -135,7 +135,7 @@ In order to automatically block unsafe applications in the future, you will crea
 
      ![](../media/l2e3-t1p12.png)
 
-1. Under **Apps matching all of the following**, click **Select a filter (1)** and choose **Risk score (2)**. Next, click **Select an operator (3)** and select **equals (4)**. Then, click the **Any** field **(5)**, move the slider to select the **Risk score range 0–4 **(6)\***\*, and click **Apply (7)\*\*.
+1. Under **Apps matching all of the following**, click **Select a filter (1)** and choose **Risk score (2)**. Next, click **Select an operator (3)** and select **equals (4)**. Then, click the **Any** field **(5)**, move the slider to select the **Risk score range 0–4 (6)**, and click **Apply (7)**.
 
    ![](../media/l2e3-t1p13.png)
 
@@ -143,7 +143,7 @@ In order to automatically block unsafe applications in the future, you will crea
 
    ![](../media/l2e3-t1p15.png)
 
-1. Under **Alerts** select **Create an alert for each matching event with the policy's severity (1)** and set the value for **Daily alert limit per policy (2)** to 5.
+1. Under **Alerts** select **Create an alert for each matching event with the policy's severity (1)** and set the value for **Daily alert limit per policy (2)** to `5`.
 
 1. Under **Governance actions** select **Tag app as unsanctioned (3)**.
 
