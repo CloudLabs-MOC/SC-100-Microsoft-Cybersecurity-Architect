@@ -12,6 +12,12 @@ Once you're ready to dive in, your virtual machine and lab guide will be right a
  
 Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
  
+## Lab Guide Zoom In/Zoom Out
+
+To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+
+ ![Manage Your Virtual Machine](../media/zoomin.png)
+
 ## Exploring Your Lab Resources
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
@@ -54,21 +60,23 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
-       ![Enter Your Username](../media/lc-image-1.png)
+      ![Enter Your Username](../media/lc-image-1.png)
  
 1. Next, provide your password:
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
-       ![Enter Your Password](../media/lc-image-2.png)
+      ![Enter Your Password](../media/lc-image-2.png)
 
-1. If **Action required** pop-up window appears, click on **Ask Later**.
+1. If prompted to stay signed in, click **Yes**.
 
-1. If prompted to stay signed in, you can click **"No"**.
+   ![](../media/staysignin.png)
 
-1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **"Cancel"** to skip the tour.
+1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Maybe later** to skip the tour.
 
-1. You can use the **Previous(1)** and **Next(2)** buttons to navigate through the lab guide.
+   ![](../media/maybelater.png)
+
+1. You can use the **Next** buttons to navigate through the lab guide.
 
    ![](../media/lc-image(3)-1.png)
 
@@ -78,7 +86,7 @@ The CloudLabs support team is available 24/7, 365 days a year, via email and liv
 
 Learner Support Contacts:
 
-- Email Support: labs-support@spektrasystems.com
+- Email Support: cloudlabs-support@spektrasystems.com
 - Live Chat Support: https://cloudlabs.ai/labs-support
 
 
