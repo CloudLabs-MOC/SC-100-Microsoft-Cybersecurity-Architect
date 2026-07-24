@@ -117,7 +117,7 @@ In this task, you will create a **Custom sensitive information type** to detect 
 
 In this task, you will create a **retention label** to retain all documents related to **construction projects** for **5 years**.
 
-1. From the left navigation panel, select **Solutions** then select **Data Lifecycle Management**.
+1. From the left navigation panel, select **Solutions (1)** then select **Data Lifecycle Management (2)**.
 
     ![altext](../media/lab3/image-23.png)
 
@@ -185,7 +185,7 @@ In this task, you will use the **sensitive information type** created earlier to
 
     - Select **Next (3)**.
 
-    ![altext](../media/lab3/image-29.png)
+        ![altext](../media/lab3/image-29.png)
 
 1. On the **Choose the type of content you want to apply this label to** page, select **Apply label to content that contains sensitive info** and select **Next**.
 

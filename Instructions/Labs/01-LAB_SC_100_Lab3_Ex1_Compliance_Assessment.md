@@ -65,7 +65,7 @@ In this task, your first step is to analyze the company's current environment. Y
 
     ![alt text](../media/lab3/image-01.png)
 
-1. From the left navigation panel, select **Solutions** then select **Compliance Manager**. Alternatively, from the main window you can select the **View all solutions** tile, then select the **Compliance Manager** tile listed under Risk & Compliance.
+1. From the left navigation panel, select **Solutions (1)** then select **Compliance Manager (2)**. Alternatively, from the main window you can select the **View all solutions** tile, then select the **Compliance Manager** tile listed under Risk & Compliance.
 
     ![alt text](../media/lab3/image-02.png)
 
@@ -97,7 +97,7 @@ In this task, your first step is to analyze the company's current environment. Y
 
      ![alt text](../media/lab3/image-06.png)
 
-1. On the **Review and finish** page, select **Create the assessment**. 
+1. On the **Review and finish** page, select **Create assessment**. 
 
     ![alt text](../media/lab3/image-08-a.png)
 
@@ -114,7 +114,7 @@ In this task, your first step is to analyze the company's current environment. Y
 
 In this task, based on the results of the assessment, you will identify areas and actions necessary to comply with **ISO-27001** regulations. You will investigate the required improvements and assign a task to a **technical engineer** for implementation.
 
-1. Navigate to the Microsoft Purview portal **`https://purview.microsoft.com/`** and from there select **Solutions (1)** > **Compliance Manager (2)** > **Assessments** > **ISO-27001 Audit assessment (3)**.
+1. Navigate to the Microsoft Purview portal **`https://purview.microsoft.com/`** and from there select **Solutions (1)** > **Compliance Manager** > **Assessments (2)** > **ISO-27001 Audit assessment (3)**.
 
     ![alt text](../media/lab3/image-09.png)
 
