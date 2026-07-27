@@ -2,13 +2,13 @@
 
 ## Estimated Duration: 40 Minutes
 
-## Lab Overview
+## Exercise Overview
 
 Contoso's Security Operations Center (SOC) needs to deploy Microsoft Sentinel as their SIEM solution and configure appropriate access controls. The SOC has two roles—security analysts and security engineers—each with different permission requirements, plus a network team that requires access to only specific logs.
 
-## Lab Objectives
+## Exercise Objectives
 
-In this lab, you will perform
+In this Exercise, you will perform
 
 - **Task 1:** Create a Log Analytics workspace  
 - **Task 2:** Deploy Microsoft Sentinel to the workspace
@@ -77,6 +77,8 @@ In this task, you'll create a log analytics workspace which is required to house
 
 ## Task 2 - Create Sentinel
 
+In this task you'll deploy Microsoft Sentinel to the Log Analytics workspace and explore the Sentinel content hub.
+
 1. In the Search bar of the Azure portal, type **microsoft sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
      ![](../media/lab01/sc100-lab1-5.png)
@@ -97,14 +99,14 @@ In this task, you'll create a log analytics workspace which is required to house
 
 ## Task 3 - Setup RBAC
 
+In this task you'll configure role-based access control by assigning appropriate Sentinel permissions to the SOC Analysts and SOC Engineers groups.
+
 #### Permission requirements
 
 | Role | Permissions |
 |---|---|
 | Security analyst | View data, incidents, workbooks and other Sentinel resources and Assigning/dismissing incidents. |
 | Security engineer | Create and edit workbooks and analytics rules  Install and update solutions from content hub |
-
----
 
 1. In the top searchbar, search for **Resoure groups** and select **sc-100-lab1** resource group.
 
@@ -156,13 +158,19 @@ In this task, you'll create a log analytics workspace which is required to house
 
 In this task, you´ll create a workbook, to get a dashboard with custom views and current incidents and their alerts.
 
-> **Note:** The steps to create a dashboard with custom views for incidents and their alerts are included for information purposes only, as there is no data available upon which to do this task. Executing the steps will not return any data.
+> **Note:** `The steps to create a dashboard with custom views for incidents and their alerts are included for information purposes only, as there is no data available upon which to do this task. Executing the steps will not return any data.`
 
 1. Open the Edge browser and navigate to the **Defender portal** using the link below:
 
      ```
      https://security.microsoft.com/
      ```
+
+1. You'll see the **Sign into Microsoft Defender portal** tab. Here, enter the username and password as below:
+
+     - **Username** <inject key="AzureAdUserEmail"></inject>
+   
+     - **Password:** <inject key="AzureAdUserPassword"></inject>
 
 1. If prompted, please close the **Microsoft Defender XDR quick tour** to go ahead.
 
@@ -200,7 +208,7 @@ In this task, you´ll create a workbook, to get a dashboard with custom views an
 
 1. In the **New Parameter** pane, select **Last 7 days (1)** under **Available time ranges**, and then select **Save (2)**.
 
-    ![](../media/lab01/sc100-lab1-22.png)
+     ![](../media/lab01/sc100-lab1-22.png)
 
 1. In the **TimeRange** parameter, select **Last 7 days (2)**, and then select **Apply (3)**.
 
@@ -223,7 +231,7 @@ In this task, you´ll create a workbook, to get a dashboard with custom views an
 
 1. Under **Get data from**, select **Query (1)**, set **Time range (2)** to **TimeRange**, and enter the following query in the **Logs (Analytics) Query (3)** field.
 
-    ![](../media/lab01/sc100-lab1-26.png)
+     ![](../media/lab01/sc100-lab1-26.png)
 
      ```KQL
      SecurityAlert
@@ -234,9 +242,9 @@ In this task, you´ll create a workbook, to get a dashboard with custom views an
 
 1. Scroll down to **Include in the drop down**, select **All (1)**, set **Default selected item (2)** to **All**, and then select **Save**.
 
-    ![](../media/lab01/sc100-lab1-27.png)
+     ![](../media/lab01/sc100-lab1-27.png)
 
-    ![](../media/lab01/sc100-lab1-28.png)
+     ![](../media/lab01/sc100-lab1-28.png)
 
 1. Select **Add** to create another parameter.
 
@@ -267,7 +275,7 @@ In this task, you´ll create a workbook, to get a dashboard with custom views an
 
 1. From the bottom of the Editing parameters window, select **More options (1)**, expand **Add (2)**, and then select **Add data source + visualization (3)**.
 
-    ![](../media/lab01/sc100-lab1-29.png)
+     ![](../media/lab01/sc100-lab1-29.png)
 
 1. In the **Editing: query** pane, enter the following query in the **Logs (Analytics) Query (1)** field, set **Time range (2)** to **Set in query**, and then select **Step Settings (3)**.
 
@@ -297,11 +305,11 @@ In this task, you´ll create a workbook, to get a dashboard with custom views an
 
 1. In the **Add Parameter** pane, enter **Alerts (1)** in the **Field to export** field, enter **Alerts (2)** in the **Parameter name** field, and then select **Apply (3)**.
 
-    ![](../media/lab01/sc100-lab1-34.png) 
+     ![](../media/lab01/sc100-lab1-34.png) 
 
 1. From the bottom of the Editing query window, select **Done Editing**.
 
-     ![](../media/lab01/sc100-lab1-n2.png) 
+      ![](../media/lab01/sc100-lab1-n2.png) 
 
 1. Select **Done Editing** in the top bar of the **New workbook** window.
 
@@ -311,13 +319,13 @@ In this task, you´ll create a workbook, to get a dashboard with custom views an
 
 1. In the **Save Workbook** pane, enter **New Workbook (2)** as the **Title**, verify the **Workspace (3)** and **Location (4)** values, and then select **Save (5)**.
 
-    ![](../media/lab01/sc100-lab1-n5.png) 
+     ![](../media/lab01/sc100-lab1-n5.png) 
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 	
  - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task.
  - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
- - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+ - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
     
 <validation step="80e42d63-07d4-44b8-bce9-022ddf79ca4d" />
 

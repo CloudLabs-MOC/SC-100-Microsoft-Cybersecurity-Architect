@@ -1,22 +1,22 @@
 # Lab 02: Managing External Attack Surface
 
+## Estimated Duration: 40 Minutes
+
 ## Exercise Overview
 
 Contoso aims to enhance its cybersecurity posture by identifying and managing its external attack surface. This surface includes assets that are hosted on different cloud providers. To achieve this goal, Contoso wants to integrate its attack surface data with Sentinel, its cloud-native SIEM solution. This integration will enhance its security monitoring and incident response capabilities. 
 
 ## Exercise Objectives
 
-After completing this exercise, you'll be able to:  
+In this Exercise, you will perform
 
-- Create a Defender External Attack Surface Management (EASM) workspace.  
-- Discover and analyze Contoso’s External Attack Surface.  
-- Configure the connection between Defender EASM and a Log Analytics workspace.  
-- Review the security posture of identified assets and apply appropriate labeling.  
-
-## Estimated Duration: 40 Minutes
+- **Task 1:** Create a Microsoft Defender EASM workspace
+- **Task 2** Discover Contoso's external-facing assets 
+- **Task 3:** Configure a data connection to a Log Analytics workspace
+- **Task 4:** Review security dashboards and label assets for investigation
+- **Task 5:** Manage and categorize discovered assets by state
 
 ## Architecture Diagram
-
 
    ![](../media/lab01/lab1ex2.png)
 
@@ -34,43 +34,15 @@ After completing this exercise, you'll be able to:
 
  - **Asset Management**: Enables monitoring, organizing, and securing identified assets to maintain a strong security posture.
 
-
-## Part 1: Design a solution
-
-### Design approach
-
-The initial step involves analyzing the requirements based on the described scenario, understanding the objectives and defining the requirements.
-
-Based on the provided use-case, the following requirements can be outlined:
-
-- Contoso´s outside facing assets need to be monitored and secured
-- Discover all assets associated with contoso
-- Integrate data to Contoso´s SIEM Solution.
-- Assets need to be managed and labeled
-
-In the second step examine Contoso Ltd.'s existing environment. Microsoft Defender External Attack Surface Management (EASM) continuously discovers and maps the digital attack surface, providing an external view of an organization’s online infrastructure. It identifies exposed resources, prioritizes risks, and extends vulnerability and exposure control beyond the firewall.
-
-### Proposed solution
-
-|Requirement|Solution|Action plan|
-|----|----|----|
-|Contoso´s outside facing assets need to be monitored and secured| Defender EASM | Create Microsoft Defender EASM resource|
-|discover all assets associated with contoso | Defender EASM |Create a discovery job on Contoso´s assets  |
-|Integrate data to Contoso´s SIEM Solution |Defender EASM, Log Analytics Workspace | Connect Log analytics workspace to Defender EASM |
-|Assets need to be managed and labeled | Defender EASM | Manage billable Assets and tags |
-
-
-## Part 2: Implement the solution
-
 ## Task 1 - Setup Defender EASM
 
 In this Task, you´ll create a Defender EASM workspace.
 
-1. In the top search bar, search for **`Microsoft Defender EASM`**.
+1. In the **Search** box, enter **Microsoft Defender EASM (1)**, and then select **Microsoft Defender EASM (2)** from the search results.
 
-     ![](../media/lab01/sc100-ex2-1.png)
+    ![](../media/lab01/sc100-ex2-1.png)
 
-1. Select **Create**.
+1. Select **+ Create**.
 
 1. On Create Microsoft Defender EASM Resource, select the existing resource group **sc-100-lab1**.
 
@@ -102,91 +74,141 @@ In this Task, you´ll create a Defender EASM workspace.
 
 In this Task, you´ll create a Discovery on Contoso Ltd. outside facing assets. After you have created an instance you need to populate it with actual data. Therefore you will now create a discovery.
 
-1. On the search bar on the top, search for **`Microsoft Defender EASM`** and open it.
-
-    ![](../media/lab01/13.png)
+1. In the Azure portal, navigate to **Microsoft Defender EASM**.
 
 1. Select the **EASM<inject key="DeploymentID" enableCopy="false" /></inject>** workspace you created in the last task.
 
       ![](../media/lab01/sc100-ex2-4.png)
 
 1. Search for **Contoso (1)** in the **Search for an organization** search field.
+
 1. Select **Contoso Ltd. (2)**.
+
 1. Select **Start attack surface discovery (3)**.
 
-    ![](../media/lab01/16.png)
+    ![](../media/lab01/sc100-ex2-5.png)
 
     >**Success!** You successfully created the Discovery of Contoso´s External Attack Surface and populated the EASM instance with actionable data.
 
-### Task 3 - Setup data connector and log analytics workspace
+## Task 3 - Setup data connector and log analytics workspace
 
 In this Task, you´ll configure a data connection from Defender EASM to an log analytics workspace that will be used for Sentinel. Defender EASM asset or insights information can be used in Log Analytics to enrich existing workflows with other security data.
 
-1. In the top search bar, search for **`Log Analytics Workspaces`**.
+1. Navigate to the **sc-100-lab1** resource group in the Azure portal.
 
-    ![](../media/lab01/17.png)
+1. In the left navigation pane, select **Access control (IAM) (1)**.
+
+1. Select **Add (2)**, from the dropdown select **Add role assignment (3)**.
+
+     ![](../media/lab01/sc100-lab1-9.png)
+
+1. Search for **`Reader` (1)** and select the role **(2)**.
+
+1. Select **Next (3)**.
+
+    ![](../media/lab01/sc100-ex2-6.png)
+
+1. Select **+ Select members (1)**.
+
+1. On the **Select members** blade, search for the **`EASM API` (2)**. From the search results select **EASM API ** press **Select (3)** to add the role assignment and select **Apply (4)**.
+
+     ![](../media/lab01/sc100-ex2-7.png)
+
+1. Select **Next**.
+
+1. Select **Review + assign** twice.
+
+    ![](../media/lab01/sc100-ex2-8.png)
+
+1. Select **Role assignments tab**, Confirm that the role assignments are set.
+
+1. Repeat this and add the **Monitoring Contributor**, **Log Analytics Contributor**, and the **Monitoring Metrics Publisher** roles for the EASM API app.
+
+1. The role assignments for the EASM API may take a few minutes to be assigned after. After configuring the assignments, please wait for a few minutes to create a new data connection.
+
+1. In the Search bar of the Azure portal, type **Log Analytics (1)**, then select **Log Analytics workspaces (2)**.
+
+   ![](../media/lab01/sc100-lab1-1.png)
+
 1. Select your **law-sentinel-<inject key="DeploymentID" enableCopy="false" /></inject>** workspace from the last exercise.
-1. Leave the page as it is and open another tab and log into the Azure portal **`https://portal.azure.com`**.
-1. On the search bar on the top, search for **`Microsoft Defender EASM`** and open it.
 
-    ![](../media/lab01/13.png)
+1. Leave the page as it is and open another tab and log into the Azure portal **`https://portal.azure.com`**.
+
+1. In the Azure portal, navigate to **Microsoft Defender EASM**.
+
 1. Select your **EASM<inject key="DeploymentID" enableCopy="false" /></inject>** workspace.
+
 1. In the left navigation pane, expand **Manage (1)** and select **Data connections (2)**.
 
-    ![](../media/lab01/18.png)
-1. Under Log Analytics, select **Add connection**.
-1. Name it **law-sentinel-<inject key="DeploymentID" enableCopy="false" /></inject>**.
+1. Under Log Analytics, select **Add connection (3)**.
+
+    ![](../media/lab01/sc100-ex2-9.png)
+
+1. Name it **law-sentinel-<inject key="DeploymentID" enableCopy="false" /></inject> (1)**.
+
 1. Switch to the previous tab with the log analytics workspace that should be open.
-1. Expand **Agents** under Settings.
-1. Expand **Log Analytics agent instructions** and Copy the **Workspace ID** into the corresponding field of the Add data connection window.
-1. Copy the **Primary key** into the API key field of the Add data connection window.
 
-    ![](../media/lab01/19.png)
-1. In Content select **All**.
-1. In Frequency select **Daily**.
-1. Select **Add**.
+1. In the **Settings (1)** menu, select **Properties (2)**, and then copy the **Workspace ID (3)**.
+    
+     ![](../media/lab01/sc100-ex2-10.png)
 
-    ![](../media/lab01/20.png)
-1. The Log Analytics card of the Data connections page should now show law-sentinel, listed under Connected (1).
+1. In Content select **All (3)**.
+
+1. In Frequency select **Daily (4)**.
+
+1. Select **Add (5)**.
+
+     ![](../media/lab01/sc100-ex2-11.png)
+
+1. The Log Analytics card of the Data connections page should now show law-sentinel, listed under Connected.
+
+     ![](../media/lab01/sc100-ex2-12.png)
 
 After the connection has been created, custom log tables are created in the log analytics workspace. In Sentinel, this data can then be used to create or enrich security incidents, build investigation playbooks, train machine learning algorithms or trigger remediation actions.
 
    >**Success!** You successfully setup the connection between Defender EASM and a log analytics workspace.
 
-### Task 4 - Review Dashboards and label assets
+## Task 4 - Review Dashboards and label assets
 
 In this Task, you´ll review the Defender EASM Security posture and get information about findings.
 
-1. On the search bar on the top, search for **`Microsoft Defender EASM`** and open it.
+1. In the Azure portal, navigate to **Microsoft Defender EASM**.
+
 1. Select your **EASM<inject key="DeploymentID" enableCopy="false" /></inject>** workspace.
+
 1. In the left navigation pane, expand **Dashboards (1)** and select **Attack surface summary (2)**. The Attack Surface Summary dashboards provide key insights and high level overview of the impacted core assets of your attack surface.
 
-    ![](../media/lab01/21.png)
+     ![](../media/lab01/sc100-ex2-13.png)
+    
 1. Review the **Attack surface summary** Dashboard.
-1. In the left navigation pane, select **Security posture**.
 
-    ![](../media/lab01/22.png)
+1. In the left navigation pane, select **Security posture (1)**.
+
 1. Review the different categories for open vulnerabilities.
-1. Under the category **Open ports**, select **Web servers**.
 
-    ![](../media/lab01/23.png)
+1. Under the category **Open ports (2)**, select **Web servers (3)**.
+
+     ![](../media/lab01/sc100-ex2-14.png)
+
 1. Select the found ip address **34.223.124.45**.
 
-    ![](../media/lab01/24.png)
+     ![](../media/lab01/sc100-ex2-15.png)
+
 1. You decide to label the asset for further investigation.
-1. Select **Modify Asset**.
 
-    ![](../media/lab01/25.png)
-1. Select **Create new label**.
+1. Select **Modify Asset (1)**.
 
-    ![](../media/lab01/26.png)
+1. Select **Create new label (2)**.
+
+     ![](../media/lab01/sc100-ex2-17.png)
+
 1. Name it **Open ports** (1) and select **Add** (2).
 
-    ![](../media/lab01/27.png)
-1. Assign the newly created label in the field **Labels** (1).
-1. Select **Update** (2).
+     ![](../media/lab01/sc100-ex2-18.png)
+     
+1. Select **Update**.
 
-    ![](../media/lab01/26.png)
+     ![](../media/lab01/sc100-ex2-19.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 	
@@ -198,50 +220,66 @@ In this Task, you´ll review the Defender EASM Security posture and get informat
 
    >**Success!** You successfully reviewed the Security posture and labeled an asset for further investigation.
 
-### Task 5 - Manage Assets
+## Task 5 - Manage Assets
 
 In this task, you´ll manage and categorize the discovered assets.
 
-1. On the search bar on the top, search for **`Microsoft Defender EASM`** and open it.
+1. In the Azure portal, navigate to **Microsoft Defender EASM**.
+
 1. Select your **EASM<inject key="DeploymentID" enableCopy="false" /></inject>** workspace.
-1. In the left navigation pane, expand **General** (1) and select **Inventory** (2).
 
-    ![](../media/lab01/29.png)
-1. In the EASM | Inventory page, the Search tab is selected (underlined). In the search field use the dropdown menu to select **Labels** (1).
-1. In the dropdown menu below choose the label you recently created, **Open ports** (2).
-1. Select **Search** (3).
-1. Open the found asset **34.223.124.45** (4).
+1. In the left navigation pane, expand **General (1)** and select **Inventory (2)**.
 
-    ![](../media/lab01/30.png)
-1. Select the **Web components** (1) tab.
+    ![](../media/lab01/sc100-ex2-20.png)
 
-    ![](../media/lab01/31.png)
+1. In the EASM | Inventory page, the Search tab is selected (underlined). In the search field use the dropdown menu to select **Labels (1)**.
+
+1. In the dropdown menu below choose the label you recently created, **Open ports (2)**.
+
+1. Select **Search (3)**.
+
+1. Open the found asset **34.223.124.45 (4)**.
+
+     ![](../media/lab01/sc100-ex2-21.png)
+
+1. Select the **Web components (1)** tab.
+
 1. You identify that this asset is hosted on Amazon, there are also open CVE´s on some of the components, but these are not active as you can see in the **Recent** and **Last seen** column. These originate from earlier discovery runs.
 Since this asset is hosted by a third party but still belongs to your attack surface, you categorize it based on their role in your organization.
-1. Select **Modify Asset** (2).
 
-    ![](../media/lab01/31.png)
-1. In the Modify Asset window, use the drop-down the **State** field to select **Dependency** (1).
-1. Select **Update** (2).
+1. Select **Modify Asset (2)**.
 
-    ![](../media/lab01/32.png)
+     ![](../media/lab01/sc100-ex2-22.png)
+
+1. In the Modify Asset window, use the drop-down the **State** field to select **Dependency (1)**.
+
+1. Select **Update (2)**.
+
+     ![](../media/lab01/sc100-ex2-23.png)
+    
     >**NOTE**: In this Case you choose Dependency, because the asset is Infrastructure that is owned by a third party but is part of your attack surface because it directly supports the operation of your owned assets.
 1. Go back to Inventory by selecting **X** in the top right and create a new Search.
-1. Modify the search query to **Web Component Name (1) - contains (2) - Amazon (3)**.
-1. Select **Search** (4).
-1. Select all Assets (5).
 
-    ![](../media/lab01/33.png)
-1. Select, **Modify assets** (1).
+1. Modify the search query to **Web Component Name (1) - contains (2) - Amazon (3)**.
+
+1. Select **Search (4)**.
+
+1. Select all Assets **(6)**.
+
+     ![](../media/lab01/sc100-ex2-24.png)
+
+1. Select, **Modify assets (1)**.
 
     ![](../media/lab01/34.png)
-1. Choose **Dependency** (1) in State and select **Update** (2).
 
-    ![](../media/lab01/35.png)
+1. Choose **Dependency (1)** in State and select **Update (2)**.
+
+    ![](../media/lab01/sc100-lab1-n7.png)
 
 Only if the State is set to **Approved Inventory**, assets are represented in dashboard charts and are scanned daily. For that reason its important to review newly discovered assets and changed their state accordingly.
 
 ### Review
+
 In this exercise, you have completed the following:
 - Created the Defender EASM workspace.
 - Created the Discovery of Contoso´s External Attack Surface.

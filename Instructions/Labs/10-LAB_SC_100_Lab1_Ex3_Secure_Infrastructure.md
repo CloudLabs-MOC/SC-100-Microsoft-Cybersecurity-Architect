@@ -1,19 +1,19 @@
 # Lab 03: Secure Infrastructure
 
+## Estimated Duration: 40 Minutes
+
 ## Exercise Overview
 
 Contoso Ltd. recently acquired Tailwind Traders, which still uses local file servers for storage. You need to evaluate a solution to secure these file servers with your existing cloud environment using Azure Arc and Microsoft Defender for Cloud. You will set up a test server and integrate it into your cloud infrastructure and security environment.
 
 ## Exercise Objectives
 
-After completing this exercise, you'll be able to:
+In this Exercise, you will perform
 
-- Enable Defender for Cloud for enhanced security management.
-- Enable Azure Arc on a test server to manage it centrally.
-- Add a server to Defender for Cloud and collect its logs for analysis.
-- Implement regulatory compliance standards within Defender for Cloud.
-
-## Estimated Duration: 40 Minutes
+- **Task 1:** Enable Defender for Cloud
+- **Task 2:** Enable the on premise Server in Azure Arc
+- **Task 3:** Add Server to Defender for Cloud and gather Logs.
+- **Task 4:** Add regulatory compliance standard
 
 ## Architecture Diagram
 
@@ -35,9 +35,9 @@ After completing this exercise, you'll be able to:
 
 In this task, you will enable Defender plans for the resource types you want to secure, ensuring that **Defender for Cloud** can apply the necessary protections to your assets.
 
-1. Search for **Microsoft Defender for Cloud** (1) and Select it (2).
+1. In the **Search** box, enter **Microsoft Defender for Cloud (1)**, and then select **Microsoft Defender for Cloud (2)** from the search results.
 
-   ![](../media/lab01/sc100-ex3-1.png)
+    ![](../media/lab01/sc100-ex3-1.png)
 
 1. In the left navigation pane, expand **Management (1)** and select **Environment settings (2)**.
 
@@ -45,15 +45,15 @@ In this task, you will enable Defender plans for the resource types you want to 
 
 1. If the Subscription is shown as **unregistered** reload the page.
 
-1. Select the ellipses (...) (3) next to the subscription and select **Edit settings** (4).
+1. Select the ellipses **(...) (3)** next to the subscription and select **Edit settings (4)**.
 
-   ![](../media/lab01/sc100-ex3-2.png)
+    ![](../media/lab01/sc100-ex3-2.png)
 
 1. Under **Cloud Workload Protection** set the **Servers** plan statUs to **On (1)**.
 
 1. Select **Save (2)** at the top of the page.
 
-   ![](../media/lab01/sc100-ex3-3.png)
+    ![](../media/lab01/sc100-ex3-3.png)
 
 When enabling the Plan for Servers you will see that Defender for Cloud supports many more resource types.
 
@@ -61,52 +61,97 @@ When enabling the Plan for Servers you will see that Defender for Cloud supports
 
 In this task, you will configure **Azure Arc** to send data to the **Log Analytics Workspace** used by **Defender for Cloud**, enabling seamless integration and enhanced security monitoring.
 
-1. Swap to VM **Microsoft Azure: VM1**, use <inject key="VM1 Password"></inject> to sign in into the machine.
+1. In the lab virtual machine, Select **VM1** from the desktop.
 
-   ![](../media/lab01/39.png)
+    ![](../media/lab01/sc100-ex3-4.png)
+
+1. Enter the **Password** as **<inject key="VM1 Password"></inject>** when prompted.
+
+    ![](../media/lab01/sc100-ex3-10.png)
+
+     > **Note:** If the password field is not displayed on the Virtual Machine login screen, click **Action** → **Ctrl+Alt+Delete** (or press **Ctrl+Alt+End**) in the Virtual Machine Connection window. This will bring up the Windows sign-in screen, allowing you to enter the Administrator password and log in.
+
+     ![](../media/lab01/sc100-ex3-11.png)
+
 1. Open Edge and sign into the Azure portal **`https://portal.azure.com`** using the following credentials:
+   
    - **Username**: <inject key="AzureAdUserEmail"></inject>
+   
    - **Password**: <inject key="AzureAdUserPassword"></inject>
    >**Note**: If you are asked to **Stay Signed in**, Click on **Yes**.
-1. Search for **`Azure Arc`** and open it.
 
-   ![](../media/lab01/40.png)
-1. In the left hand navigation pane, expand **Azure Arc resources (1)** and select **Machines (2)**.
-1. Select **Add/Create (3)** > **Add a Machine (4)**.
+1. In the Search bar of the Azure portal, type **Azure Arc (1)**, then select **Azure Arc (2)**.
 
-   ![](../media/lab01/41.png)
-1. Under Add a single server (1), select **Generate script** (2).
+    ![](../media/lab01/sc100-lab1-n8.png)
 
-   ![](../media/lab01/42.png)
-1. In the Resource group field, use the drop-down menu to select **sc-100-lab1** (1).
-1. In the Region field, use the drop-down menu to select **<inject key="Resource group Region" enableCopy="false" ></inject>** (2).
-1. Select **Download and run script** (3).
+1. On the left side navigation pane under **Azure Arc resources** select **Machines (1)** and then click on **+ Onboard/Create (2)** drop dowm and then click on **Onboard existing machines (3)**.
 
-   ![](../media/lab01/43.png)
-1. Select **Download** 
+    ![](../media/lab01/sc100-lab1-n9.png)
 
-   >**Note**: If there is a pop-up regarding **OnboardingScript.ps1 could harm your device. Do you want to keep it anyway?**, click on **Keep** (1).
+1. On the **Basics** tab, in the Resource group field, use the drop-down menu to select **sc-100-lab1 (1)**.
 
-   ![](../media/lab01/44.png)
+1. In the Region field, use the drop-down menu to select **<inject key="Resource group Region" enableCopy="false" ></inject> (2)**.
 
-1. Run Windows PowerShell as an administrator. To do this, use the right mouse key to select the Windows icon on the bottom right corner of the window and select **Windows PowerShell(Admin)**
+1. Select **Download and run script (3)**.
+
+    ![](../media/lab01/sc100-lab1-n12.png)
+
+1. Scroll down and select the **Download** button. **Hint:** If your browser blocks the download, take action in the browser to allow it.
+
+    ![](../media/lab01/sc100-lab1-n13.png)
+
+1. In Microsoft Edge Browser, select the ellipsis button (...) **(1)** if needed and then select **Keep (2)**.
+
+    ![](../media/lab01/sc100-lab1-n14.png)
+
+1. Right-click the Windows Start **(1)** button and select **Windows PowerShell (Admin) (2)**.
+
+    ![](../media/lab01/sc100-lab1-n15.png)
+
+1. Enter the below command.
+
+    ```CommandPrompt
+    cd C:\Users\Administrator\Downloads
+    ```
+
+    >**Note:** If you are not able to copy the content, then copy the required content to a notepad file using the Clipboard functionality in the top navigation pane of the Hyper V VM in the lab VM and paste it into the Powershell window.
+
 1. Set the Execution Policy to unrestricted.
 
     ```Powershell
     Set-ExecutionPolicy -ExecutionPolicy unrestricted
     ```
 
-1. On the PowerShell windows, select Y
-1. Run the onboarding script. To do this, select file explorer. It should take you to the downloads folder on the local C drive of the server VM. Use the right mouse key to select the file **OnboardingScript** and select **Run with PowerShell**.
-1. Click on **Open**.
-1. When the authentication popup appears, log in with the following following credentials:
-   - **Username**: <inject key="AzureAdUserEmail"></inject>
-   - **Password**: <inject key="AzureAdUserPassword"></inject>
-1. Wait till the script is successfully completed.
-1. Go back to Azure Portal and open Azure Arc.
-1. Select **Machines**, select **Refresh** (1) on top of the page and validate your server is successfully deployed to Azure Arc.
+1. Enter **A** for Yes to All and press enter.
 
-   ![](../media/lab01/45.png)
+     ![](../media/lab01/sc100-lab1-n16.png)
+
+1. Type `.\OnboardingScript.ps1` and press enter.  
+
+    >**Important:** If you get the error **"The term .\OnboardingScript.ps1 is not recognized..."**, make sure you are doing the steps for Task 2 on the VM1 virtual machine. Another issue might be that the name of the file changed due to multiple downloads, search for **".\OnboardingScript (1).ps1"** or other file numbers in the running directory.
+
+    ![](../media/lab01/sc100-lab1-n17.png)
+
+1. Enter **R** to Run once and press enter (this may take a couple of minutes).
+
+     ![](../media/lab01/sc100-lab1-n18.png)
+
+1. The setup process will open a new Edge browser tab to authenticate the Azure Arc agent. Select your admin account, wait for the message "Authentication complete" and then go back to the Windows PowerShell window.
+
+    - **Username**: <inject key="AzureAdUserEmail"></inject>
+    - **Password**: <inject key="AzureAdUserPassword"></inject>
+
+      ![](../media/lab01/sc100-lab1-n19.png)
+
+1. When the installation finishes,you will get a output like this in the powershell. 
+
+    ![](../media/lab01/sc100-lab1-n20.png)
+
+1. Go back to Azure Portal and open Azure Arc.
+
+1. Select **Machines**, select **Refresh** on top of the page and validate your server is successfully deployed to Azure Arc.
+
+    ![](../media/lab01/sc100-ex3-6.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 	
@@ -118,48 +163,71 @@ In this task, you will configure **Azure Arc** to send data to the **Log Analyti
 
    >**Success!**: You have successfully enabled Azure Arc on the test server and data should start to flow into the log analytics workspace. This process might take some time until you can see anything in the dashboard.
 
-### Task 3: Add Server to Defender for Cloud and gather Logs.
+## Task 3: Add Server to Defender for Cloud and gather Logs.
 
 In this task, you will deploy a **Data Collection Rule** to gather event logs from the on-premises server. The rule will automatically install the monitoring agent on the server and forward the logs to the pre-configured **Log Analytics Workspace**.
 
-1. Search for **Microsoft Defender for Cloud** and open it.
+1. In the Azure portal, navigate to **Microsoft Defender for Cloud**.
 
-   ![](../media/lab01/46.png)
-1. From the left navigation panel, select **Environment settings** (1) under management.
-<!-- 1. From the top of the Getting started page, select the **Upgrade** tab. -->
-1. Expand the **Tenant Root Group** and the **Subscrtiption**, now you will see the previously created log analytics workspace, **law-sentinel-<inject key="DeploymentID" enableCopy="false" /></inject>** listed. Select the ellipses (...) next to the **law-sentinel-<inject key="DeploymentID" enableCopy="false" /></inject>** and select **Edit settings** (2).  This will take you to the **Defender plan** page of law-sentinel-<inject key="DeploymentID" enableCopy="false" /></inject>.  
+1. From the left navigation panel, select **Environment settings (1)** under management.
 
-   ![](../media/lab01/47.png)
-1. On the **Servers** plan, select **On** (1), then select **Save** (2), from the top of the page.
+1. Expand the **Tenant Root Group** and the **Subscrtiption**, now you will see the previously created log analytics workspace, **law-sentinel-<inject key="DeploymentID" enableCopy="false" /></inject>** listed. Select the ellipses **(...) (2)** next to the **law-sentinel-<inject key="DeploymentID" enableCopy="false" /></inject>** and select **Edit settings (3)**.  This will take you to the **Defender plan** page of law-sentinel-<inject key="DeploymentID" enableCopy="false" /></inject>.  
 
-   ![](../media/lab01/48.png)
-1. Use the search bar at the top to search for **Data collection rules**, then select it from the search results.
+    ![](../media/lab01/sc100-ex3-7.png)
 
-   ![](../media/lab01/49.png)
-1. Select **Create**.
-1. Add the following details, and select **Next: Resources** (4):
-   - Rule Name: **`ContosoDCR`** (1)
-   - Resource group: **sc-100-lab1** (2)
-   - Region - **<inject key="Resource group Region" enableCopy="false" ></inject>** (3)
+1. On the **Servers** plan, select **On (1)**, then select **Save (2)**, from the top of the page.
 
-      ![](../media/lab01/50.png)
-1. Select **Add resources** (1). Choose **Machines - Azure Arc** (2) under the droupdown for **Resource types** and Expand the scope of the resource group. Check the previously onboarded **Azure Arc machine** (3), select **Apply** (4).
+    ![](../media/lab01/sc100-ex3-8.png)
 
-   ![](../media/lab01/51.png)
+1. In the **Search** box, enter **Data collection rules (1)**, and then select **Data collection rules (2)** from the search results.
+
+    ![](../media/lab01/sc100-ex3-9.png)
+
+1. Select **+ Create**.
+
+1. Add the following details, and select **Next (5)**:
+   - Rule Name: **`ContosoDCR` (1)**
+   - Subscription: Select default **(2)**
+   - Resource group: **sc-100-lab1 (3)**
+   - Region - **<inject key="Resource group Region" enableCopy="false" ></inject> (4)**
+
+      ![](../media/lab01/sc100-ex3-10.png)
+
+1. Select **Add resources (1)**. Check the previously onboarded **Azure Arc machine (2)**, then select **Apply (3)**.
+
+    ![](../media/lab01/sc100-ex3-11.png)
+
 1. Select **Next: Collect and deliver**.
-1. Select **Add data source** (1).
-1. Choose Data Source type **Windows Event Logs** (2).
-1. Select every option under **Configure the event logs and levels to collect:** (3).
-1. Select **Next: Destination** (4).
 
-   ![](../media/lab01/52.png)
-1. Select **Add Destination** (1).
-   - Destination type: **Azure Monitor Logs** (2).
-   - Destination Details: **law-sentinel-<inject key="DeploymentID" enableCopy="false" /></inject>** (3).
-1. Select **Add data source** (4).
+1. Select **Add data source**.
 
-   ![](../media/lab01/53.png)
+    ![](../media/lab01/sc100-ex3-12.png)
+
+1. Choose Data Source type **Windows Event Logs (1)**.
+
+1. Select every option under **Application, Security and System (2)** event logs.
+
+1. Select **Next: Destination (3)**.
+
+    ![](../media/lab01/sc100-ex3-13.png)
+
+1. Select **Add destination (1)**, and configure the following settings:
+   - **Destination type (2):** Log Analytics Workspaces
+   - **Subscription (3):** Verify the selected subscription
+   - **Log Analytics Workspaces (4):** Select the Log Analytics workspace **law-sentinel-<inject key="DeploymentID" enableCopy="false" /></inject>**
+
+1. Select **Apply (5)**.
+
+    ![](../media/lab01/sc100-ex3-14.png)
+
+1. Select **Save**.
+
+    ![](../media/lab01/sc100-ex3-15.png)
+
 1. Select **Review & create**.
+
+    ![](../media/lab01/sc100-ex3-16.png)
+
 1. Select **Create**.
 
 It may take a few hours till the resource is fully onboarded in Defender for Cloud. The next step is to look at the recommendation that Defender for Cloud generates for this resource.
@@ -172,24 +240,29 @@ It may take a few hours till the resource is fully onboarded in Defender for Clo
     
 <validation step="883a42a8-fd6a-4cf4-9b39-da3e203dc093" />
 
-### Task 4: Add regulatory compliance standard
+## Task 4: Add regulatory compliance standard
 
 In this task, you will secure the resources based on recommendations and assign security policies, such as **NIST SP 800-53 Rev.5**, to ensure that **Tailwind Traders'** resources comply with regulatory requirements.
 
-1. Search for **Microsoft Defender for Cloud** and open it.
-1. Expand **Management** and select **Environment settings** (1).
-1. Select **Expand all**.
-1. Select the ellipses (...) next to the subscription and select **Edit settings** (2).
+1. In the Azure portal, navigate to **Microsoft Defender for Cloud**.
 
-   ![](../media/lab01/54.png)
-1. Select **Security policies** (1) in the navigation menu on the left. The list might take a while to load.
-1. Search for **`NIST SP 800-53 Rev. 5`** (2). Change the status slider to **On** (3).
+1. In the left navigation pane, expand **Management (1)** and select **Environment settings (2)**.
 
-   ![](../media/lab01/55.png)
-1. Go back to Defender for Cloud and select **Regulatory compliance** (1) under Cloud Security.
+1. Select **Expand all** and select your Subscription.
+
+1. Select the ellipses **(...) (3)** next to the subscription and select **Edit settings (4)**.
+
+    ![](../media/lab01/sc100-ex3-2.png)
+
+1. Select **Security policies (1)** in the navigation menu on the left. The list might take a while to load.
+
+1. Search for **`NIST SP 800-53 Rev. 5` (2)**. Change the status slider to **On (3)**.
+
+     ![](../media/lab01/sc100-ex3-17.png)
+
+1. Go back to Defender for Cloud and select **Regulatory compliance** under Cloud Security.
 
    ![](../media/lab01/56.png)
-
 
 Due to limitation off the lab environment, you are not able to see the resources as well as the compliance recommendations. It takes a while until the deployed resources are visible in Defender for Cloud.
 
