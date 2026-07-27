@@ -73,6 +73,7 @@ In this task, you'll create a log analytics workspace which is required to house
   <validation step="76fe2891-2386-4c8f-872c-46eb9701d50c" />
 
    >**Success!** You successfully created the log analytics workspace for your Sentinel deployment.
+--- 
 
 ## Task 2 - Create Sentinel
 
@@ -80,7 +81,7 @@ In this task you'll deploy Microsoft Sentinel to the Log Analytics workspace and
 
 1. In the Search bar of the Azure portal, type **microsoft sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
-     ![](../media/lab01/sc100-lab1-5.png)
+      ![](../media/lab01/sc100-lab1-5.png)
 
 1. From the **Microsoft Sentinel** page, select **+ Create**.
 
