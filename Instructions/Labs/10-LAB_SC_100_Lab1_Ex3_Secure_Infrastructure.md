@@ -37,7 +37,7 @@ In this task, you will enable Defender plans for the resource types you want to 
 
 1. In the **Search** box, enter **Microsoft Defender for Cloud (1)**, and then select **Microsoft Defender for Cloud (2)** from the search results.
 
-    ![](../media/lab01/sc100-ex3-1.png)
+     ![](../media/lab01/sc100-ex3-1.png)
 
 1. In the left navigation pane, expand **Management (1)** and select **Environment settings (2)**.
 
@@ -47,13 +47,13 @@ In this task, you will enable Defender plans for the resource types you want to 
 
 1. Select the ellipses **(...) (3)** next to the subscription and select **Edit settings (4)**.
 
-    ![](../media/lab01/sc100-ex3-2.png)
+     ![](../media/lab01/sc100-ex3-2.png)
 
 1. Under **Cloud Workload Protection** set the **Servers** plan statUs to **On (1)**.
 
 1. Select **Save (2)** at the top of the page.
 
-    ![](../media/lab01/sc100-ex3-3.png)
+     ![](../media/lab01/sc100-ex3-3.png)
 
 When enabling the Plan for Servers you will see that Defender for Cloud supports many more resource types.
 
@@ -63,11 +63,11 @@ In this task, you will configure **Azure Arc** to send data to the **Log Analyti
 
 1. In the lab virtual machine, Select **VM1** from the desktop.
 
-    ![](../media/lab01/sc100-ex3-4.png)
+     ![](../media/lab01/sc100-ex3-4.png)
 
 1. Enter the **Password** as **<inject key="VM1 Password"></inject>** when prompted.
 
-    ![](../media/lab01/sc100-ex3-10.png)
+     ![](../media/lab01/sc100-ex3-10.png)
 
      > **Note:** If the password field is not displayed on the Virtual Machine login screen, click **Action** → **Ctrl+Alt+Delete** (or press **Ctrl+Alt+End**) in the Virtual Machine Connection window. This will bring up the Windows sign-in screen, allowing you to enter the Administrator password and log in.
 
@@ -82,11 +82,11 @@ In this task, you will configure **Azure Arc** to send data to the **Log Analyti
 
 1. In the Search bar of the Azure portal, type **Azure Arc (1)**, then select **Azure Arc (2)**.
 
-    ![](../media/lab01/sc100-lab1-n8.png)
+     ![](../media/lab01/sc100-lab1-n8.png)
 
 1. On the left side navigation pane under **Azure Arc resources** select **Machines (1)** and then click on **+ Onboard/Create (2)** drop dowm and then click on **Onboard existing machines (3)**.
 
-    ![](../media/lab01/sc100-lab1-n9.png)
+     ![](../media/lab01/sc100-lab1-n9.png)
 
 1. On the **Basics** tab, in the Resource group field, use the drop-down menu to select **sc-100-lab1 (1)**.
 
@@ -94,19 +94,19 @@ In this task, you will configure **Azure Arc** to send data to the **Log Analyti
 
 1. Select **Download and run script (3)**.
 
-    ![](../media/lab01/sc100-lab1-n12.png)
+     ![](../media/lab01/sc100-lab1-n12.png)
 
 1. Scroll down and select the **Download** button. **Hint:** If your browser blocks the download, take action in the browser to allow it.
 
-    ![](../media/lab01/sc100-lab1-n13.png)
+     ![](../media/lab01/sc100-lab1-n13.png)
 
 1. In Microsoft Edge Browser, select the ellipsis button (...) **(1)** if needed and then select **Keep (2)**.
 
-    ![](../media/lab01/sc100-lab1-n14.png)
+     ![](../media/lab01/sc100-lab1-n14.png)
 
 1. Right-click the Windows Start **(1)** button and select **Windows PowerShell (Admin) (2)**.
 
-    ![](../media/lab01/sc100-lab1-n15.png)
+     ![](../media/lab01/sc100-lab1-n15.png)
 
 1. Enter the below command.
 
@@ -130,7 +130,7 @@ In this task, you will configure **Azure Arc** to send data to the **Log Analyti
 
     >**Important:** If you get the error **"The term .\OnboardingScript.ps1 is not recognized..."**, make sure you are doing the steps for Task 2 on the VM1 virtual machine. Another issue might be that the name of the file changed due to multiple downloads, search for **".\OnboardingScript (1).ps1"** or other file numbers in the running directory.
 
-    ![](../media/lab01/sc100-lab1-n17.png)
+     ![](../media/lab01/sc100-lab1-n17.png)
 
 1. Enter **R** to Run once and press enter (this may take a couple of minutes).
 
@@ -138,20 +138,20 @@ In this task, you will configure **Azure Arc** to send data to the **Log Analyti
 
 1. The setup process will open a new Edge browser tab to authenticate the Azure Arc agent. Select your admin account, wait for the message "Authentication complete" and then go back to the Windows PowerShell window.
 
-    - **Username**: <inject key="AzureAdUserEmail"></inject>
-    - **Password**: <inject key="AzureAdUserPassword"></inject>
+     - **Username**: <inject key="AzureAdUserEmail"></inject>
+     - **Password**: <inject key="AzureAdUserPassword"></inject>
 
-      ![](../media/lab01/sc100-lab1-n19.png)
+       ![](../media/lab01/sc100-lab1-n19.png)
 
 1. When the installation finishes,you will get a output like this in the powershell. 
 
-    ![](../media/lab01/sc100-lab1-n20.png)
+     ![](../media/lab01/sc100-lab1-n20.png)
 
 1. Go back to Azure Portal and open Azure Arc.
 
 1. Select **Machines**, select **Refresh** on top of the page and validate your server is successfully deployed to Azure Arc.
 
-    ![](../media/lab01/sc100-ex3-6.png)
+     ![](../media/lab01/sc100-ex3-6.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 	
@@ -173,35 +173,35 @@ In this task, you will deploy a **Data Collection Rule** to gather event logs fr
 
 1. Expand the **Tenant Root Group** and the **Subscrtiption**, now you will see the previously created log analytics workspace, **law-sentinel-<inject key="DeploymentID" enableCopy="false" /></inject>** listed. Select the ellipses **(...) (2)** next to the **law-sentinel-<inject key="DeploymentID" enableCopy="false" /></inject>** and select **Edit settings (3)**.  This will take you to the **Defender plan** page of law-sentinel-<inject key="DeploymentID" enableCopy="false" /></inject>.  
 
-    ![](../media/lab01/sc100-ex3-7.png)
+     ![](../media/lab01/sc100-ex3-7.png)
 
 1. On the **Servers** plan, select **On (1)**, then select **Save (2)**, from the top of the page.
 
-    ![](../media/lab01/sc100-ex3-8.png)
+     ![](../media/lab01/sc100-ex3-8.png)
 
 1. In the **Search** box, enter **Data collection rules (1)**, and then select **Data collection rules (2)** from the search results.
 
-    ![](../media/lab01/sc100-ex3-9.png)
+     ![](../media/lab01/sc100-ex3-9.png)
 
 1. Select **+ Create**.
 
 1. Add the following details, and select **Next (5)**:
-   - Rule Name: **`ContosoDCR` (1)**
-   - Subscription: Select default **(2)**
-   - Resource group: **sc-100-lab1 (3)**
-   - Region - **<inject key="Resource group Region" enableCopy="false" ></inject> (4)**
+    - Rule Name: **`ContosoDCR` (1)**
+    - Subscription: Select default **(2)**
+    - Resource group: **sc-100-lab1 (3)**
+    - Region - **<inject key="Resource group Region" enableCopy="false" ></inject> (4)**
 
-      ![](../media/lab01/sc100-ex3-10.png)
+       ![](../media/lab01/sc100-ex3-10.png)
 
 1. Select **Add resources (1)**. Check the previously onboarded **Azure Arc machine (2)**, then select **Apply (3)**.
 
-    ![](../media/lab01/sc100-ex3-11.png)
+     ![](../media/lab01/sc100-ex3-11.png)
 
 1. Select **Next: Collect and deliver**.
 
 1. Select **Add data source**.
 
-    ![](../media/lab01/sc100-ex3-12.png)
+     ![](../media/lab01/sc100-ex3-12.png)
 
 1. Choose Data Source type **Windows Event Logs (1)**.
 
@@ -209,7 +209,7 @@ In this task, you will deploy a **Data Collection Rule** to gather event logs fr
 
 1. Select **Next: Destination (3)**.
 
-    ![](../media/lab01/sc100-ex3-13.png)
+     ![](../media/lab01/sc100-ex3-13.png)
 
 1. Select **Add destination (1)**, and configure the following settings:
    - **Destination type (2):** Log Analytics Workspaces
@@ -218,15 +218,15 @@ In this task, you will deploy a **Data Collection Rule** to gather event logs fr
 
 1. Select **Apply (5)**.
 
-    ![](../media/lab01/sc100-ex3-14.png)
+     ![](../media/lab01/sc100-ex3-14.png)
 
 1. Select **Save**.
 
-    ![](../media/lab01/sc100-ex3-15.png)
+     ![](../media/lab01/sc100-ex3-15.png)
 
 1. Select **Review & create**.
 
-    ![](../media/lab01/sc100-ex3-16.png)
+     ![](../media/lab01/sc100-ex3-16.png)
 
 1. Select **Create**.
 
@@ -252,7 +252,7 @@ In this task, you will secure the resources based on recommendations and assign 
 
 1. Select the ellipses **(...) (3)** next to the subscription and select **Edit settings (4)**.
 
-    ![](../media/lab01/sc100-ex3-2.png)
+     ![](../media/lab01/sc100-ex3-2.png)
 
 1. Select **Security policies (1)** in the navigation menu on the left. The list might take a while to load.
 
@@ -262,7 +262,7 @@ In this task, you will secure the resources based on recommendations and assign 
 
 1. Go back to Defender for Cloud and select **Regulatory compliance** under Cloud Security.
 
-   ![](../media/lab01/56.png)
+     ![](../media/lab01/56.png)
 
 Due to limitation off the lab environment, you are not able to see the resources as well as the compliance recommendations. It takes a while until the deployed resources are visible in Defender for Cloud.
 
