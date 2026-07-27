@@ -1,7 +1,8 @@
 # Lab 03: Secure Infrastructure
 
 ## Exercise Overview
-Contoso Ltd. recently acquired Tailwind Traders, which still uses local file servers for storage. As the cybersecurity architect of Contoso Ltd., you want to evaluate a solution to secure these file servers with your existing cloud environment. Tailwind Traders provided you with a test server (The Lab VM 2) that you can use for the implementation of your POC. In this exercise, you will set up the server and integrate it into your cloud infrastructure and security environment using Azure Arc and send server logs to Defender for Cloud.
+
+Contoso Ltd. recently acquired Tailwind Traders, which still uses local file servers for storage. You need to evaluate a solution to secure these file servers with your existing cloud environment using Azure Arc and Microsoft Defender for Cloud. You will set up a test server and integrate it into your cloud infrastructure and security environment.
 
 ## Exercise Objectives
 
@@ -11,7 +12,6 @@ After completing this exercise, you'll be able to:
 - Enable Azure Arc on a test server to manage it centrally.
 - Add a server to Defender for Cloud and collect its logs for analysis.
 - Implement regulatory compliance standards within Defender for Cloud.
-
 
 ## Estimated Duration: 40 Minutes
 
@@ -31,66 +31,33 @@ After completing this exercise, you'll be able to:
 
    - **Regulatory Compliance Standard**: Helps organizations align with industry compliance requirements by assessing and monitoring adherence to regulatory standards.  
 
-## Part 1: Design a solution
-
-### Design approach
-
-The initial step involves analyzing the requirements based on the described scenario, understanding the objectives and defining the requirements.
-
-Based on the provided use-case, the following requirements can be outlined:
-
-- Enable Defender for Cloud on your subscription
-- On premises servers need to be secured
-- Logs should be stored, that Contoso´s SIEM Solution can process them
-- Assess the compliance state of deploy resources
-
-In the second step examine Contoso Ltd.'s existing environment. Defender for Cloud provides recommendations to secure cloud and on-premises resources by identifying steps to improve configuration and deployment. By actively monitoring workloads, it enhances overall security posture and reduces exposure to threats.
-
-### Proposed solution
-
-|Requirement|Solution|Action plan|
-|----|----|----|
-|Enable Defender for Cloud on your subscription| Defender for Cloud | Activate Defender plans in Defender for Cloud |
-|On premises servers need to be secured | Azure Arc | Onboard the on premise Server to the cloud enviroment |
-|Logs need to be stored, that Contoso´s SIEM Solution can process them |Defender for Cloud, DataCollectionRules, AzureMonitoring Agent, Log Analytics workspace | Create a Data Collection Rule to gather logs from Contoso´s on premise Server |
-|Assess the compliance state of deploy resources | Defender for Cloud Security policies| Enable the NIST SP 800-53 Rev.5 Compliance and assesses your compliance state.|
-
-## Part 2: Implement the solution
-
-<!-- ### Task 1: Create a Log Analytics Workspace
-
-In this task, you´ll create a log analytics workspace which is required to house the data that is send from different resources.
-
-1. Select **Create a resource** and search for **log analytics workspace**
-1. Find the **Log Analytics Workspace tile**, select **Create**.
-1. On Create Log Analytics workspace site, create a new **Resource Group** and name it **`ContosoRG`**.
-1. In Instance details enter the name **`ContosoLA`**, select **East US** for region.
-1. Select **Review & Create**
-1. Select **Create** to start the deployment.
-
-You successfully created the log analytics workspace. -->
-
-### Task 1: Enable Defender for Cloud
+## Task 1: Enable Defender for Cloud
 
 In this task, you will enable Defender plans for the resource types you want to secure, ensuring that **Defender for Cloud** can apply the necessary protections to your assets.
 
 1. Search for **Microsoft Defender for Cloud** (1) and Select it (2).
 
-   ![](../media/lab01/36.png)
-1. In the left navigation pane, expand **Management** (1) and select **Environment settings** (2).
+   ![](../media/lab01/sc100-ex3-1.png)
+
+1. In the left navigation pane, expand **Management (1)** and select **Environment settings (2)**.
+
 1. Select **Expand all** and select your Subscription.
+
 1. If the Subscription is shown as **unregistered** reload the page.
+
 1. Select the ellipses (...) (3) next to the subscription and select **Edit settings** (4).
 
-   ![](../media/lab01/37.png)
-1. Under **Cloud Workload Protection** set the **Servers** plan statUs to **On** (1).
-1. Select **Save** (2) at the top of the page.
+   ![](../media/lab01/sc100-ex3-2.png)
 
-   ![](../media/lab01/38.png)
+1. Under **Cloud Workload Protection** set the **Servers** plan statUs to **On (1)**.
+
+1. Select **Save (2)** at the top of the page.
+
+   ![](../media/lab01/sc100-ex3-3.png)
 
 When enabling the Plan for Servers you will see that Defender for Cloud supports many more resource types.
 
-### Task 2: Enable the on premise Server in Azure Arc
+## Task 2: Enable the on premise Server in Azure Arc
 
 In this task, you will configure **Azure Arc** to send data to the **Log Analytics Workspace** used by **Defender for Cloud**, enabling seamless integration and enhanced security monitoring.
 

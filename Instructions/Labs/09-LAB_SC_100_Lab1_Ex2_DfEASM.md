@@ -62,28 +62,31 @@ In the second step examine Contoso Ltd.'s existing environment. Microsoft Defend
 
 ## Part 2: Implement the solution
 
-### Task 1 - Setup Defender EASM
+## Task 1 - Setup Defender EASM
 
 In this Task, you´ll create a Defender EASM workspace.
 
 1. In the top search bar, search for **`Microsoft Defender EASM`**.
 
-    ![](../media/lab01/13.png)
+     ![](../media/lab01/sc100-ex2-1.png)
+
 1. Select **Create**.
 
-    ![](../media/lab01/14.png)
 1. On Create Microsoft Defender EASM Resource, select the existing resource group **sc-100-lab1**.
-1. In Instance details enter the following details and select on **Review & Create** (5):
+
+1. In Instance details enter the following details and select on **Review & Create (5)**:
     | Settings | Values |
     |  -- | -- |
-    | Subscription | *Leave default subscription* (1)|
-    | Resource group | Select the resource group name **sc-100-lab1** from the dropdown list (2)|
-    | Name | **EASM<inject key="DeploymentID" enableCopy="false" /></inject>** (3) | 
-    | Region | **<inject key="Resource group Region" enableCopy="false" ></inject>** (4) | 
+    | Subscription | *Leave default subscription* **(1)** |
+    | Resource group | Select the resource group name **sc-100-lab1** from the dropdown list **(2)** |
+    | Name | **EASM<inject key="DeploymentID" enableCopy="false" /></inject> (3)** | 
+    | Region | **<inject key="Resource group Region" enableCopy="false" ></inject> (4)** | 
 
-    ![](../media/lab01/15.png)
+     ![](../media/lab01/sc100-ex2-2.png)
 
 1. Select **Create**.
+
+    ![](../media/lab01/sc100-ex2-3.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 	
@@ -95,14 +98,18 @@ In this Task, you´ll create a Defender EASM workspace.
 
    >**Success!** You successfully created the Defender EASM workspace.
 
-### Task 2 - Create Discovery
+## Task 2 - Create Discovery
 
 In this Task, you´ll create a Discovery on Contoso Ltd. outside facing assets. After you have created an instance you need to populate it with actual data. Therefore you will now create a discovery.
 
 1. On the search bar on the top, search for **`Microsoft Defender EASM`** and open it.
 
     ![](../media/lab01/13.png)
+
 1. Select the **EASM<inject key="DeploymentID" enableCopy="false" /></inject>** workspace you created in the last task.
+
+      ![](../media/lab01/sc100-ex2-4.png)
+
 1. Search for **Contoso (1)** in the **Search for an organization** search field.
 1. Select **Contoso Ltd. (2)**.
 1. Select **Start attack surface discovery (3)**.
