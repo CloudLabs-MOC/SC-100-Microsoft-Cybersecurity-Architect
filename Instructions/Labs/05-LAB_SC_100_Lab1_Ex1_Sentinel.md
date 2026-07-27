@@ -219,15 +219,16 @@ In this task, you´ll create a workbook, to get a dashboard with custom views an
       ![](../media/lab01/sc100-lab1-24.png)
 
 1. In the **New Parameter** pane, configure the following settings:
-     - **Parameter name (1):** AlertSeverity
-     - **Parameter type (2):** Drop down
+     
+      - **Parameter name (1):** AlertSeverity
+      - **Parameter type (2):** Drop down
 
-     - Select the following options **(3)**:
-       - **Required?**
-       - **Allow multiple selections**
-       - **Hide parameter in reading mode**
+      - Select the following options **(3)**:
+        - **Required?**
+        - **Allow multiple selections**
+        - **Hide parameter in reading mode**
 
-         ![](../media/lab01/sc100-lab1-25.png)
+          ![](../media/lab01/sc100-lab1-25.png)
 
 1. Under **Get data from**, select **Query (1)**, set **Time range (2)** to **TimeRange**, and enter the following query in the **Logs (Analytics) Query (3)** field.
 
@@ -262,12 +263,12 @@ In this task, you´ll create a workbook, to get a dashboard with custom views an
 
 1. Under **Get data from**, select **Query**, set **Time range** to **TimeRange**, and enter the following query in the **Logs (Analytics) Query** field.
 
-     ```KQL
-     SecurityAlert
-     | summarize Count = count() by ProductName
-     | order by Count desc, ProductName asc
-     | project Value = ProductName, Label = strcat(ProductName, ' - ', Count)
-     ```
+      ```KQL
+      SecurityAlert
+      | summarize Count = count() by ProductName
+      | order by Count desc, ProductName asc
+      | project Value = ProductName, Label = strcat(ProductName, ' - ', Count)
+      ```
 
 1. Scroll down to **Include in the drop down**, check **All** and set **Default selected item** to **All**.
 
@@ -279,23 +280,23 @@ In this task, you´ll create a workbook, to get a dashboard with custom views an
 
 1. In the **Editing: query** pane, enter the following query in the **Logs (Analytics) Query (1)** field, set **Time range (2)** to **Set in query**, and then select **Step Settings (3)**.
 
-     ```KQL
-     SecurityIncident
-     | where CreatedTime {TimeRange:value}
-     | summarize arg_max(TimeGenerated,*) by tostring(IncidentNumber)
-     | extend IncidentID = IncidentName
-     | extend Alerts = extract("\\[(.*?)\\]", 1, tostring(AlertIds))
-     | mv-expand AlertIds to typeof(string)
-     | join
-     (
-         SecurityAlert
-         | extend AlertEntities = parse_json(Entities)
-         | mv-expand AlertEntities
-     ) on $left.AlertIds == $right.SystemAlertId
-     | summarize AlertCount=dcount(AlertIds) by IncidentNumber, Status, Severity, Title, Alerts, IncidentUrl, IncidentID
-     | project IncidentNumber, IncidentID, Title, Severity, Status, AlertCount, Alerts, IncidentUrl
-     | order by Severity
-     ```
+      ```KQL
+      SecurityIncident
+      | where CreatedTime {TimeRange:value}
+      | summarize arg_max(TimeGenerated,*) by tostring(IncidentNumber)
+      | extend IncidentID = IncidentName
+      | extend Alerts = extract("\\[(.*?)\\]", 1, tostring(AlertIds))
+      | mv-expand AlertIds to typeof(string)
+      | join
+      (
+          SecurityAlert
+          | extend AlertEntities = parse_json(Entities)
+          | mv-expand AlertEntities
+      ) on $left.AlertIds == $right.SystemAlertId
+      | summarize AlertCount=dcount(AlertIds) by IncidentNumber, Status, Severity, Title, Alerts, IncidentUrl, IncidentID
+      | project IncidentNumber, IncidentID, Title, Severity, Status, AlertCount, Alerts, IncidentUrl
+      | order by Severity
+      ```
 
       ![](../media/lab01/sc100-lab1-32.png)
 

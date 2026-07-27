@@ -173,35 +173,35 @@ In this task, you will deploy a **Data Collection Rule** to gather event logs fr
 
 1. Expand the **Tenant Root Group** and the **Subscrtiption**, now you will see the previously created log analytics workspace, **law-sentinel-<inject key="DeploymentID" enableCopy="false" /></inject>** listed. Select the ellipses **(...) (2)** next to the **law-sentinel-<inject key="DeploymentID" enableCopy="false" /></inject>** and select **Edit settings (3)**.  This will take you to the **Defender plan** page of law-sentinel-<inject key="DeploymentID" enableCopy="false" /></inject>.  
 
-     ![](../media/lab01/sc100-ex3-7.png)
+      ![](../media/lab01/sc100-ex3-7.png)
 
 1. On the **Servers** plan, select **On (1)**, then select **Save (2)**, from the top of the page.
 
-     ![](../media/lab01/sc100-ex3-8.png)
+      ![](../media/lab01/sc100-ex3-8.png)
 
 1. In the **Search** box, enter **Data collection rules (1)**, and then select **Data collection rules (2)** from the search results.
 
-     ![](../media/lab01/sc100-ex3-9.png)
+      ![](../media/lab01/sc100-ex3-9.png)
 
 1. Select **+ Create**.
 
 1. Add the following details, and select **Next (5)**:
-    - Rule Name: **`ContosoDCR` (1)**
-    - Subscription: Select default **(2)**
-    - Resource group: **sc-100-lab1 (3)**
-    - Region - **<inject key="Resource group Region" enableCopy="false" ></inject> (4)**
+     - Rule Name: **`ContosoDCR` (1)**
+     - Subscription: Select default **(2)**
+     - Resource group: **sc-100-lab1 (3)**
+     - Region - **<inject key="Resource group Region" enableCopy="false" ></inject> (4)**
 
-       ![](../media/lab01/sc100-ex3-10.png)
+        ![](../media/lab01/sc100-ex3-10.png)
 
 1. Select **Add resources (1)**. Check the previously onboarded **Azure Arc machine (2)**, then select **Apply (3)**.
 
-     ![](../media/lab01/sc100-ex3-11.png)
+      ![](../media/lab01/sc100-ex3-11.png)
 
 1. Select **Next: Collect and deliver**.
 
 1. Select **Add data source**.
 
-     ![](../media/lab01/sc100-ex3-12.png)
+      ![](../media/lab01/sc100-ex3-12.png)
 
 1. Choose Data Source type **Windows Event Logs (1)**.
 
@@ -209,24 +209,24 @@ In this task, you will deploy a **Data Collection Rule** to gather event logs fr
 
 1. Select **Next: Destination (3)**.
 
-     ![](../media/lab01/sc100-ex3-13.png)
+      ![](../media/lab01/sc100-ex3-13.png)
 
 1. Select **Add destination (1)**, and configure the following settings:
-   - **Destination type (2):** Log Analytics Workspaces
-   - **Subscription (3):** Verify the selected subscription
-   - **Log Analytics Workspaces (4):** Select the Log Analytics workspace **law-sentinel-<inject key="DeploymentID" enableCopy="false" /></inject>**
+     - **Destination type (2):** Log Analytics Workspaces
+     - **Subscription (3):** Verify the selected subscription
+     - **Log Analytics Workspaces (4):** Select the Log Analytics workspace **law-sentinel-<inject key="DeploymentID" enableCopy="false" /></inject>**
 
 1. Select **Apply (5)**.
 
-     ![](../media/lab01/sc100-ex3-14.png)
+      ![](../media/lab01/sc100-ex3-14.png)
 
 1. Select **Save**.
 
-     ![](../media/lab01/sc100-ex3-15.png)
+      ![](../media/lab01/sc100-ex3-15.png)
 
 1. Select **Review & create**.
 
-     ![](../media/lab01/sc100-ex3-16.png)
+      ![](../media/lab01/sc100-ex3-16.png)
 
 1. Select **Create**.
 
