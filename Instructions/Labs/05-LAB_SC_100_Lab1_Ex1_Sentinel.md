@@ -77,28 +77,25 @@ In this task, you'll create a log analytics workspace which is required to house
 
 ## Task 2 - Create Sentinel
 
-
-
 1. In the Search bar of the Azure portal, type **microsoft sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
-    ![](../media/lab01/sc100-lab1-5.png)
+     ![](../media/lab01/sc100-lab1-5.png)
 
 1. From the **Microsoft Sentinel** page, select **+ Create**.
 
-    ![](../media/lab01/sc100-lab1-6.png)
+     ![](../media/lab01/sc100-lab1-6.png)
 
 1. In the **Add a Microsoft Sentinel to a workspace page** the previously created log analytics workspace should be listed. Select **law-sentinel-<inject key="DeploymentID" enableCopy="false" /></inject> (1)** then select **Add (2)**.
 
-    ![](../media/lab01/sc100-lab1-7.png)
+     ![](../media/lab01/sc100-lab1-7.png)
 
 1. It may take a few minutes to add Sentinel to the workspace. Once it's added, the **Microsoft Sentinel | Guides** page is displayed.  You're notified that the Microsoft Sentinel free trial is activated.  Select **Ok**.
 
-    ![](../media/lab01/sc100-lab1-8.png)
+     ![](../media/lab01/sc100-lab1-8.png)
 
 1. From the center of the page, select **Go to content hub**. The content hub is where you would go to download solutions. Explore the content hub, at will.
 
 ## Task 3 - Setup RBAC
-
 
 #### Permission requirements
 
@@ -115,7 +112,7 @@ In this task, you'll create a log analytics workspace which is required to house
 
 1. Select **Add (2)**, from the dropdown select **Add role assignment (3)**.
 
-    ![](../media/lab01/sc100-lab1-9.png)
+     ![](../media/lab01/sc100-lab1-9.png)
 
 1. Search for **`Microsoft Sentinel Responder` (1)** and select **View (2)** in the Details column.
 
@@ -125,17 +122,17 @@ In this task, you'll create a log analytics workspace which is required to house
 
 1. Select **Next (3)**.
 
-    ![](../media/lab01/sc100-lab1-10.png)
+     ![](../media/lab01/sc100-lab1-10.png)
 
 1. Select **+ Select members (1)**.
 
 1. Search for **`SOC Analysts` (2)** Group, select **SOC Analysts** from the search results, press **Select (3)** and add the role assignment.
 
-    ![](../media/lab01/sc100-lab1-11.png)
+     ![](../media/lab01/sc100-lab1-11.png)
 
 1. Select **Review + assign** twice.
 
-    ![](../media/lab01/sc100-lab1-12.png)
+     ![](../media/lab01/sc100-lab1-12.png)
 
 1. You'll repeat the steps for the Sentinel Contributor role. Select **Add**, from the dropdown select **Add role assignment**.
 
@@ -143,22 +140,23 @@ In this task, you'll create a log analytics workspace which is required to house
 
 1. Select **Next (3)**.
 
-    ![](../media/lab01/sc100-lab1-13.png)
+     ![](../media/lab01/sc100-lab1-13.png)
 
 1. Select **+ Select members (1)**.
 
 1. On the **Select members** blade, search for the **`SOC Engineers` (2)** Group. From the search results select **SOC Engineers** press **Select (3)** to add the role assignment and select **Apply**.
 
-    ![](../media/lab01/sc100-lab1-14.png)
+     ![](../media/lab01/sc100-lab1-14.png)
 
 1. Select **Review + assign** twice.
 
 1. Select **Role assignments tab**, Confirm that the role assignments are set.
 
-
 ## Task 4 - Create Workbook
 
 In this task, you´ll create a workbook, to get a dashboard with custom views and current incidents and their alerts.
+
+> **Note:** The steps to create a dashboard with custom views for incidents and their alerts are included for information purposes only, as there is no data available upon which to do this task. Executing the steps will not return any data.
 
 1. Open the Edge browser and navigate to the **Defender portal** using the link below:
 
@@ -178,15 +176,15 @@ In this task, you´ll create a workbook, to get a dashboard with custom views an
 
 1. In the workbook, select the **Edit** icon.
 
-    ![](../media/lab01/sc100-lab1-16.png)
+     ![](../media/lab01/sc100-lab1-16.png)
 
 1. Select the first **Edit** button on the right side.
 
-    ![](../media/lab01/sc100-lab1-17.png)
+     ![](../media/lab01/sc100-lab1-17.png)
 
 1. In edit mode, select the **More actions (1)** menu, expand **Add (2)**, and then select **Add parameters (3)**.
 
-    ![](../media/lab01/sc100-lab1-18.png)
+     ![](../media/lab01/sc100-lab1-18.png)
 
 1. Select **Edit inline** to expand the text editor into inline editing mode.
 
@@ -194,23 +192,23 @@ In this task, you´ll create a workbook, to get a dashboard with custom views an
 
 1. Select **Add** to create a new workbook parameter.
 
-    ![](../media/lab01/sc100-lab1-20.png)
+     ![](../media/lab01/sc100-lab1-20.png)
 
 1. In the **New Parameter** pane, enter **TimeRange (1)** as the **Parameter name**, select **Time range picker (2)** as the **Parameter type**, and select **Required? (3)**.
    
-    ![](../media/lab01/sc100-lab1-21.png)
+     ![](../media/lab01/sc100-lab1-21.png)
 
 1. In the **New Parameter** pane, select **Last 7 days (1)** under **Available time ranges**, and then select **Save (2)**.
 
-   ![](../media/lab01/sc100-lab1-22.png)
+    ![](../media/lab01/sc100-lab1-22.png)
 
 1. In the **TimeRange** parameter, select **Last 7 days (2)**, and then select **Apply (3)**.
 
-    ![](../media/lab01/sc100-lab1-23.png)
+     ![](../media/lab01/sc100-lab1-23.png)
 
 1. Select **Add** to create another parameter.
 
-    ![](../media/lab01/sc100-lab1-24.png)
+     ![](../media/lab01/sc100-lab1-24.png)
 
 1. In the **New Parameter** pane, configure the following settings:
     - **Parameter name (1):** AlertSeverity
@@ -225,24 +223,24 @@ In this task, you´ll create a workbook, to get a dashboard with custom views an
 
 1. Under **Get data from**, select **Query (1)**, set **Time range (2)** to **TimeRange**, and enter the following query in the **Logs (Analytics) Query (3)** field.
 
-   ![](../media/lab01/sc100-lab1-26.png)
+    ![](../media/lab01/sc100-lab1-26.png)
 
-    ```KQL
-    SecurityAlert
-    | summarize Count = count() by AlertSeverity
-    | order by Count desc, AlertSeverity
-    | project Value = AlertSeverity, Label = strcat(AlertSeverity, ' - ', Count)
-    ```
+     ```KQL
+     SecurityAlert
+     | summarize Count = count() by AlertSeverity
+     | order by Count desc, AlertSeverity
+     | project Value = AlertSeverity, Label = strcat(AlertSeverity, ' - ', Count)
+     ```
 
 1. Scroll down to **Include in the drop down**, select **All (1)**, set **Default selected item (2)** to **All**, and then select **Save**.
 
-   ![](../media/lab01/sc100-lab1-27.png)
+    ![](../media/lab01/sc100-lab1-27.png)
 
-   ![](../media/lab01/sc100-lab1-28.png)
+    ![](../media/lab01/sc100-lab1-28.png)
 
 1. Select **Add** to create another parameter.
 
-    ![](../media/lab01/sc100-lab1-24.png)
+     ![](../media/lab01/sc100-lab1-24.png)
 
 1. In the **New Parameter** pane, configure the following settings:
 
@@ -269,7 +267,7 @@ In this task, you´ll create a workbook, to get a dashboard with custom views an
 
 1. From the bottom of the Editing parameters window, select **More options (1)**, expand **Add (2)**, and then select **Add data source + visualization (3)**.
 
-   ![](../media/lab01/sc100-lab1-29.png)
+    ![](../media/lab01/sc100-lab1-29.png)
 
 1. In the **Editing: query** pane, enter the following query in the **Logs (Analytics) Query (1)** field, set **Time range (2)** to **Set in query**, and then select **Step Settings (3)**.
 
@@ -291,29 +289,29 @@ In this task, you´ll create a workbook, to get a dashboard with custom views an
     | order by Severity
     ```
 
-    ![](../media/lab01/sc100-lab1-32.png)
+     ![](../media/lab01/sc100-lab1-32.png)
 
 1. On the **Step Settings** tab, select **When items are selected, export parameters (1)**, and then select **+ Add Parameter (2)**.
 
-    ![](../media/lab01/sc100-lab1-33.png)
+     ![](../media/lab01/sc100-lab1-33.png)
 
 1. In the **Add Parameter** pane, enter **Alerts (1)** in the **Field to export** field, enter **Alerts (2)** in the **Parameter name** field, and then select **Apply (3)**.
 
-   ![](../media/lab01/sc100-lab1-34.png) 
+    ![](../media/lab01/sc100-lab1-34.png) 
 
 1. From the bottom of the Editing query window, select **Done Editing**.
 
-    ![](../media/lab01/sc100-lab1-n2.png) 
+     ![](../media/lab01/sc100-lab1-n2.png) 
 
 1. Select **Done Editing** in the top bar of the **New workbook** window.
 
-    ![](../media/lab01/sc100-lab1-n3.png) 
+     ![](../media/lab01/sc100-lab1-n3.png) 
 
 1. Select **Save (1)**.
 
 1. In the **Save Workbook** pane, enter **New Workbook (2)** as the **Title**, verify the **Workspace (3)** and **Location (4)** values, and then select **Save (5)**.
 
-   ![](../media/lab01/sc100-lab1-n5.png) 
+    ![](../media/lab01/sc100-lab1-n5.png) 
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 	
