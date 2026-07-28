@@ -14,8 +14,8 @@ Since a partner organization was recently attacked using SMS interception, you w
 
 In this Exercise, you will perform
 
-Task 1: Restrict use of third-party apps to Microsoft verified services
-Task 2: Create an Authentication strength
+- Task 1: Restrict use of third-party apps to Microsoft verified services
+- Task 2: Create an Authentication strength
 
 ## Architecture Diagram
 
