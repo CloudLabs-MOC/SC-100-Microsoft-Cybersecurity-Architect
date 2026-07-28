@@ -1,5 +1,7 @@
 # Lab 02: Conditional Access
 
+### Estimated Duration: 45 Minutes
+
 ## Exercise Overview
 
 You have discovered that employees are accessing Microsoft 365 from unknown locations, despite your Conditional Access policies only allowing access from specific locations and devices. Your investigation has revealed that these employees are accessing Microsoft 365 while traveling home from their office on public transportation. This behavior is in violation of industry regulations, and you want to use Continuous Access Evaluation to prevent it. Additionally, you want to implement the authentication strength you prepared in the previous exercise to secure certain applications that handle customer data.
@@ -8,13 +10,11 @@ You have discovered that employees are accessing Microsoft 365 from unknown loca
 
 After completing this exercise, you'll be able to:
 
-- Create a trusted network for enhanced security.
-- Set up a new Conditional Access Policy with a limited scope.
-- Test and validate the effectiveness of the configured policy.
-- Implement a Conditional Access policy that restricts user login to the trusted network.
-- Create and enforce a Conditional Access policy to apply your authentication strength policy to Salesforce.
-
-### Estimated Duration: 45 Minutes
+- Task 1: Create a trusted network for enhanced security.
+- Task 2: Set up a new Conditional Access Policy with a limited scope.
+- Task 3: Test and validate the effectiveness of the configured policy.
+- Task 4: Implement a Conditional Access policy that restricts user login to the trusted network.
+- Task 5: Create and enforce a Conditional Access policy to apply your authentication strength policy to Salesforce.
 
 ## Architecture Diagram
 
@@ -33,30 +33,6 @@ The architecture for this lab involves the following key components:
 - **Company-Wide Policy Rollout**: Expands the tested policies across the organization to standardize access control measures and enhance overall security.
 
 - **Multi-Factor Authentication (MFA) for Salesforce**: Enforces MFA for Salesforce access to protect sensitive data and ensure secure authentication practices.
-
-## Part 1: Design a solution
-
-### Design approach
-
-The initial step involves analyzing the requirements based on the described issue, understanding the objectives and defining the requirements.
-
-Based on the provided use-case, the following requirements can be outlined:
-
-- Restrict access from insecure/unknown locations
-- Require strong authentication for apps containing sensitive information
-
-In the second step examine Contoso Ltd.'s existing environment. Microsoft Entra ID offers solutions to manage and restrict user access with the use of Entra ID Conditional access policies. Investigate which controls exist and which policies are already in place. Use the Entra ID portal to review current configurations and policies and determine if adjustments are necessary or if new policies need to be implemented.
-
-The third phase involves crafting the solution's concept. Upon investigation, it is evident that there is no trusted network yet configured and none of the current policies meet the defined requirements. Therefore, a new set of Conditional access policies is essential.
-
-### Proposed solution
-
-| Requirement                                                             | Solution                           | Action plan                                                                                                                                                                                          |
-| ----------------------------------------------------------------------- | ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Restrict access from insecure/unknown locations                         | Entra ID Conditional access policy | Define the current company's networks as trusted network and restrict access to devices inside this network                                                                                          |
-| Require strong authentication for apps containing sensitive information | Entra ID Conditional access policy | Create a new conditional access policy scoped to sensitive applications requiring the just created hardened authentication strength that excludes insecure authentication methods like SMS and Voice |
-
-## Part 2: Implement the solution
 
 ### Task 1 - Create trusted network
 

@@ -1,5 +1,7 @@
 # Lab 01: Configure Entra ID
 
+### Estimated Duration: 30 Minutes
+
 ## Exercise Overview
 
 You are the newly promoted IT-Security specialist of Contoso Ltd. As the company recently acquired Tailwind Traders, you reviewed your Entra ID tenant and decided on new security requirements. Your task is to manage the tasks and implement policies to meet the requirements that come with the acquisition.
@@ -10,12 +12,10 @@ Since a partner organization was recently attacked using SMS interception, you w
 
 ## Exercise Objectives
 
-After completing this exercise, you'll be able to:
+In this Exercise, you will perform
 
-- Restrict the use of third-party applications to only Microsoft-verified services.
-- Create and configure authentication strength policies to enhance security.
-
-## Estimated Duration: 30 Minutes
+Task 1: Restrict use of third-party apps to Microsoft verified services
+Task 2: Create an Authentication strength
 
 ## Architecture Diagram
 
@@ -28,34 +28,6 @@ The architecture for this lab involves the following key components:
 - **Microsoft Verified Services**: Restricts the use of third-party applications, ensuring only trusted, Microsoft-verified services are utilized for enhanced security.
 
 - **Authentication Strength**: Establishes customized authentication policies to enforce stronger and more secure access controls for sensitive resources.
-
-## Part 1: Design a solution
-
-### Design approach
-
-The initial step involves analyzing the requirements based on the described issue, understanding the objectives and defining the requirements.
-
-Based on the provided use-case, the following requirements can be outlined:
-
-- Restrict uncontrolled access from third-party applications
-- Allow users to share login IDs to validated services
-- Allow users to request access to SaaS products
-- Improve on authentication strength
-
-In the second step examine Contoso Ltd.'s existing environment. Microsoft Entra ID offers solutions to manage and restrict user's and cloud application's access with the use of Entra ID policies. Investigate which controls exist and which policies are already in place. Use the Entra ID portal to review current configurations and policies and determine if adjustments are necessary or if new policies need to be implemented.
-
-The third phase involves crafting the solution's concept. Upon investigation, it is evident that none of the current policies meet the defined requirements. Therefore, adjustments to the Entra ID configuration are essential.
-
-### Proposed solution
-
-| Requirement                                             | Solution                        | Action plan                                                                                                                                |
-| ------------------------------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Block uncontrolled access from third-party applications | Entra ID application policy     | Restrict user consent to permissions classified as "low impact", for apps from verified publishers or apps registered in this organization |
-| Allow users to share login IDs to validated services    | Entra ID application policy     | Restrict user consent to permissions classified as "low impact", for apps from verified publishers or apps registered in this organization |
-| Allow users to request access to SaaS products          | Entra ID application policy     | Define users that are eligible to approve of applications that are safe to use                                                             |
-| Restrict use of insecure authentication methods         | Entra ID authentication methods | Create an authentication strength excluding SMS and Voice methods                                                                          |
-
-## Part 2: Implement the solution
 
 ### Task 1 - Restrict use of third-party apps to Microsoft verified services
 
@@ -89,11 +61,11 @@ In this task, you will restrict the level of access a user can grant to applicat
 
    ![](../media/lab02/exc1-4.png)
 
-1. Select **+ Add users (3)** to add **`Lidia Holloway` (1)** and **ODL_User <inject key="DeploymentID" enableCopy="false"/> (2)** as users that can review admin consent requests.
+1. Select **+ Add users (3)** to add **`Lidia Holloway` (1)** and **ODL_User <inject key="DeploymentID" enableCopy="false"/> (2)** as users that can review admin consent requests and then click **Select (3)**.
 
    ![](../media/l2e1-t1p4.png)
 
-1. Select **Save (3)** on the **Admin consent settings** window.
+1. Select **Save** on the **Admin consent settings** window.
 
    ![](../media/lab02/exc1-6.png)
 

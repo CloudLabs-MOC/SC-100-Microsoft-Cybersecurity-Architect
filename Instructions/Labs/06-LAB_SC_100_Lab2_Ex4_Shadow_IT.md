@@ -1,5 +1,7 @@
 # Lab 03: Shadow-IT
 
+### Estimated Duration: 45 Minutes
+
 ## Exercise Overview
 
 Contoso's IT infrastructure has evolved over the past few decades, providing various server instances, applications, and services. Recently, the company has prioritized securing its environment by implementing Device Management, data governance, and Identity and Application Protection over the last two years. However, the process of restricting users to only specific applications deployed by the company has not yet been established, allowing users to install applications from various sources. As the organization's cyber security architect, your goal is to have a complete overview of all applications used by employees. Your protection measure is to block insecure applications in your environment.
@@ -8,12 +10,10 @@ Contoso's IT infrastructure has evolved over the past few decades, providing var
 
 After completing this exercise, you'll be able to:
 
-- Integrate Microsoft Defender for Endpoint with Defender for Cloud Apps for unified security management.
-- Investigate and identify Shadow IT within the organization (Contoso Ltd.).
-- Block unsecure applications to enhance security posture.
-- Automate the blocking of unsecure applications for continuous protection.
-
-### Estimated Duration: 45 Minutes
+- Task 1: Integrate Microsoft Defender for Endpoint with Defender for Cloud Apps for unified security management.
+- Task 2: Task 2: Investigate the Shadow-IT of Contoso Ltd
+- Task 3: Block unsecure applications
+- Task 4: Block unsecure applicatons automatically
 
 ## Architecture Diagram
 
@@ -31,28 +31,11 @@ The architecture for this lab involves the following key components:
 
 - **Automated Application Blocking**: Configures automation to detect and block unsecure applications proactively, ensuring continuous compliance and reducing manual intervention.
 
-## Part 1: Design a solution
-
-### Design Approach
-
-In the given scenario, your initial action is to analyze and uncover all applications currently in use by employees. Unauthorized applications installed by users can pose security risks to the company, highlighting the need to identify Shadow IT. The subsequent step involves remedying the risks posed by these unsafe applications.
-
-Defender for Cloud Apps is a security solution designed to address Shadow IT risks within cloud environments. It aids organizations in discovering and monitoring unauthorized cloud applications utilized by employees, evaluating their security posture, and enforcing policies to ensure compliance and safeguard data. By offering visibility and control over Shadow IT, Defender for Cloud Apps assists organizations in mitigating security risks associated with unauthorized cloud usage, thereby enhancing the security of their cloud environment.
-
-### Proposed Solution
-
-| Requirement                   | Solution                          | Action plan                                             |
-| ----------------------------- | --------------------------------- | ------------------------------------------------------- |
-| Discover Shadow IT            | Microsoft Defender for Cloud Apps | Investigate all applications in the Contoso environment |
-| Block all unsafe applications | Microsoft Defender for Cloud Apps | Mark unsafe applications as unsanctioned                |
-
-## Part 2: Implement the solution
-
 ### Task 1: Integrate Microsoft Defender for Endpoint with Defender for Cloud Apps
 
 In order to control the use of application on users company owned devices you must integrate Defender for Endpoint with Defender for Cloud Apps.
 
-1. Open a new tab in the Microsoft edge. Sign-in to the Microsoft Defender portal **`https://security.microsoft.com`** using below credentials
+1. Open a new tab in the Microsoft edge. Sign-in to the Microsoft Defender portal **`https://security.microsoft.com`** using below credentials.
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
    - **Password:** <inject key="AzureAdUserPassword"></inject>
