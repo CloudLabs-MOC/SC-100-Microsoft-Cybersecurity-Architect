@@ -110,7 +110,7 @@ In this Task, you´ll configure a data connection from Defender EASM to an log a
 
 1. Select **+ Select members (1)**.
 
-1. On the **Select members** blade, search for the **`EASM API` (2)**. From the search results select **EASM API ** press **Select (3)** to add the role assignment and select **Apply (4)**.
+1. On the **Select members** blade, search for the **`EASM API` (2)**. From the search results select **EASM API** press **Select (3)** to add the role assignment and select **Apply (4)**.
 
       ![](../media/lab01/sc100-ex2-7.png)
 
@@ -268,9 +268,9 @@ Since this asset is hosted by a third party but still belongs to your attack sur
 
       ![](../media/lab01/sc100-ex2-24.png)
 
-1. Select, **Modify assets (1)**.
+1. Select, **Modify assets**.
 
-      ![](../media/lab01/34.png)
+      ![](../media/lab01/sc100-ex2-25.png)
 
 1. Choose **Dependency (1)** in State and select **Update (2)**.
 

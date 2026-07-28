@@ -146,7 +146,7 @@ In this task you'll configure role-based access control by assigning appropriate
 
 1. Select **+ Select members (1)**.
 
-1. On the **Select members** blade, search for the **`SOC Engineers` (2)** Group. From the search results select **SOC Engineers** press **Select (3)** to add the role assignment and select **Apply**.
+1. On the **Select members** blade, search for the **`SOC Engineers` (2)** Group. From the search results select **SOC Engineers** press **Select (3)** to add the role assignment and select **Apply (4)**.
 
       ![](../media/lab01/sc100-lab1-14.png)
 

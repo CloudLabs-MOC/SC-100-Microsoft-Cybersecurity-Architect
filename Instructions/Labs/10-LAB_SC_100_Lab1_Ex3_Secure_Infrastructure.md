@@ -67,11 +67,11 @@ In this task, you will configure **Azure Arc** to send data to the **Log Analyti
 
 1. Enter the **Password** as **<inject key="VM1 Password"></inject>** when prompted.
 
-     ![](../media/lab01/sc100-ex3-10.png)
+     ![](../media/lab01/sc100-lab1-n10.png)
 
      > **Note:** If the password field is not displayed on the Virtual Machine login screen, click **Action** → **Ctrl+Alt+Delete** (or press **Ctrl+Alt+End**) in the Virtual Machine Connection window. This will bring up the Windows sign-in screen, allowing you to enter the Administrator password and log in.
 
-     ![](../media/lab01/sc100-ex3-11.png)
+     ![](../media/lab01/sc100-lab1-n11.png)
 
 1. Open Edge and sign into the Azure portal **`https://portal.azure.com`** using the following credentials:
    
@@ -145,7 +145,7 @@ In this task, you will configure **Azure Arc** to send data to the **Log Analyti
 
 1. When the installation finishes,you will get a output like this in the powershell. 
 
-     ![](../media/lab01/sc100-lab1-n20.png)
+     ![](../media/lab01/sc100-ex3-5.png)
 
 1. Go back to Azure Portal and open Azure Arc.
 
@@ -186,10 +186,10 @@ In this task, you will deploy a **Data Collection Rule** to gather event logs fr
 1. Select **+ Create**.
 
 1. Add the following details, and select **Next (5)**:
-     - Rule Name: **`ContosoDCR` (1)**
-     - Subscription: Select default **(2)**
-     - Resource group: **sc-100-lab1 (3)**
-     - Region - **<inject key="Resource group Region" enableCopy="false" ></inject> (4)**
+      - Rule Name: **`ContosoDCR` (1)**
+      - Subscription: Select default **(2)**
+      - Resource group: **sc-100-lab1 (3)**
+      - Region - **<inject key="Resource group Region" enableCopy="false" ></inject> (4)**
 
         ![](../media/lab01/sc100-ex3-10.png)
 
@@ -212,9 +212,9 @@ In this task, you will deploy a **Data Collection Rule** to gather event logs fr
       ![](../media/lab01/sc100-ex3-13.png)
 
 1. Select **Add destination (1)**, and configure the following settings:
-     - **Destination type (2):** Log Analytics Workspaces
-     - **Subscription (3):** Verify the selected subscription
-     - **Log Analytics Workspaces (4):** Select the Log Analytics workspace **law-sentinel-<inject key="DeploymentID" enableCopy="false" /></inject>**
+      - **Destination type (2):** Log Analytics Workspaces
+      - **Subscription (3):** Verify the selected subscription
+      - **Log Analytics Workspaces (4):** Select the Log Analytics workspace **law-sentinel-<inject key="DeploymentID" enableCopy="false" /></inject>**
 
 1. Select **Apply (5)**.
 
